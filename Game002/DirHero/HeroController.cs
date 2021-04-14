@@ -8,7 +8,7 @@ namespace Game002.DirHero
     public static class HeroController
     {
         public static Hero Hero;
-
+        
         public static void OnPressKey(object sender, KeyEventArgs args)
         {
             switch (args.KeyCode)
@@ -31,16 +31,10 @@ namespace Game002.DirHero
         private static void PreMove(Point dp)
         {
             var newLocation = new Point(Hero.Location.X + dp.X, Hero.Location.Y + dp.Y);
-            if (MapController.Map == null)
-                throw new Exception("There is no map in the MapController");
-            if (MapController.Map.IsBound(newLocation) && !MapController.Map.IsBlock(newLocation))
+            if (MapDrawer.Map == null)
+                throw new Exception("There is no map in the MapDrawer");
+            if (MapDrawer.Map.IsBound(newLocation) && !MapDrawer.Map.IsBlock(newLocation))
                 Hero.Move(dp);
         }
-
-        public static void DrawHeroSheet(Graphics g) => 
-            g.DrawRectangle(new Pen(Color.Red), Hero.Location.X, Hero.Location.Y, Hero.Size.Width, Hero.Size.Height);
-
-        public static void DrawHero(Graphics g) => 
-            g.DrawImage(Hero.HeroView, new Rectangle(Hero.Location, Hero.Size));
     }
 }

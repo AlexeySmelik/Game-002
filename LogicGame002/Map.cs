@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
- namespace Game002.DirMap
+namespace LogicGame002
 {
     public class Map
     {
@@ -8,9 +8,19 @@
         public readonly int Width;
         
         public int[,] BlockMap;
-        public int CellSize = 40;
-        public Image Background;
+        public int CellSize;
+        private Image _background;
         
+        public Image Background
+        {
+            get => _background;
+            set
+            {
+                _background = value;
+                CellSize = value.Width / Width;
+            }
+        }
+
         public Map(int height, int width)
         {
             Height = height;
