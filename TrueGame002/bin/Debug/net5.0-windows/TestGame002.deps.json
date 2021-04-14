@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "TestGame002/1.0.0": {
+        "dependencies": {
+          "Game002": "1.0.0"
+        },
+        "runtime": {
+          "TestGame002.dll": {}
+        }
+      },
+      "Game002/1.0.0": {
+        "runtime": {
+          "Game002.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TestGame002/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Game002/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

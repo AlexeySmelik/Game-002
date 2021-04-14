@@ -18,7 +18,7 @@ namespace TestGame002.Model.DirHero
             StepSize = size.Width / 4;
             Manipulator = new Manipulator(this);
         }
-        
+
         public void Move(Point dPoint)
         {
             Location.X += dPoint.X;
