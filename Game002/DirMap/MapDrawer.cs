@@ -50,15 +50,15 @@ namespace Game002.DirMap
         public static void DrawMap(Graphics g)
         {
             DrawingObjects[-1](g, 0, 0);
-            for(var i = 0; i < Map.Width; i++)
-                for (var j = 0; j < Map.Height; j++)
+            for(var i = 0; i < Map.Width / Map.CellSize; i++)
+                for (var j = 0; j < Map.Height / Map.CellSize; j++)
                     DrawingObjects[Map.BlockMap[i, j]](g, i * Map.CellSize, j * Map.CellSize);
         }
 
         public static void DrawMapSheet(Graphics g)
         {
-            for (var i = 0; i < Map.Width; i++)
-            for (var j = 0; j < Map.Height; j++)
+            for (var i = 0; i < Map.Width / Map.CellSize; i++)
+            for (var j = 0; j < Map.Height / Map.CellSize; j++)
                 DrawingObjects[-2](g, i * Map.CellSize, j * Map.CellSize);
         }
     }

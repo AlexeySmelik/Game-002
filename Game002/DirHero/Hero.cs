@@ -24,7 +24,5 @@
             Location.X += dPoint.X;
             Location.Y += dPoint.Y;
         }
-
-        public Point GetRightLocation() => new Point(Location.X + Size.Width, Location.Y);
     }
 }

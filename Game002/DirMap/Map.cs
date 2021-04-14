@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
  namespace Game002.DirMap
 {
@@ -13,19 +14,13 @@
         
         public Map(int height, int width)
         {
-            Height = height;
-            Width = width;
-            BlockMap = new int[width, height];
+            Height = height * CellSize;
+            Width = width * CellSize;
+            BlockMap = new int[width / CellSize, height / CellSize];
         }
 
-        public bool IsBound(Point entity)
-        {
-            return entity.X > 0 && entity.X / CellSize < Width && entity.Y > 0 && entity.Y / CellSize < Height;
-        }
+        public bool IsBound(Point p) => p.X > 0 && p.X < Width && p.Y > 0 && p.Y < Height;
 
-        public bool IsBlock(Point point)
-        {
-            return BlockMap[point.X / CellSize, point.Y / CellSize] != 0;
-        }
+        public bool IsBlock(Point point) => BlockMap[point.X / CellSize, point.Y / CellSize] != 0;
     }
 }
