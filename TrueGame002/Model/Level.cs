@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
-using Game002.DirHero;
-using Game002.DirMap;
+using TestGame002.Model.DirHero;
 
-namespace Game002
+namespace TestGame002.Model
 {
     public class Level
     {
         public Hero CurrentHero;
         public List<Map> CurrentMaps;
-        private int IndexMap = 0;
+        private int IndexMap;
 
         public Level(Hero hero, List<Map> maps)
         {
@@ -17,5 +16,11 @@ namespace Game002
         }
 
         public Map GetCurrentMap() => CurrentMaps[IndexMap];
+        
+        public bool NextMap()
+        {
+            IndexMap++;
+            return IndexMap < CurrentMaps.Count;
+        }
     }
 }

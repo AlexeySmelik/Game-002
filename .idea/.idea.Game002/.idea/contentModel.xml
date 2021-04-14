@@ -4,30 +4,40 @@
     <e p="C:\Users\Alexey\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Alexey\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Game002.316305247.00" t="ExcludeRecursive" />
     <e p="C:\Users\Alexey\RiderProjects\Game002" t="IncludeFlat">
-      <e p="Game002" t="IncludeRecursive">
+      <e p="Game002.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="TrueGame002" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="DirHero" t="Include">
-          <e p="Hero.cs" t="Include" />
-          <e p="HeroController.cs" t="Include" />
-          <e p="HeroDrawer.cs" t="Include" />
-          <e p="HeroObserver.cs" t="Include" />
+        <e p="Controllers" t="Include">
+          <e p="Drawers" t="Include">
+            <e p="HeroDrawer.cs" t="Include" />
+            <e p="LevelDrawer.cs" t="Include" />
+            <e p="MapDrawer.cs" t="Include" />
+          </e>
+          <e p="MainController.cs" t="Include" />
+          <e p="Observers" t="Include">
+            <e p="HeroObserver.cs" t="Include" />
+          </e>
         </e>
-        <e p="DirMap" t="Include">
+        <e p="GameMods.cs" t="Include" />
+        <e p="Levels" t="Include">
+          <e p="TestLevel.cs" t="Include" />
+        </e>
+        <e p="MainForm.cs" t="Include" />
+        <e p="MainForm.Designer.cs" t="Include" />
+        <e p="Model" t="Include">
+          <e p="DirHero" t="Include">
+            <e p="Hero.cs" t="Include" />
+            <e p="Manipulator.cs" t="Include" />
+          </e>
+          <e p="GameModel.cs" t="Include" />
+          <e p="Level.cs" t="Include" />
           <e p="Map.cs" t="Include" />
-          <e p="MapDrawer.cs" t="Include" />
-        </e>
-        <e p="Game002.csproj" t="IncludeRecursive" />
-        <e p="Level.cs" t="Include" />
-        <e p="LevelController.cs" t="Include" />
-        <e p="LevelForm.cs" t="Include" />
-        <e p="LevelForm.Designer.cs" t="Include" />
-        <e p="Maps" t="Include">
-          <e p="SetTestMaps.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="net5.0-windows" t="Include">
-              <e p="Game002.AssemblyInfo.cs" t="Include" />
+              <e p="TrueGame002.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -48,9 +58,8 @@
             <e p="RightPlatform.png" t="Include" />
           </e>
         </e>
+        <e p="TrueGame002.csproj" t="IncludeRecursive" />
       </e>
-      <e p="Game002.sln" t="IncludeFlat" />
-      <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
