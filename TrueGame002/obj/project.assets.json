@@ -1,33 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {
-      "Game002/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/Game002.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Game002.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WindowsForms"
-        ]
-      }
-    }
+    "net5.0-windows7.0": {}
   },
-  "libraries": {
-    "Game002/1.0.0": {
-      "type": "project",
-      "path": "../Game002/Game002.csproj",
-      "msbuildProject": "../Game002/Game002.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": [
-      "Game002 >= 1.0.0"
-    ]
+    "net5.0-windows7.0": []
   },
   "packageFolders": {
     "C:\\Users\\Alexey\\.nuget\\packages\\": {}
@@ -53,11 +31,7 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "projectReferences": {
-            "C:\\Users\\Alexey\\RiderProjects\\Game002\\Game002\\Game002.csproj": {
-              "projectPath": "C:\\Users\\Alexey\\RiderProjects\\Game002\\Game002\\Game002.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

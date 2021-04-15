@@ -30,6 +30,9 @@
             <e p="Hero.cs" t="Include" />
             <e p="Manipulator.cs" t="Include" />
           </e>
+          <e p="DirPhysic" t="Include">
+            <e p="Physics.cs" t="Include" />
+          </e>
           <e p="GameModel.cs" t="Include" />
           <e p="Level.cs" t="Include" />
           <e p="Map.cs" t="Include" />

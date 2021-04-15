@@ -25,75 +25,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02d0beb4-0563-47d4-90a7-88bab69fa0eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game002/LevelForm.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/LogicGame002.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/obj/Debug/net5.0/LogicGame002.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/obj/Debug/net5.0/LogicGame002.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/obj/Debug/net5.0/LogicGame002.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/obj/Debug/net5.0/LogicGame002.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/obj/Debug/net5.0/LogicGame002.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/obj/LogicGame002.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/obj/LogicGame002.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/obj/LogicGame002.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LogicGame002/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/MainForm.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/TestGame002.csproj.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/Game002.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/Game002.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/Game002.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TestGame002.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TestGame002.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TestGame002.runtimeconfig.dev.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TestGame002.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TrueGame002.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TrueGame002.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TrueGame002.runtimeconfig.dev.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TrueGame002.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/ref/TestGame002.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/ref/TrueGame002.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TestGame002.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TestGame002.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TestGame002.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TestGame002.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TestGame002.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TestGame002.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TestGame002.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TestGame002.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TestGame002.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TestGame002.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TestGame002.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/apphost.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/ref/TestGame002.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/ref/TrueGame002.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/TestGame002.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/TestGame002.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/TestGame002.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/TrueGame002.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/TrueGame002.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/TrueGame002.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrueGame002/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueGame002/Model/DirPhysic/Physics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrueGame002/Model/DirHero/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/Model/DirHero/Hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/Levels/TestLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/Levels/TestLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/Model/DirHero/Manipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/Model/DirHero/Manipulator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/Model/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/Model/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/Game002.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/Game002.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/Game002.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TrueGame002.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TrueGame002.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TrueGame002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TrueGame002.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TrueGame002.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/TrueGame002.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/ref/TrueGame002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/bin/Debug/net5.0-windows/ref/TrueGame002.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/TrueGame002.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/ref/TrueGame002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/obj/Debug/net5.0-windows/ref/TrueGame002.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/obj/TrueGame002.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/obj/TrueGame002.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueGame002/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TrueGame002/obj/project.nuget.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,18 +59,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/LogicGame002/Map.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/37581B6A-F235-477E-A1EE-8192154B0F87/113/NativeWindow.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LogicGame002/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TrueGame002/Model/DirHero/Hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TrueGame002/Model/DirHero/Manipulator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LogicGame002/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Game002/DirMap/MapController.cs" />
-        <option value="$PROJECT_DIR$/LogicGame002/Program.cs" />
         <option value="$PROJECT_DIR$/LogicGame002/Map.cs" />
         <option value="$PROJECT_DIR$/Game002/Form1.cs" />
         <option value="$PROJECT_DIR$/Game002/DirHero/HeroDrawer.cs" />
@@ -158,7 +108,15 @@
         <option value="$PROJECT_DIR$/TestGame002/Model/DirHero/Manipulator.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/TrueGame002/Program.cs" />
+        <option value="$PROJECT_DIR$/TrueGame002/Controllers/Drawers/HeroDrawer.cs" />
+        <option value="$PROJECT_DIR$/TrueGame002/Model/DirPhysic/Physic.cs" />
+        <option value="$PROJECT_DIR$/TrueGame002/Model/IEntity.cs" />
+        <option value="$PROJECT_DIR$/TrueGame002/Model/DirPhysic/Gravity.cs" />
+        <option value="$PROJECT_DIR$/TrueGame002/Model/DirPhysic/Physics.cs" />
         <option value="$PROJECT_DIR$/TrueGame002/Model/DirHero/Hero.cs" />
+        <option value="$PROJECT_DIR$/TrueGame002/Levels/TestLevel.cs" />
+        <option value="$PROJECT_DIR$/TrueGame002/Model/Level.cs" />
+        <option value="$PROJECT_DIR$/TrueGame002/Model/DirHero/Manipulator.cs" />
       </list>
     </option>
   </component>
@@ -249,6 +207,8 @@
       <workItem from="1618386907396" duration="1718000" />
       <workItem from="1618401072986" duration="9668000" />
       <workItem from="1618422998687" duration="12621000" />
+      <workItem from="1618435780190" duration="264000" />
+      <workItem from="1618474150918" duration="3548000" />
     </task>
     <task id="LOCAL-00001" summary="some refactoring">
       <created>1618407918527</created>
@@ -271,7 +231,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618434365515</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ref">
+      <created>1618435887754</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618435887754</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ref">
+      <created>1618435969917</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1618435969917</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,29 +269,30 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="some refactoring" />
     <MESSAGE value="some MVC" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="ref" />
+    <option name="LAST_COMMIT_MESSAGE" value="ref" />
   </component>
   <component name="WindowStateProjectService">
     <state width="440" height="464" key="DebuggerActiveHint" timestamp="1618430751343">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="440" height="464" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1618430751343" />
-    <state width="1323" height="250" key="GridCell.Tab.0.bottom" timestamp="1618435726353">
+    <state width="1323" height="100" key="GridCell.Tab.0.bottom" timestamp="1618477092023">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618435726353" />
-    <state width="1323" height="250" key="GridCell.Tab.0.center" timestamp="1618435726353">
+    <state width="1323" height="100" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618477092023" />
+    <state width="1323" height="100" key="GridCell.Tab.0.center" timestamp="1618477092022">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618435726353" />
-    <state width="1323" height="250" key="GridCell.Tab.0.left" timestamp="1618435726352">
+    <state width="1323" height="100" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618477092022" />
+    <state width="1323" height="100" key="GridCell.Tab.0.left" timestamp="1618477092022">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618435726352" />
-    <state width="1323" height="250" key="GridCell.Tab.0.right" timestamp="1618435726353">
+    <state width="1323" height="100" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618477092022" />
+    <state width="1323" height="100" key="GridCell.Tab.0.right" timestamp="1618477092023">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="250" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618435726353" />
+    <state width="1323" height="100" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618477092023" />
     <state width="1323" height="250" key="GridCell.Tab.1.bottom" timestamp="1618435726354">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -386,10 +361,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Rider.ProjectTemplateDialog.Size/0.0.1366.728@0.0.1366.728" timestamp="1618423613913" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1618434369816">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1618436001671">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618434369816" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618436001671" />
     <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1618430787167">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -404,15 +379,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/TrueGame002/Levels/TestLevel.cs</url>
-          <line>17</line>
-          <properties documentPath="C:\Users\Alexey\RiderProjects\Game002\TestGame002\Levels\TestLevel.cs" initialLine="15">
-            <startOffsets>
-              <option value="571" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2134" />
-            </endOffsets>
-          </properties>
+          <line>16</line>
+          <properties documentPath="C:\Users\Alexey\RiderProjects\Game002\TestGame002\Levels\TestLevel.cs" initialLine="15" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

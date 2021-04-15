@@ -14,7 +14,6 @@ namespace TestGame002.Levels
             {
                 HeroView = new Bitmap(Path.GetFullPath(@"..\..\..\Sprites\MainCharacter\Naruto128x128.png"))
             };
-            var a = Path.GetFullPath(@"..\..\..\Sprites\MainCharacter\Naruto128x128.png");
             var testMap = new Map(15, 20)
             {
                 BlockMap = new [,] {
