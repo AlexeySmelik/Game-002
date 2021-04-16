@@ -28,6 +28,7 @@ namespace TestGame002.Model
         {
             CurrentHero.Manipulator.PreDownMove(GetCurrentMap());
             Physics.MoveHero(LevelTimer.Interval);
+            CurrentHero.Manipulator.PreUpMove(GetCurrentMap());
         }
 
         public Map GetCurrentMap() => CurrentMaps[IndexMap];

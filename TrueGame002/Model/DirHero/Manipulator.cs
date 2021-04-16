@@ -20,7 +20,7 @@ namespace TestGame002.Model.DirHero
 
         public void SpaceMove(Map map)
         {
-            
+            CurrentHero.UpVelocity = 20;
         }
     }
 }

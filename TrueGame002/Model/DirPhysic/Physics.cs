@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-using TestGame002.Model.DirHero;
 
 namespace TestGame002.Model.DirPhysic
 {
@@ -9,6 +6,7 @@ namespace TestGame002.Model.DirPhysic
     {
         private readonly double maxVelocity;
         private readonly Level currentLevel;
+        
         private const double G = 9.8;
 
         public Physics(Level level)
@@ -27,6 +25,12 @@ namespace TestGame002.Model.DirPhysic
             else
             {
                 currentLevel.CurrentHero.DownVelocity = 0;
+            }
+
+            if (currentLevel.CurrentHero.UpVelocity != 0)
+            {
+                currentLevel.CurrentHero.UpVelocity = Math.Max(0, currentLevel.CurrentHero.UpVelocity - dt / 100 * G);
+                currentLevel.CurrentHero.Manipulator.PreUpMove(currentLevel.GetCurrentMap());
             }
         }
     }

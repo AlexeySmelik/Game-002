@@ -22,10 +22,10 @@ namespace TestGame002.Controllers
                 LevelDrawer.Draw(g, Model);
         }
 
-        public static void OnKeyPress(object? sender, KeyPressEventArgs e)
+        public static void OnKeyPress(object? sender, KeyPressEventArgs args)
         {
             if (Model.CurrentMode == GameMods.PlayMode)
-                HeroObserver.SetKeyPassActions();
+                HeroObserver.SetKeyPassActions(args, Model);
         }
     }
 }

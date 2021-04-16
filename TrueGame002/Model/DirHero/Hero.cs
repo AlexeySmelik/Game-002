@@ -10,7 +10,8 @@ namespace TestGame002.Model.DirHero
 
         public Point Location;
         public Image HeroView;
-        public double DownVelocity;        
+        public double DownVelocity;
+        public double UpVelocity;
 
         public Hero(Size size, Point location)
         {
@@ -18,6 +19,7 @@ namespace TestGame002.Model.DirHero
             Location = location;
             StepSize = size.Width / 4;
             DownVelocity = 0;
+            UpVelocity = 0;
             Manipulator = new Manipulator(this);
         }
         

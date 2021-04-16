@@ -5,7 +5,38 @@ namespace TestGame002.Model.DirHero
 {
     public partial class Manipulator
     {
-        public void PreDownMove(Map map) //TODO test
+        public void PreUpMove(Map map) //TODO Testing and refactoring
+        {
+            var dp = new Point(0, -(int) CurrentHero.UpVelocity);
+            var n = Math.Ceiling(1.0 * CurrentHero.Size.Width / map.CellSize);
+            for (var i = 0; i < n; i++)
+            {
+                var checkPoint = new Point(
+                    CurrentHero.Location.X + i * map.CellSize,
+                    CurrentHero.Location.Y + dp.Y);
+                if (!map.IsBound(checkPoint))
+                {
+                    CurrentHero.Move(
+                        new Point(
+                            0,
+                            -CurrentHero.Location.Y)
+                    );
+                    return;
+                }
+                if (map.IsBound(checkPoint) && map.IsBlock(checkPoint))
+                {
+                    CurrentHero.Move(
+                        new Point(
+                            0,
+                            checkPoint.Y / map.CellSize * map.CellSize - CurrentHero.Location.Y + 4 * map.CellSize / 3)
+                    );
+                    return;
+                }
+            }
+            CurrentHero.Move(dp);
+        }
+        
+        public void PreDownMove(Map map) //TODO Testing
         {
             var dp = new Point(0, (int) CurrentHero.DownVelocity);
             var n = Math.Ceiling(1.0 * CurrentHero.Size.Width / map.CellSize);

@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using TestGame002.Model;
 
 namespace TestGame002.Controllers.Observers
@@ -19,9 +18,14 @@ namespace TestGame002.Controllers.Observers
             }
         }
 
-        public static void SetKeyPassActions()
+        public static void SetKeyPassActions(KeyPressEventArgs args, GameModel model)
         {
-            
+            switch (args.KeyChar)
+            {
+                case '\b':
+                    model.CurrentLevel.CurrentHero.Manipulator.SpaceMove(model.CurrentLevel.GetCurrentMap());
+                    break;
+            }
         }
     }
 }
