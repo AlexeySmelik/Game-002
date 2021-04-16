@@ -6,23 +6,31 @@ namespace TestGame002.Model.DirHero
     {
         public readonly Size Size;
         public readonly int StepSize;
+        public readonly Manipulator Manipulator;
 
         public Point Location;
         public Image HeroView;
-        public Manipulator Manipulator;
+        public double DownVelocity;        
 
         public Hero(Size size, Point location)
         {
             Size = size;
             Location = location;
             StepSize = size.Width / 4;
+            DownVelocity = 0;
             Manipulator = new Manipulator(this);
         }
-
+        
         public void Move(Point dPoint)
         {
             Location.X += dPoint.X;
             Location.Y += dPoint.Y;
+        }
+
+        public bool IsFall(Map map) //TODO Tests
+        {
+            return map.IsBound(new Point(Location.X, Location.Y + Size.Height)) &&
+                   !map.IsBlock(new Point(Location.X, Location.Y + Size.Height));
         }
     }
 }

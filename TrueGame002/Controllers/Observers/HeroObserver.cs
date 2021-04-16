@@ -16,13 +16,12 @@ namespace TestGame002.Controllers.Observers
                 case Keys.D:
                     model.CurrentLevel.CurrentHero.Manipulator.RightMove(model.CurrentLevel.GetCurrentMap());
                     break;
-                case Keys.Space:
-                    model.CurrentLevel.CurrentHero.Manipulator.SpaceMove(model.CurrentLevel.GetCurrentMap());
-                    break;
-                case Keys.S:
-                    model.CurrentLevel.CurrentHero.Manipulator.DownMove(model.CurrentLevel.GetCurrentMap());
-                    break;
             }
-        } 
+        }
+
+        public static void SetKeyPassActions()
+        {
+            
+        }
     }
 }

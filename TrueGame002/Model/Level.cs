@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 using TestGame002.Model.DirHero;
 using TestGame002.Model.DirPhysic;
 
@@ -7,19 +9,29 @@ namespace TestGame002.Model
     public class Level
     {
         public Hero CurrentHero;
+        public Timer LevelTimer;
+
         private List<Map> CurrentMaps;
-        private Physics _physic;  
         private int IndexMap;
+        private Physics Physics;
 
         public Level(Hero hero, List<Map> maps)
         {
             CurrentHero = hero;
-            _physic = new Physics(hero);
             CurrentMaps = maps;
+            LevelTimer = new Timer {Interval = 10};
+            LevelTimer.Tick += OnTimerTick;
+            Physics = new Physics(this);
+        }
+
+        private void OnTimerTick(object sender, EventArgs args)
+        {
+            CurrentHero.Manipulator.PreDownMove(GetCurrentMap());
+            Physics.MoveHero(LevelTimer.Interval);
         }
 
         public Map GetCurrentMap() => CurrentMaps[IndexMap];
-        
+
         public bool NextMap()
         {
             IndexMap++;

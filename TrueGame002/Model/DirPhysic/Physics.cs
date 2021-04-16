@@ -5,21 +5,29 @@ using TestGame002.Model.DirHero;
 
 namespace TestGame002.Model.DirPhysic
 {
-    public class Physics //TODO
+    public class Physics
     {
-        private Hero CurrentHero;
+        private readonly double maxVelocity;
+        private readonly Level currentLevel;
+        private const double G = 9.8;
 
-        public Physics(Hero currentHero)
+        public Physics(Level level)
         {
-            CurrentHero = currentHero;
-            var timer = new Timer {Interval = 100};
-            timer.Tick += (sender, args) => UpdateLocation();
-            timer.Start();
+            maxVelocity = level.GetCurrentMap().CellSize;
+            currentLevel = level;
         }
 
-        private void UpdateLocation()
+        public void MoveHero(double dt = 0.1) //TODO Tests
         {
-            CurrentHero.Move(new Point(0, CurrentHero.StepSize));
+            if (currentLevel.CurrentHero.IsFall(currentLevel.GetCurrentMap()))
+            {
+                currentLevel.CurrentHero.DownVelocity = Math.Min(maxVelocity, currentLevel.CurrentHero.DownVelocity + dt / 100 * G);
+                currentLevel.CurrentHero.Manipulator.PreDownMove(currentLevel.GetCurrentMap());
+            }
+            else
+            {
+                currentLevel.CurrentHero.DownVelocity = 0;
+            }
         }
     }
 }

@@ -20,6 +20,6 @@ namespace TestGame002.Model
 
         public bool IsBound(Point p) => p.X > 0 && p.X < Width && p.Y > 0 && p.Y < Height;
 
-        public bool IsBlock(Point point) => BlockMap[point.X / CellSize, point.Y / CellSize] != 0;
+        public bool IsBlock(Point p) => BlockMap[p.X / CellSize, p.Y / CellSize] != 0;
     }
 }

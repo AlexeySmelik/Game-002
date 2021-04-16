@@ -12,13 +12,14 @@ namespace TestGame002
             InitializeComponent();
             MainController.Model = model;
             
-            var timer = new Timer {Interval = 100};
+            var timer = MainController.Model.CurrentLevel.LevelTimer;
             timer.Tick += (sender, args) => Invalidate();
             timer.Start();
 
             KeyDown += MainController.OnKeyDown;
+            KeyPress += MainController.OnKeyPress;
         }
-        
+
         protected override void OnPaint(PaintEventArgs e)
         {
             var graphics = e.Graphics;

@@ -21,5 +21,11 @@ namespace TestGame002.Controllers
             if (Model.CurrentMode == GameMods.PlayMode)
                 LevelDrawer.Draw(g, Model);
         }
+
+        public static void OnKeyPress(object? sender, KeyPressEventArgs e)
+        {
+            if (Model.CurrentMode == GameMods.PlayMode)
+                HeroObserver.SetKeyPassActions();
+        }
     }
 }

@@ -13,8 +13,4 @@
       </Compile>
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\Game002\Game002.csproj" />
-    </ItemGroup>
-
 </Project>
