@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace TestGame002
+namespace Game002
 {
     partial class MainForm
     {

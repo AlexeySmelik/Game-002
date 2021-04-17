@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
-using TestGame002.Model;
+using Game002.Model;
 
-namespace TestGame002.Controllers.Observers
+namespace Game002.Controllers.Observers
 {
     public static class HeroObserver
     {

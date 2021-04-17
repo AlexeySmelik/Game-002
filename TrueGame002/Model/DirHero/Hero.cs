@@ -1,6 +1,7 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
-namespace TestGame002.Model.DirHero
+namespace Game002.Model.DirHero
 {
     public class Hero
     {
@@ -22,7 +23,7 @@ namespace TestGame002.Model.DirHero
             UpVelocity = 0;
             Manipulator = new Manipulator(this);
         }
-        
+
         public void Move(Point dPoint)
         {
             Location.X += dPoint.X;
@@ -34,5 +35,7 @@ namespace TestGame002.Model.DirHero
             return map.IsBound(new Point(Location.X, Location.Y + Size.Height)) &&
                    !map.IsBlock(new Point(Location.X, Location.Y + Size.Height));
         }
+        
+        public bool IsJump => UpVelocity > 0;
     }
 }

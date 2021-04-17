@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace TestGame002.Model.DirHero
+namespace Game002.Model.DirHero
 {
     public partial class Manipulator //TODO
     {
@@ -10,17 +10,18 @@ namespace TestGame002.Model.DirHero
 
         public void LeftMove(Map map)
         {
-            CurrentHero.Move(new Point(-CurrentHero.StepSize, 0));
+            CurrentHero.Manipulator.PreLeftMove(map);
         }
 
         public void RightMove(Map map)
         {
-            CurrentHero.Move(new Point(CurrentHero.StepSize, 0));
+            CurrentHero.Manipulator.PreRightMove(map);
         }
 
         public void SpaceMove(Map map)
         {
-            CurrentHero.UpVelocity = 20;
+            if (CurrentHero.UpVelocity == 0)
+                CurrentHero.UpVelocity = 20;
         }
     }
 }

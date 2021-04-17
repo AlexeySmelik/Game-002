@@ -1,10 +1,11 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using TestGame002.Controllers.Drawers;
-using TestGame002.Controllers.Observers;
-using TestGame002.Model;
+using Game002.Controllers.Drawers;
+using Game002.Controllers.Observers;
+using Game002.Model;
+using TestGame002;
 
-namespace TestGame002.Controllers
+namespace Game002.Controllers
 {
     public static class MainController
     {

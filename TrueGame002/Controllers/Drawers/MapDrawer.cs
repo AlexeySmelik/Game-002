@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using TestGame002.Model;
+using Game002.Model;
 
-namespace TestGame002.Controllers.Drawers
+namespace Game002.Controllers.Drawers
 {
     public static class MapDrawer
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using TestGame002.Model.DirHero;
-using TestGame002.Model.DirPhysic;
+using Game002.Model.DirHero;
+using Game002.Model.DirPhysic;
 
-namespace TestGame002.Model
+namespace Game002.Model
 {
     public class Level
     {
@@ -26,9 +26,7 @@ namespace TestGame002.Model
 
         private void OnTimerTick(object sender, EventArgs args)
         {
-            CurrentHero.Manipulator.PreDownMove(GetCurrentMap());
             Physics.MoveHero(LevelTimer.Interval);
-            CurrentHero.Manipulator.PreUpMove(GetCurrentMap());
         }
 
         public Map GetCurrentMap() => CurrentMaps[IndexMap];

@@ -1,7 +1,8 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using TestGame002.Model;
+using Game002;
+using Game002.Model;
 
 namespace TestGame002
 {

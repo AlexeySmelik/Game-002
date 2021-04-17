@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace TestGame002.Model
+namespace Game002.Model
 {
     public class Map
     {
@@ -18,8 +18,8 @@ namespace TestGame002.Model
             BlockMap = new int[width / CellSize, height / CellSize];
         }
 
-        public bool IsBound(Point p) => p.X > 0 && p.X < Width && p.Y > 0 && p.Y < Height;
+        public bool IsBound(Point p) => p.X >= 0 && p.X < Width && p.Y >= 0 && p.Y < Height; //TODO Tests
 
-        public bool IsBlock(Point p) => BlockMap[p.X / CellSize, p.Y / CellSize] != 0;
+        public bool IsBlock(Point p) => BlockMap[p.X / CellSize, p.Y / CellSize] != 0; //TODO Tests
     }
 }

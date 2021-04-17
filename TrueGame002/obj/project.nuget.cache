@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "fjdUzBAIzRCANd9TC6B1AMSxD7y5BoLuoBp9gcbUqb91+qIhv6wKshZCJimtpaU6CMVZrQwtk1cjy6PliIXQ+A==",
+  "dgSpecHash": "+VV7aU/muOlnKX5AWDyZYnQ7frv0ks02a+jQIYO6mMHFF6zX5f6r/uB/8jBPTPGT9uxwpl+Kblx9mijE+u7mnQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexey\\RiderProjects\\Game002\\TrueGame002\\TrueGame002.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexey\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Alexey\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\Alexey\\.nuget\\packages\\nunit\\3.13.1\\nunit.3.13.1.nupkg.sha512",
+    "C:\\Users\\Alexey\\.nuget\\packages\\nunit3testadapter\\4.0.0-beta.2\\nunit3testadapter.4.0.0-beta.2.nupkg.sha512"
+  ],
   "logs": []
 }

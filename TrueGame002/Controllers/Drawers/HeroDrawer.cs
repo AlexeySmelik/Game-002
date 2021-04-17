@@ -1,8 +1,8 @@
 ﻿using System.Drawing;
-using TestGame002.Model;
-using TestGame002.Model.DirHero;
+using Game002.Model.DirHero;
+using Game002.Model;
 
-namespace TestGame002.Controllers.Drawers
+namespace Game002.Controllers.Drawers
 {
     public static class HeroDrawer
     {
