@@ -7,11 +7,7 @@ namespace Game002.Model.DirHero
         public readonly Size Size;
         public readonly int StepSize;
         public readonly Manipulator Manipulator;
-        
-        public bool StopMoveUp;
-        public bool StopMoveLeft;
-        public bool StopMoveDown;
-        public bool StopMoveRight;
+
         public Point Location;
         public Image HeroView;
         public double DownVelocity;

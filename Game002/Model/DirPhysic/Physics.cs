@@ -17,10 +17,9 @@ namespace Game002.Model.DirPhysic
 
         public void TryMove(double dt) //TODO Tests
         {
-            Console.WriteLine($"{level.CurrentHero.UpVelocity}");
             var hero = level.CurrentHero;
             var map = level.GetCurrentMap();
-
+            
             if (CheckOnJump())
             {
                 hero.UpVelocity = Math.Max(0, hero.UpVelocity - dt / 300 * G);
@@ -41,8 +40,11 @@ namespace Game002.Model.DirPhysic
         {
             var hero = level.CurrentHero;
             var map = level.GetCurrentMap();
-            return map.IsBound(new Point(hero.Location.X, hero.Location.Y + hero.Size.Height)) &&
-                   !map.IsBlock(new Point(hero.Location.X, hero.Location.Y + hero.Size.Height));
+            for (var i = 0; i <= hero.Size.Width; i++)
+                if (!map.IsBound(new Point(hero.Location.X, hero.Location.Y + hero.Size.Height + 1)) ||
+                    map.IsBlock(new Point(hero.Location.X, hero.Location.Y + hero.Size.Height + 1)))
+                    return false;
+            return true;
         }
 
         private bool CheckOnJump()
