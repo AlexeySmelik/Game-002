@@ -26,7 +26,7 @@ namespace Game002.Model
 
         private void OnTimerTick(object sender, EventArgs args)
         {
-            Physics.MoveHero(LevelTimer.Interval);
+            Physics.TryMove(LevelTimer.Interval);
         }
 
         public Map GetCurrentMap() => CurrentMaps[IndexMap];

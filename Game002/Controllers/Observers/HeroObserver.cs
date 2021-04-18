@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using Game002.Model;
 
 namespace Game002.Controllers.Observers
@@ -22,7 +23,7 @@ namespace Game002.Controllers.Observers
         {
             switch (args.KeyChar)
             {
-                case '\b':
+                case (char)Keys.Space:
                     model.CurrentLevel.CurrentHero.Manipulator.SpaceMove(model.CurrentLevel.GetCurrentMap());
                     break;
             }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+VV7aU/muOlnKX5AWDyZYnQ7frv0ks02a+jQIYO6mMHFF6zX5f6r/uB/8jBPTPGT9uxwpl+Kblx9mijE+u7mnQ==",
+  "dgSpecHash": "9VE+idJGUytqlBIXQqL7v2VJyjZgBduWp1VU7tiIc4ZEkZD20NyQfvOcPwhH6yxsO0FJXOIRBJCStuMWa8n20A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alexey\\RiderProjects\\Game002\\TrueGame002\\TrueGame002.csproj",
+  "projectFilePath": "C:\\Users\\Alexey\\RiderProjects\\Game002\\Game002\\Game002.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexey\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Alexey\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",

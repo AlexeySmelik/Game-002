@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace Game002.Model.DirHero
 {
@@ -8,7 +7,11 @@ namespace Game002.Model.DirHero
         public readonly Size Size;
         public readonly int StepSize;
         public readonly Manipulator Manipulator;
-
+        
+        public bool StopMoveUp;
+        public bool StopMoveLeft;
+        public bool StopMoveDown;
+        public bool StopMoveRight;
         public Point Location;
         public Image HeroView;
         public double DownVelocity;
@@ -29,13 +32,5 @@ namespace Game002.Model.DirHero
             Location.X += dPoint.X;
             Location.Y += dPoint.Y;
         }
-
-        public bool IsFall(Map map) //TODO Tests
-        {
-            return map.IsBound(new Point(Location.X, Location.Y + Size.Height)) &&
-                   !map.IsBlock(new Point(Location.X, Location.Y + Size.Height));
-        }
-        
-        public bool IsJump => UpVelocity > 0;
     }
 }

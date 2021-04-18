@@ -47,5 +47,12 @@ namespace Game002.Controllers.Drawers
                 for (var j = 0; j < map.BlockMap.GetLength(1); j++)
                     DrawingObjects[map.BlockMap[i, j]](map, g, i * map.CellSize, j * map.CellSize);
         }
+        
+        public static void DrawSheetMap(Graphics g, Map map)
+        {
+            for(var i = 0; i < map.BlockMap.GetLength(0); i++)
+            for (var j = 0; j < map.BlockMap.GetLength(1); j++)
+                DrawingObjects[-2](map, g, i * map.CellSize, j * map.CellSize);
+        }
     }
 }

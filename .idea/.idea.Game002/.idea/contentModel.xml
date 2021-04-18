@@ -10,9 +10,7 @@
     <e p="C:\Users\Alexey\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Alexey\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Game002.316305247.00" t="ExcludeRecursive" />
     <e p="C:\Users\Alexey\RiderProjects\Game002" t="IncludeFlat">
-      <e p="Game002.sln" t="IncludeFlat" />
-      <e p="packages" t="ExcludeRecursive" />
-      <e p="TrueGame002" t="IncludeRecursive">
+      <e p="Game002" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="Drawers" t="Include">
@@ -27,7 +25,9 @@
         </e>
         <e p="DirTests" t="Include">
           <e p="ManipulatorTests.cs" t="Include" />
+          <e p="PhysicsTests.cs" t="Include" />
         </e>
+        <e p="Game002.csproj" t="IncludeRecursive" />
         <e p="GameMods.cs" t="Include" />
         <e p="Levels" t="Include">
           <e p="TestLevel.cs" t="Include" />
@@ -50,7 +50,7 @@
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="net5.0-windows" t="Include">
-              <e p="TrueGame002.AssemblyInfo.cs" t="Include" />
+              <e p="Game002.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -71,8 +71,9 @@
             <e p="RightPlatform.png" t="Include" />
           </e>
         </e>
-        <e p="TrueGame002.csproj" t="IncludeRecursive" />
       </e>
+      <e p="Game002.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>
 </project>

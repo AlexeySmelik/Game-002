@@ -257,11 +257,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alexey\\RiderProjects\\Game002\\TrueGame002\\TrueGame002.csproj",
-      "projectName": "TrueGame002",
-      "projectPath": "C:\\Users\\Alexey\\RiderProjects\\Game002\\TrueGame002\\TrueGame002.csproj",
+      "projectUniqueName": "C:\\Users\\Alexey\\RiderProjects\\Game002\\Game002\\Game002.csproj",
+      "projectName": "Game002",
+      "projectPath": "C:\\Users\\Alexey\\RiderProjects\\Game002\\Game002\\Game002.csproj",
       "packagesPath": "C:\\Users\\Alexey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alexey\\RiderProjects\\Game002\\TrueGame002\\obj\\",
+      "outputPath": "C:\\Users\\Alexey\\RiderProjects\\Game002\\Game002\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alexey\\AppData\\Roaming\\NuGet\\NuGet.Config"
