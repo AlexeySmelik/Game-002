@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e82388ce_002D7676_002D4d09_002Db085_002Dabde3b625100/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="IfThePointOnTheBorder" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0A7E192C-A661-4B29-B139-1F5BC80F0582::.NETCoreApp,Version=v5.0::TestGame002.DirTests.MapMethodsTests.IfThePointOnTheBorder&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fbc8bd8f_002Df76d_002D4cec_002D91a7_002D4edae0df2f4f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MapMethodsTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0A7E192C-A661-4B29-B139-1F5BC80F0582::.NETCoreApp,Version=v5.0::TestGame002.DirTests.MapMethodsTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
