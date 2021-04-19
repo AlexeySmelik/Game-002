@@ -1,11 +1,10 @@
 ﻿using System.Drawing;
-using Game002.Model;
 
 namespace Game002.Controllers.Drawers
 {
     public static class LevelDrawer
     {
-        public static void Draw(Graphics g, GameModel model)
+        public static void Draw(Graphics g, GameModel.Model.GameModel model)
         {
             MapDrawer.DrawMap(g, model.CurrentLevel.GetCurrentMap());
             //MapDrawer.DrawSheetMap(g, model.CurrentLevel.GetCurrentMap());

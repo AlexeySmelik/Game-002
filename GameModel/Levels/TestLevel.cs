@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
-using Game002.Model;
-using Game002.Model.DirHero;
+using GameModel.Model;
+using GameModel.Model.DirHero;
 
 namespace Game002.Levels
 {

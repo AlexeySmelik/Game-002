@@ -1,4 +1,4 @@
-﻿namespace TestGame002
+﻿namespace GameModel
 {
     public enum GameMods
     {

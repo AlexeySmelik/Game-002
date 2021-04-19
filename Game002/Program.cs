@@ -2,7 +2,6 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Game002;
-using Game002.Model;
 
 namespace TestGame002
 {
@@ -17,7 +16,7 @@ namespace TestGame002
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var model = new GameModel();
+            var model = new GameModel.Model.GameModel();
             var mainForm = new MainForm(model)
             {
                 ClientSize = new Size(800, 600),

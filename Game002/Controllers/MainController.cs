@@ -3,14 +3,13 @@ using System.Drawing;
 using System.Windows.Forms;
 using Game002.Controllers.Drawers;
 using Game002.Controllers.Observers;
-using Game002.Model;
-using TestGame002;
+using GameModel;
 
 namespace Game002.Controllers
 {
     public static class MainController
     {
-        public static GameModel Model;
+        public static GameModel.Model.GameModel Model;
 
         public static void OnKeyDown(object sender, KeyEventArgs args)
         {

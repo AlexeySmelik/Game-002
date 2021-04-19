@@ -1,16 +1,17 @@
 ﻿using System.Drawing;
+using GameModel.Model.DirEntity;
 
-namespace Game002.Model.DirHero
+namespace GameModel.Model.DirHero
 {
-    public class Hero
+    public class Hero : IEntity
     {
-        public readonly Size Size;
-        public readonly Manipulator Manipulator;
+        public Size Size { get; }
+        public Manipulator Manipulator { get; }
 
-        public Point Location;
-        public double DownVelocity;
-        public double UpVelocity;
-        public double HorizontalVelocity;
+        public Point Location { get; private set; }
+        public double DownVelocity { get; set; }
+        public double UpVelocity { get; set; }
+        public double HorizontalVelocity { get; set; }
 
         public Hero(Size size, Point location)
         {
@@ -21,10 +22,11 @@ namespace Game002.Model.DirHero
             Manipulator = new Manipulator(this);
         }
 
+        
+
         public void Move(Point dPoint)
         {
-            Location.X += dPoint.X;
-            Location.Y += dPoint.Y;
+            Location = new Point(Location.X + dPoint.X, Location.Y + dPoint.Y);
         }
     }
 }

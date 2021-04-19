@@ -1,5 +1,5 @@
 using System.Drawing;
-using Game002.Model;
+using GameModel.Model;
 using NUnit.Framework;
 
 namespace TestGameModelProject

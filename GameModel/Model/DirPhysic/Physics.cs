@@ -1,63 +1,68 @@
 ﻿using System;
 using System.Drawing;
-using System.Numerics;
+using GameModel.Model.DirEntity;
+using GameModel.Model.DirHero;
 
-namespace Game002.Model.DirPhysic
+namespace GameModel.Model.DirPhysic
 {
     public class Physics
     {
-        private readonly Level level;
+        private readonly Map map;
+        private readonly Hero hero;
         
         private const double G = 100;
 
-        public Physics(Level level)
+        public Physics(Hero hero, Map map)
         {
-            this.level = level;
+            this.hero = hero;
+            this.map = map;
         }
 
-        public void TryMove(double dt) //TODO Tests
+        public void TryMoveForAllEntity(double interval)
         {
-            var hero = level.CurrentHero;
-            var map = level.GetCurrentMap();
+            TryMove(hero, interval);
+            map.MobsArray.ForEach(mob => TryMove(mob, interval));
+        }
+
+        private void TryMove(IEntity entity, double dt) //TODO Tests
+        {
             
-            if (CheckOnJump())
+            if (CheckOnJump(entity))
             {
-                hero.UpVelocity = Math.Max(0, hero.UpVelocity - dt / 100 * G);
-                hero.Move(hero.Manipulator.PreDownOrUpMove(new Point(0, -(int) hero.UpVelocity), map));
+                entity.UpVelocity = Math.Max(0, entity.UpVelocity - dt / 100 * G);
+                entity.Move(entity.Manipulator.PreDownOrUpMove(new Point(0, -(int) entity.UpVelocity), map));
             } 
-            else if (CheckOnFall())
+            else if (CheckOnFall(entity))
             {
-                hero.DownVelocity = Math.Min(level.GetCurrentMap().CellSize - 1, hero.DownVelocity + dt / 100 * G);
-                hero.Move(hero.Manipulator.PreDownOrUpMove(new Point(0, (int)hero.DownVelocity), map));
+                entity.DownVelocity = Math.Min(map.CellSize - 1, entity.DownVelocity + dt / 100 * G);
+                entity.Move(entity.Manipulator.PreDownOrUpMove(new Point(0, (int)entity.DownVelocity), map));
             }
             else
             {
-                hero.DownVelocity = 0;
+                entity.DownVelocity = 0;
             }
 
-            if (CheckOnHorizontalMove())
+            if (CheckOnHorizontalMove(entity))
             {
-                hero.HorizontalVelocity = 
-                    Math.Sign(hero.HorizontalVelocity) * Math.Max(0, Math.Abs(hero.HorizontalVelocity) - dt / 100 * G);
-                hero.Move(
-                    hero.Manipulator.PreRightOrLeftMove(new Point((int) hero.HorizontalVelocity, 0), map)
+                entity.HorizontalVelocity = 
+                    Math.Sign(entity.HorizontalVelocity) * Math.Max(0, Math.Abs(entity.HorizontalVelocity) - dt / 100 * G);
+                entity.Move(
+                    entity.Manipulator.PreRightOrLeftMove(new Point((int) entity.HorizontalVelocity, 0), map)
                     );
             }
         }
 
-        private bool CheckOnFall()
+        private bool CheckOnFall(IEntity entity)
         {
-            var hero = level.CurrentHero;
-            var map = level.GetCurrentMap();
-            for (var i = 0; i <= hero.Size.Width; i++)
-                if (!map.IsBound(new Point(hero.Location.X, hero.Location.Y + hero.Size.Height + 1)) ||
-                    map.IsBlock(new Point(hero.Location.X, hero.Location.Y + hero.Size.Height + 1)))
+            for (var i = 0; i <= entity.Size.Width; i++)
+                if (!map.IsBound(new Point(entity.Location.X, entity.Location.Y + entity.Size.Height + 1)) ||
+                    map.IsBlock(new Point(entity.Location.X, entity.Location.Y + entity.Size.Height + 1)))
                     return false;
             return true;
         }
 
-        private bool CheckOnJump() => level.CurrentHero.UpVelocity > 0;
+        private bool CheckOnJump(IEntity entity) => entity.UpVelocity > 0;
 
-        private bool CheckOnHorizontalMove() => level.CurrentHero.HorizontalVelocity != 0;
+        private bool CheckOnHorizontalMove(IEntity entity) => entity.HorizontalVelocity != 0;
     }
 }

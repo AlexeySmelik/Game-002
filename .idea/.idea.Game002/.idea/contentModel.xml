@@ -68,7 +68,12 @@
         <e p="Levels" t="Include">
           <e p="TestLevel.cs" t="Include" />
         </e>
+        <e p="LinqExtensions.cs" t="Include" />
         <e p="Model" t="Include">
+          <e p="DirEntity" t="Include">
+            <e p="IEntity.cs" t="Include" />
+            <e p="Mob.cs" t="Include" />
+          </e>
           <e p="DirHero" t="Include">
             <e p="Hero.cs" t="Include" />
             <e p="Manipulator.cs" t="Include" />

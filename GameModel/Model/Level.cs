@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Game002.Model.DirHero;
-using Game002.Model.DirPhysic;
+using GameModel.Model.DirHero;
+using GameModel.Model.DirPhysic;
 
-namespace Game002.Model
+namespace GameModel.Model
 {
     public class Level
     {
@@ -12,17 +12,17 @@ namespace Game002.Model
         private List<Map> CurrentMaps;
         private int IndexMap;
         private Physics Physics;
-
+        
         public Level(Hero hero, List<Map> maps)
         {
             CurrentHero = hero;
             CurrentMaps = maps;
-            Physics = new Physics(this);
+            Physics = new Physics(hero, GetCurrentMap());
         }
         
         public void OnTimerTickEvents()
         {
-            Physics.TryMove(TimerInterval);
+            Physics.TryMoveForAllEntity(TimerInterval);
         }
 
         public Map GetCurrentMap() => CurrentMaps[IndexMap];

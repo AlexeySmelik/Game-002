@@ -1,13 +1,14 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
+using GameModel.Model.DirEntity;
 
-namespace Game002.Model
+namespace GameModel.Model
 {
     public class Map
     {
         public readonly int Height;
         public readonly int Width;
-        
+
+        public Mob[] MobsArray;
         public int[,] BlockMap;
         public readonly int CellSize;
 
@@ -16,6 +17,7 @@ namespace Game002.Model
             CellSize = cellSize;
             Height = numStrings * CellSize;
             Width = numColumns * CellSize;
+            MobsArray = System.Array.Empty<Mob>();
             BlockMap = new int[numColumns / CellSize, numStrings / CellSize];
         }
 

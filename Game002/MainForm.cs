@@ -1,12 +1,11 @@
 ﻿using System.Windows.Forms;
 using Game002.Controllers;
-using Game002.Model;
 
 namespace Game002
 {
     public partial class MainForm : Form
     {
-        public MainForm(GameModel model)
+        public MainForm(GameModel.Model.GameModel model)
         {
             DoubleBuffered = true;
             InitializeComponent();

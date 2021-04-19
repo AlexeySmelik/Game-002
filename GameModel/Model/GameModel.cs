@@ -1,7 +1,6 @@
 ﻿using Game002.Levels;
-using TestGame002;
 
-namespace Game002.Model
+namespace GameModel.Model
 {
     public class GameModel
     {

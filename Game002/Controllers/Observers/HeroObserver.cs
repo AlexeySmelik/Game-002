@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using Game002.Model.DirHero;
+using GameModel.Model.DirHero;
 
 namespace Game002.Controllers.Observers
 {

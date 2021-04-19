@@ -1,27 +1,29 @@
-﻿using System.Drawing;
+﻿using GameModel.Model.DirEntity;
 
-namespace Game002.Model.DirHero
+namespace GameModel.Model.DirHero
 {
-    public partial class Manipulator //TODO
+    public partial class Manipulator
     {
-        private readonly Hero hero;
+        private const int RALS = 30; // Right and left step
 
-        public Manipulator(Hero hero) => this.hero = hero;
-
+        private readonly IEntity entity;
+        
+        public Manipulator(IEntity entity) => this.entity = entity;
+        
         public void LeftMove()
         {
-            hero.HorizontalVelocity = -30;
+            entity.HorizontalVelocity = -RALS;
         }
 
         public void RightMove()
         {
-            hero.HorizontalVelocity = 30;
+            entity.HorizontalVelocity = RALS;
         }
 
         public void SpaceMove()
         {
-            if (hero.UpVelocity == 0)
-                hero.UpVelocity = 39;
+            if (entity.UpVelocity == 0)
+                entity.UpVelocity = 39;
         }
     }
 }

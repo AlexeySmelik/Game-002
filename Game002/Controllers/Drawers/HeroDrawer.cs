@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 using System.IO;
-using Game002.Model.DirHero;
+using GameModel.Model.DirHero;
 
 namespace Game002.Controllers.Drawers
 {

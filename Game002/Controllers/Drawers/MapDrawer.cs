@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using Game002.Model;
+using GameModel.Model;
 
 namespace Game002.Controllers.Drawers
 {
