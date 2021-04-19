@@ -9,7 +9,6 @@ namespace Game002.Model
         
         public int[,] BlockMap;
         public int CellSize = 40;
-        public Image Background;
         
         public Map(int height, int width)
         {

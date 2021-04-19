@@ -9,7 +9,6 @@ namespace Game002.Model.DirHero
         public readonly Manipulator Manipulator;
 
         public Point Location;
-        public Image HeroView;
         public double DownVelocity;
         public double UpVelocity;
 

@@ -10,10 +10,7 @@ namespace Game002.Levels
     {
         public static Level GetTestLevel0()
         {
-            var naruto = new Hero(new Size(64, 64), new Point(0, 100))
-            {
-                HeroView = new Bitmap(Path.GetFullPath(@"..\..\..\Sprites\MainCharacter\Naruto128x128.png"))
-            };
+            var naruto = new Hero(new Size(64, 64), new Point(0, 100));
             var testMap = new Map(15, 20)
             {
                 BlockMap = new [,] {
@@ -37,8 +34,7 @@ namespace Game002.Levels
                     {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 1, 2, 2},
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2}
-                },
-                Background = new Bitmap(Path.GetFullPath(@"..\..\..\Sprites\Backgrounds\BackgroundCity.png"))
+                }
             };
             return new Level(naruto, new List<Map> {testMap});
         }

@@ -22,7 +22,7 @@ namespace Game002.Model.DirPhysic
             
             if (CheckOnJump())
             {
-                hero.UpVelocity = Math.Max(0, hero.UpVelocity - dt / 300 * G);
+                hero.UpVelocity = Math.Max(0, hero.UpVelocity - dt / 100 * G);
                 hero.Move(hero.Manipulator.PreDownOrUpMove(new Point(0, -(int) hero.UpVelocity), map));
             } 
             else if (CheckOnFall())
