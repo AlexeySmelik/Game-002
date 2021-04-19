@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
 namespace Game002.Model
 {
@@ -8,17 +9,19 @@ namespace Game002.Model
         public readonly int Width;
         
         public int[,] BlockMap;
-        public int CellSize = 40;
-        
-        public Map(int height, int width)
+        public readonly int CellSize;
+
+        public Map(int numStrings, int numColumns, int cellSize = 40)
         {
-            Height = height * CellSize;
-            Width = width * CellSize;
-            BlockMap = new int[width / CellSize, height / CellSize];
+            CellSize = cellSize;
+            Height = numStrings * CellSize;
+            Width = numColumns * CellSize;
+            BlockMap = new int[numColumns / CellSize, numStrings / CellSize];
         }
 
-        public bool IsBound(Point p) => p.X >= 0 && p.X < Width && p.Y >= 0 && p.Y < Height; //TODO Tests
+        public bool IsBound(Point p) => p.X >= 0 && p.X < Width && p.Y >= 0 && p.Y < Height;
 
-        public bool IsBlock(Point p) => BlockMap[p.X / CellSize, p.Y / CellSize] != 0; //TODO Tests
+        public bool IsBlock(Point p) => IsBound(new Point(p.X, p.Y)) && 
+                                        BlockMap[p.X / CellSize, p.Y / CellSize] != 0;  
     }
 }

@@ -12,10 +12,11 @@ namespace Game002
             InitializeComponent();
             MainController.Model = model;
             
-            var timer = MainController.Model.CurrentLevel.LevelTimer;
+            var timer = new Timer{Interval = 5};
             timer.Tick += (sender, args) => Invalidate();
+            timer.Tick += MainController.TimerTickEvents;
             timer.Start();
-
+            
             KeyDown += MainController.OnKeyDown;
             KeyPress += MainController.OnKeyPress;
         }

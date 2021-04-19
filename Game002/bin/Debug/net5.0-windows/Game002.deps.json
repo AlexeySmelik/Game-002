@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "Game002/1.0.0": {
         "dependencies": {
+          "GameModel": "1.0.0",
           "NUnit": "3.13.1",
           "NUnit3TestAdapter": "4.0.0-beta.2"
         },
@@ -32,7 +33,12 @@
           }
         }
       },
-      "NUnit3TestAdapter/4.0.0-beta.2": {}
+      "NUnit3TestAdapter/4.0.0-beta.2": {},
+      "GameModel/1.0.0": {
+        "runtime": {
+          "GameModel.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -68,6 +74,11 @@
       "sha512": "sha512-W2+NDVe++7KBF3rAUq/m74S9yeOlNtyf+c5g7brJBvYkJfZJgY4LWB0+MOz0u88fDGuxojGtLEacfAIq9Lm9lg==",
       "path": "nunit3testadapter/4.0.0-beta.2",
       "hashPath": "nunit3testadapter.4.0.0-beta.2.nupkg.sha512"
+    },
+    "GameModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

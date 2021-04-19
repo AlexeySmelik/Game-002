@@ -8,17 +8,17 @@ namespace Game002.Model.DirHero
 
         public Manipulator(Hero hero) => this.hero = hero;
 
-        public void LeftMove(Map map)
+        public void LeftMove()
         {
-            hero.Move(PreRightOrLeftMove(new Point(-hero.StepSize, 0), map));
+            hero.HorizontalVelocity = -30;
         }
 
-        public void RightMove(Map map)
+        public void RightMove()
         {
-            hero.Move(PreRightOrLeftMove(new Point(hero.StepSize, 0), map));
+            hero.HorizontalVelocity = 30;
         }
 
-        public void SpaceMove(Map map)
+        public void SpaceMove()
         {
             if (hero.UpVelocity == 0)
                 hero.UpVelocity = 39;

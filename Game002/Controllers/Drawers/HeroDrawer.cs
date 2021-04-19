@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.IO;
 using Game002.Model.DirHero;
 
 namespace Game002.Controllers.Drawers
@@ -9,6 +10,8 @@ namespace Game002.Controllers.Drawers
             g.DrawRectangle(new Pen(Color.Blue), new Rectangle(hero.Location, hero.Size));
         
         public static void DrawHero(Graphics g, Hero hero) => 
-            g.DrawImage(hero.HeroView, new Rectangle(hero.Location, hero.Size));
+            g.DrawImage(
+                new Bitmap(Path.GetFullPath(@"..\..\..\Sprites\MainCharacter\Naruto128x128.png")),
+                new Rectangle(hero.Location, hero.Size));
     }
 }

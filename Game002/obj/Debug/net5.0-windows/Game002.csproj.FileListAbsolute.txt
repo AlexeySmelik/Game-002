@@ -22,3 +22,5 @@ C:\Users\Alexey\RiderProjects\Game002\Game002\obj\Debug\net5.0-windows\Game002.d
 C:\Users\Alexey\RiderProjects\Game002\Game002\obj\Debug\net5.0-windows\ref\Game002.dll
 C:\Users\Alexey\RiderProjects\Game002\Game002\obj\Debug\net5.0-windows\Game002.pdb
 C:\Users\Alexey\RiderProjects\Game002\Game002\obj\Debug\net5.0-windows\Game002.genruntimeconfig.cache
+C:\Users\Alexey\RiderProjects\Game002\Game002\bin\Debug\net5.0-windows\GameModel.dll
+C:\Users\Alexey\RiderProjects\Game002\Game002\bin\Debug\net5.0-windows\GameModel.pdb

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Drawing;
-using Game002.Model.DirHero;
+using System.Numerics;
 
 namespace Game002.Model.DirPhysic
 {
@@ -34,6 +34,15 @@ namespace Game002.Model.DirPhysic
             {
                 hero.DownVelocity = 0;
             }
+
+            if (CheckOnHorizontalMove())
+            {
+                hero.HorizontalVelocity = 
+                    Math.Sign(hero.HorizontalVelocity) * Math.Max(0, Math.Abs(hero.HorizontalVelocity) - dt / 100 * G);
+                hero.Move(
+                    hero.Manipulator.PreRightOrLeftMove(new Point((int) hero.HorizontalVelocity, 0), map)
+                    );
+            }
         }
 
         private bool CheckOnFall()
@@ -47,10 +56,8 @@ namespace Game002.Model.DirPhysic
             return true;
         }
 
-        private bool CheckOnJump()
-        {
-            var hero = level.CurrentHero;
-            return hero.UpVelocity > 0;
-        }
+        private bool CheckOnJump() => level.CurrentHero.UpVelocity > 0;
+
+        private bool CheckOnHorizontalMove() => level.CurrentHero.HorizontalVelocity != 0;
     }
 }

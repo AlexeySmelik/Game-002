@@ -46,6 +46,16 @@
         "build": {
           "build/netcoreapp2.1/NUnit3TestAdapter.props": {}
         }
+      },
+      "GameModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/GameModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameModel.dll": {}
+        }
       }
     }
   },
@@ -243,10 +253,16 @@
         "nunit3testadapter.4.0.0-beta.2.nupkg.sha512",
         "nunit3testadapter.nuspec"
       ]
+    },
+    "GameModel/1.0.0": {
+      "type": "project",
+      "path": "../GameModel/GameModel.csproj",
+      "msbuildProject": "../GameModel/GameModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
+      "GameModel >= 1.0.0",
       "NUnit >= 3.13.1",
       "NUnit3TestAdapter >= 4.0.0-beta.2"
     ]
@@ -275,7 +291,11 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Alexey\\RiderProjects\\Game002\\GameModel\\GameModel.csproj": {
+              "projectPath": "C:\\Users\\Alexey\\RiderProjects\\Game002\\GameModel\\GameModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

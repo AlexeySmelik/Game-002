@@ -33,25 +33,8 @@
           </e>
         </e>
         <e p="Game002.csproj" t="IncludeRecursive" />
-        <e p="GameMods.cs" t="Include" />
-        <e p="Levels" t="Include">
-          <e p="TestLevel.cs" t="Include" />
-        </e>
         <e p="MainForm.cs" t="Include" />
         <e p="MainForm.Designer.cs" t="Include" />
-        <e p="Model" t="Include">
-          <e p="DirHero" t="Include">
-            <e p="Hero.cs" t="Include" />
-            <e p="Manipulator.cs" t="Include" />
-            <e p="ManipulatorEXTRA.cs" t="Include" />
-          </e>
-          <e p="DirPhysic" t="Include">
-            <e p="Physics.cs" t="Include" />
-          </e>
-          <e p="GameModel.cs" t="Include" />
-          <e p="Level.cs" t="Include" />
-          <e p="Map.cs" t="Include" />
-        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="net5.0-windows" t="Include">
@@ -78,14 +61,46 @@
         </e>
       </e>
       <e p="Game002.sln" t="IncludeFlat" />
-      <e p="packages" t="ExcludeRecursive" />
-      <e p="TestProject" t="IncludeRecursive">
+      <e p="GameModel" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="ManipulatorTests.cs" t="Include" />
+        <e p="GameModel.csproj" t="IncludeRecursive" />
+        <e p="GameMods.cs" t="Include" />
+        <e p="Levels" t="Include">
+          <e p="TestLevel.cs" t="Include" />
+        </e>
+        <e p="Model" t="Include">
+          <e p="DirHero" t="Include">
+            <e p="Hero.cs" t="Include" />
+            <e p="Manipulator.cs" t="Include" />
+            <e p="ManipulatorEXTRA.cs" t="Include" />
+          </e>
+          <e p="DirPhysic" t="Include">
+            <e p="Physics.cs" t="Include" />
+          </e>
+          <e p="GameModel.cs" t="Include" />
+          <e p="Level.cs" t="Include" />
+          <e p="Map.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="GameModel.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="TestGameModelProject" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
         <e p="MapMethodsTests.cs" t="Include" />
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="PhysicsTests.cs" t="Include" />
-        <e p="TestProject.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="TestGameModelProject.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="TestGameModelProject.csproj" t="IncludeRecursive" />
       </e>
     </e>
   </component>

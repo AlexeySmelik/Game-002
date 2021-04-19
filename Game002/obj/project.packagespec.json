@@ -14,7 +14,11 @@
     },
     "frameworks": {
       "netcoreapp5.0": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Users\\Alexey\\RiderProjects\\Game002\\GameModel\\GameModel.csproj": {
+            "projectPath": "C:\\Users\\Alexey\\RiderProjects\\Game002\\GameModel\\GameModel.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
