@@ -28,51 +28,32 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d0beb4-0563-47d4-90a7-88bab69fa0eb" name="Default Changelist" comment="//">
-      <change afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/IPVP.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/Creeper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/CreeperAI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" afterDir="false" />
+    <list default="true" id="02d0beb4-0563-47d4-90a7-88bab69fa0eb" name="Default Changelist" comment="+physics">
+      <change afterPath="$PROJECT_DIR$/Game002/Sprites/CreeperWings 128x128.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game002/Controllers/Drawers/HeroDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/Controllers/Drawers/HeroDrawer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/Controllers/Drawers/MapDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/Controllers/Drawers/MapDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game002/Controllers/MainController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/Controllers/MainController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game002/Controllers/Observers/HeroObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/Controllers/Observers/HeroObserver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game002/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/MainForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/GameModel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/GameModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/GameModel.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/ref/Game002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/ref/Game002.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/Game002.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/Game002.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/Game002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/Game002.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/Game002.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/Game002.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/ref/Game002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/ref/Game002.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Levels/TestLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Levels/TestLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/DirEntity/IEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/IEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/DirEntity/Mob.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/DirHero/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Hero/Hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/DirHero/Manipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/Manipulator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/DirHero/ManipulatorEXTRA.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/ManipulatorEXTRA.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Model/DirPhysic/Physics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirPhysic/Physics.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Model/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/Creeper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/Creeper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/CreeperAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/CreeperAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/ref/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/ref/GameModel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/ref/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/ref/GameModel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestGameModelProject/MapMethodsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestGameModelProject/MapMethodsTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestGameModelProject/bin/Debug/net5.0/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestGameModelProject/bin/Debug/net5.0/GameModel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestGameModelProject/bin/Debug/net5.0/GameModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestGameModelProject/bin/Debug/net5.0/GameModel.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestGameModelProject/bin/Debug/net5.0/TestGameModelProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestGameModelProject/bin/Debug/net5.0/TestGameModelProject.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestGameModelProject/bin/Debug/net5.0/TestGameModelProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestGameModelProject/bin/Debug/net5.0/TestGameModelProject.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestGameModelProject/bin/Debug/net5.0/ref/TestGameModelProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestGameModelProject/bin/Debug/net5.0/ref/TestGameModelProject.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestGameModelProject/obj/Debug/net5.0/TestGameModelProject.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestGameModelProject/obj/Debug/net5.0/TestGameModelProject.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestGameModelProject/obj/Debug/net5.0/TestGameModelProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestGameModelProject/obj/Debug/net5.0/TestGameModelProject.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestGameModelProject/obj/Debug/net5.0/TestGameModelProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestGameModelProject/obj/Debug/net5.0/TestGameModelProject.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestGameModelProject/obj/Debug/net5.0/ref/TestGameModelProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestGameModelProject/obj/Debug/net5.0/ref/TestGameModelProject.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TrueGame002/Model/DirHero/Hero.cs" />
         <option value="$PROJECT_DIR$/TrueGame002/Model/DirPhysic/Physics.cs" />
         <option value="$PROJECT_DIR$/TrueGame002/Model/DirHero/ManipulatorEXTRA.cs" />
         <option value="$PROJECT_DIR$/Game002/DirTests/ManipulatorTests.cs" />
@@ -134,19 +114,20 @@
         <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/CreeperAI.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/MobsController.cs" />
         <option value="$PROJECT_DIR$/Game002/Program.cs" />
-        <option value="$PROJECT_DIR$/Game002/Controllers/Drawers/MapDrawer.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/GameModel.cs" />
         <option value="$PROJECT_DIR$/Game002/Controllers/MainController.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/Manipulator.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/DirPhysic/Physics.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Hero/Hero.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Levels/TestLevel.cs" />
         <option value="$PROJECT_DIR$/Game002/MainForm.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/Level.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Map.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/AI.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/Creeper.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Mobs/CreeperAI.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Level.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/DirPhysic/Physics.cs" />
+        <option value="$PROJECT_DIR$/Game002/Controllers/Drawers/MapDrawer.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Levels/TestLevel.cs" />
       </list>
     </option>
   </component>
@@ -327,7 +308,7 @@
       <workItem from="1619003801400" duration="3833000" />
       <workItem from="1619013638052" duration="3703000" />
       <workItem from="1619264212865" duration="8396000" />
-      <workItem from="1619273166328" duration="2817000" />
+      <workItem from="1619273166328" duration="3901000" />
     </task>
     <task id="LOCAL-00001" summary="some refactoring">
       <created>1618407918527</created>
@@ -427,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618855577213</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="+physics">
+      <created>1619276309038</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1619276309038</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,31 +445,31 @@
     <MESSAGE value="space jam" />
     <MESSAGE value="-some bugs" />
     <MESSAGE value="0" />
-    <MESSAGE value="+physics" />
     <MESSAGE value="//" />
-    <option name="LAST_COMMIT_MESSAGE" value="//" />
+    <MESSAGE value="+physics" />
+    <option name="LAST_COMMIT_MESSAGE" value="+physics" />
   </component>
   <component name="WindowStateProjectService">
     <state width="488" height="464" key="DebuggerActiveHint" timestamp="1619273724364">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="488" height="464" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1619273724364" />
-    <state width="1323" height="159" key="GridCell.Tab.0.bottom" timestamp="1619275429452">
+    <state width="1323" height="159" key="GridCell.Tab.0.bottom" timestamp="1619277035519">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619275429452" />
-    <state width="1323" height="159" key="GridCell.Tab.0.center" timestamp="1619275429452">
+    <state width="1323" height="159" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619277035519" />
+    <state width="1323" height="159" key="GridCell.Tab.0.center" timestamp="1619277035519">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619275429452" />
-    <state width="1323" height="159" key="GridCell.Tab.0.left" timestamp="1619275429452">
+    <state width="1323" height="159" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619277035519" />
+    <state width="1323" height="159" key="GridCell.Tab.0.left" timestamp="1619277035518">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619275429452" />
-    <state width="1323" height="159" key="GridCell.Tab.0.right" timestamp="1619275429452">
+    <state width="1323" height="159" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619277035518" />
+    <state width="1323" height="159" key="GridCell.Tab.0.right" timestamp="1619277035519">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619275429452" />
+    <state width="1323" height="159" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619277035519" />
     <state width="1323" height="124" key="GridCell.Tab.1.bottom" timestamp="1619274771024">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -619,29 +607,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/GameModel/Model/DirPhysic/Physics.cs</url>
-          <line>56</line>
+          <line>55</line>
           <properties documentPath="C:\Users\Alexey\RiderProjects\Game002\GameModel\Model\DirPhysic\Physics.cs" initialLine="54">
             <startOffsets>
-              <option value="2117" />
+              <option value="2065" />
             </startOffsets>
             <endOffsets>
-              <option value="2129" />
+              <option value="2077" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/GameModel/Model/DirPhysic/Physics.cs</url>
-          <line>25</line>
-          <properties documentPath="C:\Users\Alexey\RiderProjects\Game002\GameModel\Model\DirPhysic\Physics.cs" initialLine="25">
-            <startOffsets>
-              <option value="661" />
-            </startOffsets>
-            <endOffsets>
-              <option value="700" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

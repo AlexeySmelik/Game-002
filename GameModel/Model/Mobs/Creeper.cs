@@ -14,14 +14,12 @@ namespace GameModel.Model.DirEntity
         public int Health { get; set; }
         public int Attack { get; set; }
         
-        public CreeperAI AI;
-        
         public Creeper(Size size, Point location)
         {
             Size = size;
             Location = location;
             Health = 10;
-            Attack = 2;
+            Attack = 10;
             Manipulator = new Manipulator(this);
         }
         

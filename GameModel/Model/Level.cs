@@ -26,6 +26,7 @@ namespace GameModel.Model
         {
             TryNextMap();
             UpdateLevelPhysics();
+            MobsController.MakeMove(GetCurrentMap(), CurrentHero);
         }
         
         private void UpdateLevelPhysics()

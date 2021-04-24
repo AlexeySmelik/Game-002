@@ -23,7 +23,6 @@ namespace GameModel.Model.DirPhysic
 
         private static void TryMove(IEntity entity, double dt) //TODO Tests
         {
-            Console.WriteLine(entity.DownVelocity);
             if (CheckOnJump(entity))
             {
                 entity.UpVelocity = Math.Max(0, entity.UpVelocity - dt / 100 * G);

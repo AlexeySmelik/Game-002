@@ -11,7 +11,12 @@ namespace Game002.Levels
         public static Level GetTestLevel0()
         {
             var naruto = new Hero(new Size(64, 64), new Point(0, 100));
-            var mobTestList = new List<IEntity>();
+            var mobTestList = new List<IEntity>
+            {
+                new Creeper(new Size(64, 64), new Point(100, 100)),
+                new Creeper(new Size(64, 64), new Point(0, 0)),
+                new Creeper(new Size(64, 64), new Point(400, 200))
+            };
             var testMap1 = new Map(15, 20, mobTestList)
             {
                 BlockMap = new [,] {

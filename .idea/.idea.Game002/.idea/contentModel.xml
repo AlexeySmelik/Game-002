@@ -47,6 +47,7 @@
           <e p="Backgrounds" t="Include">
             <e p="BackgroundCity.png" t="Include" />
           </e>
+          <e p="CreeperWings 128x128.png" t="Include" />
           <e p="MainCharacter" t="Include">
             <e p="Naruto128x128.png" t="Include" />
             <e p="Naruto64x64.png" t="Include" />
