@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using System.Drawing;
 using GameModel.Model;
+using GameModel.Model.DirEntity;
 using NUnit.Framework;
 
 namespace TestGameModelProject
@@ -10,7 +12,7 @@ namespace TestGameModelProject
         [SetUp]
         public void Setup()
         {
-            _testMap = new Map(3, 3, 3)
+            _testMap = new Map(3, 3, new List<IEntity>(), 3)
             {
                 BlockMap = new [,]
                 {

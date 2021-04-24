@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Drawing;
 using GameModel.Model;
+using GameModel.Model.DirEntity;
 
 namespace Game002.Controllers.Drawers
 {
     public static class MapDrawer
     {
         private static readonly string Path = System.IO.Path.GetFullPath(@"..\..\..\Sprites\StandartBlocks\");
-        private static readonly Dictionary<int, Action<Map, Graphics, int, int>> DrawingObjects =
+        private static readonly Dictionary<int, Action<Map, Graphics, int, int>> DrawingBlocks =
             new Dictionary<int, Action<Map, Graphics, int, int>>
             {
                 {-2, (map, g, x, y) => 
@@ -45,17 +46,17 @@ namespace Game002.Controllers.Drawers
 
         public static void DrawMap(Graphics g, Map map)
         {
-            DrawingObjects[-1](map, g, 0, 0);
+            DrawingBlocks[-1](map, g, 0, 0);
             for(var i = 0; i < map.BlockMap.GetLength(0); i++)
                 for (var j = 0; j < map.BlockMap.GetLength(1); j++)
-                    DrawingObjects[map.BlockMap[i, j]](map, g, i * map.CellSize, j * map.CellSize);
+                    DrawingBlocks[map.BlockMap[i, j]](map, g, i * map.CellSize, j * map.CellSize);
         }
         
         public static void DrawSheetMap(Graphics g, Map map)
         {
             for(var i = 0; i < map.BlockMap.GetLength(0); i++)
             for (var j = 0; j < map.BlockMap.GetLength(1); j++)
-                DrawingObjects[-2](map, g, i * map.CellSize, j * map.CellSize);
+                DrawingBlocks[-2](map, g, i * map.CellSize, j * map.CellSize);
         }
     }
 }

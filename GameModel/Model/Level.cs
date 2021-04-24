@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
 using GameModel.Model.DirHero;
 using GameModel.Model.DirPhysic;
 
@@ -6,31 +8,42 @@ namespace GameModel.Model
 {
     public class Level
     {
-        public Hero CurrentHero;
-        public int TimerInterval;
-
-        private List<Map> CurrentMaps;
-        private int IndexMap;
-        private Physics Physics;
+        public readonly Hero CurrentHero;
+        public readonly int TimerInterval;
         
-        public Level(Hero hero, List<Map> maps)
+        private readonly List<Map> maps;
+        
+        private int indexMap;
+        
+        public Level(Hero hero, List<Map> maps, int t)
         {
             CurrentHero = hero;
-            CurrentMaps = maps;
-            Physics = new Physics(hero, GetCurrentMap());
+            this.maps = maps;
+            TimerInterval = t;
         }
-        
+
         public void OnTimerTickEvents()
         {
-            Physics.TryMoveForAllEntity(TimerInterval);
+            TryNextMap();
+            UpdateLevelPhysics();
         }
-
-        public Map GetCurrentMap() => CurrentMaps[IndexMap];
-
-        public bool NextMap()
+        
+        private void UpdateLevelPhysics()
         {
-            IndexMap++;
-            return IndexMap < CurrentMaps.Count;
+            Physics.UpdateMap(GetCurrentMap());
+            var entityList = GetCurrentMap().MobList.Where(it => it.IsActive()).ToList();
+            entityList.Add(CurrentHero);
+            Physics.TryMoveForEntity(entityList, TimerInterval);
         }
+
+        private bool TryNextMap()
+        {
+            if (GetCurrentMap().MobList.Any(it => it.IsActive()) || indexMap + 1 >= maps.Count) 
+                return false;
+            indexMap++;
+            return true;
+        }
+        
+        public Map GetCurrentMap() => maps[indexMap];
     }
 }

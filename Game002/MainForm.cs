@@ -10,8 +10,8 @@ namespace Game002
             DoubleBuffered = true;
             InitializeComponent();
             MainController.Model = model;
-            
-            var timer = new Timer{Interval = 5};
+
+            var timer = new Timer{Interval = model.CurrentLevel.TimerInterval};
             timer.Tick += (sender, args) => Invalidate();
             timer.Tick += MainController.TimerTickEvents;
             timer.Start();

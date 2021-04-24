@@ -1,5 +1,7 @@
-﻿using System.Drawing;
+﻿using System.Collections.Generic;
+using System.Drawing;
 using GameModel.Model.DirEntity;
+using GameModel.Model.DirHero;
 
 namespace GameModel.Model
 {
@@ -7,23 +9,23 @@ namespace GameModel.Model
     {
         public readonly int Height;
         public readonly int Width;
-
-        public Mob[] MobsArray;
+        public readonly List<IEntity> MobList;
+        
         public int[,] BlockMap;
         public readonly int CellSize;
 
-        public Map(int numStrings, int numColumns, int cellSize = 40)
+        public Map(int numStrings, int numColumns, List<IEntity> mobs, int cellSize = 40)
         {
             CellSize = cellSize;
             Height = numStrings * CellSize;
             Width = numColumns * CellSize;
-            MobsArray = System.Array.Empty<Mob>();
+            MobList = mobs;
             BlockMap = new int[numColumns / CellSize, numStrings / CellSize];
         }
 
         public bool IsBound(Point p) => p.X >= 0 && p.X < Width && p.Y >= 0 && p.Y < Height;
 
         public bool IsBlock(Point p) => IsBound(new Point(p.X, p.Y)) && 
-                                        BlockMap[p.X / CellSize, p.Y / CellSize] != 0;  
+                                        BlockMap[p.X / CellSize, p.Y / CellSize] != 0;
     }
 }

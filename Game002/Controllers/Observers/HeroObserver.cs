@@ -10,10 +10,10 @@ namespace Game002.Controllers.Observers
             switch (args.KeyCode)
             {
                 case Keys.A:
-                    hero.Manipulator.LeftMove();
+                    hero.Manipulator.SetHorizontalVelocity(-1);
                     break;
                 case Keys.D:
-                    hero.Manipulator.RightMove();
+                    hero.Manipulator.SetHorizontalVelocity(1);
                     break;
             }
         }
@@ -23,7 +23,7 @@ namespace Game002.Controllers.Observers
             switch (args.KeyChar)
             {
                 case (char)Keys.Space:
-                    hero.Manipulator.SpaceMove();
+                    hero.Manipulator.SetUpVelocity(39);
                     break;
             }
         }

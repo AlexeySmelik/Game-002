@@ -72,10 +72,7 @@
         <e p="Model" t="Include">
           <e p="DirEntity" t="Include">
             <e p="IEntity.cs" t="Include" />
-            <e p="Mob.cs" t="Include" />
-          </e>
-          <e p="DirHero" t="Include">
-            <e p="Hero.cs" t="Include" />
+            <e p="IPVP.cs" t="Include" />
             <e p="Manipulator.cs" t="Include" />
             <e p="ManipulatorEXTRA.cs" t="Include" />
           </e>
@@ -83,8 +80,16 @@
             <e p="Physics.cs" t="Include" />
           </e>
           <e p="GameModel.cs" t="Include" />
+          <e p="Hero" t="Include">
+            <e p="Hero.cs" t="Include" />
+          </e>
           <e p="Level.cs" t="Include" />
           <e p="Map.cs" t="Include" />
+          <e p="Mobs" t="Include">
+            <e p="Creeper.cs" t="Include" />
+            <e p="CreeperAI.cs" t="Include" />
+            <e p="MobsController.cs" t="Include" />
+          </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

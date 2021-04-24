@@ -32,10 +32,7 @@ namespace Game002.Controllers
         public static void TimerTickEvents(object sender, EventArgs args)
         {
             if (Model.CurrentMode == GameMods.PlayMode)
-            {
-                Model.CurrentLevel.TimerInterval = 5;
                 Model.CurrentLevel.OnTimerTickEvents();
-            }
         }
     }
 }

@@ -11,7 +11,7 @@ namespace GameModel.Model.DirEntity
         public double DownVelocity { get; set; }
         public double UpVelocity { get; set; }
         public double HorizontalVelocity { get; set; }
-        
         public void Move(Point dp);
+        public bool IsActive();
     }
 }
