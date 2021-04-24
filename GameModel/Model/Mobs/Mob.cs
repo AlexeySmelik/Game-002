@@ -1,25 +1,29 @@
 ﻿using System.Drawing;
-using Manipulator = GameModel.Model.DirHero.Manipulator;
+using GameModel.Model.DirEntity;
+using GameModel.Model.DirHero;
 
-namespace GameModel.Model.DirEntity
+namespace GameModel.Model.Mobs
 {
-    public class Creeper : IEntity, IPVP
+    public class Mob : IEntity, IPVP
     {
+        public string Name { get; set; }
         public Size Size { get; }
         public Manipulator Manipulator { get; }
         public Point Location { get; private set; }
         public double DownVelocity { get; set; }
         public double UpVelocity { get; set; }
         public double HorizontalVelocity { get; set; }
-        public int Health { get; set; }
+        public int Health { get; private set; }
         public int Attack { get; set; }
-        
-        public Creeper(Size size, Point location)
+        public int Cooldown { get; set; }
+
+        public Mob(string name, Size size, Point location, int health, int attack)
         {
+            Name = name;
             Size = size;
             Location = location;
-            Health = 10;
-            Attack = 10;
+            Health = health;
+            Attack = attack;
             Manipulator = new Manipulator(this);
         }
         
@@ -27,7 +31,7 @@ namespace GameModel.Model.DirEntity
         {
             Location = new Point(Location.X + dPoint.X, Location.Y + dPoint.Y);
         }
-        
+
         public bool IsActive() => Health > 0;
         
         public void GetDamage(int damage)

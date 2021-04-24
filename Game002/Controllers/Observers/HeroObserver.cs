@@ -25,6 +25,9 @@ namespace Game002.Controllers.Observers
                 case (char)Keys.Space:
                     hero.Manipulator.SetUpVelocity(39);
                     break;
+                case (char)Keys.F:
+                    hero.TryAttack();
+                    break;
             }
         }
     }

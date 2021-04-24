@@ -16,7 +16,7 @@ namespace Game002.Controllers.Drawers
                 new Rectangle(hero.Location, hero.Size));
             g.FillRectangle(
                 new SolidBrush(Color.Red), 
-                new Rectangle(new Point(10, 10), new Size(hero.GetHealth() * 3, 20)));
+                new Rectangle(new Point(10, 10), new Size(hero.Health * 3, 20)));
         }
     }
 }

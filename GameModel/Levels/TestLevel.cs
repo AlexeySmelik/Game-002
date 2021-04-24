@@ -3,6 +3,7 @@ using System.Drawing;
 using GameModel.Model;
 using GameModel.Model.DirEntity;
 using GameModel.Model.DirHero;
+using GameModel.Model.Mobs;
 
 namespace Game002.Levels
 {
@@ -10,14 +11,15 @@ namespace Game002.Levels
     {
         public static Level GetTestLevel0()
         {
-            var naruto = new Hero(new Size(64, 64), new Point(0, 100));
-            var mobTestList = new List<IEntity>
+            var naruto = 
+                new Hero("Naruto", new Size(64, 64), new Point(0, 100), 100, 10);
+            var mobTest1List = new List<IEntity>
             {
-                new Creeper(new Size(64, 64), new Point(100, 100)),
-                new Creeper(new Size(64, 64), new Point(0, 0)),
-                new Creeper(new Size(64, 64), new Point(400, 200))
+                new Mob("Creeper", new Size(128, 128), new Point(100, 100), 10, 10),
+                new Mob("Creeper", new Size(96, 96), new Point(0, 50), 10, 10),
+                new Mob("Creeper", new Size(64, 64), new Point(400, 150), 10, 10),
             };
-            var testMap1 = new Map(15, 20, mobTestList)
+            var testMap1 = new Map(15, 20, mobTest1List)
             {
                 BlockMap = new [,] {
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
@@ -42,16 +44,16 @@ namespace Game002.Levels
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2}
                 }
             };
-            var testMap2 = new Map(15, 20, mobTestList)
+            var testMap2 = new Map(15, 20, new List<IEntity>())
             {
                 BlockMap = new [,] {
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
                     {0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 2, 2},
                     {0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 1, 2, 2},
-                    {0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 0, 0, 1, 2, 2},
-                    {0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 1, 2, 2},
-                    {0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 2, 2},
-                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 2, 0, 0, 0, 0, 1, 2, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},

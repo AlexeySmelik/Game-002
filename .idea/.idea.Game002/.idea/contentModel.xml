@@ -87,8 +87,8 @@
           <e p="Level.cs" t="Include" />
           <e p="Map.cs" t="Include" />
           <e p="Mobs" t="Include">
-            <e p="Creeper.cs" t="Include" />
             <e p="CreeperAI.cs" t="Include" />
+            <e p="Mob.cs" t="Include" />
             <e p="MobsController.cs" t="Include" />
           </e>
         </e>

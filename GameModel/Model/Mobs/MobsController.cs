@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using GameModel.Model.DirEntity;
 using GameModel.Model.DirHero;
+using GameModel.Model.Mobs;
 
 namespace GameModel.Model
 {
@@ -12,8 +13,8 @@ namespace GameModel.Model
                 .Where(it => it.IsActive())
                 .ForEach(it =>
             {
-                if (it is Creeper creeper)
-                    CreeperAI.SetVelocity(hero, creeper, map);
+                if (it.Name == "Creeper")
+                    CreeperAI.SetVelocity(hero, it as Mob, map);
             });
         }
     }

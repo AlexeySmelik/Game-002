@@ -29,10 +29,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02d0beb4-0563-47d4-90a7-88bab69fa0eb" name="Default Changelist" comment="+physics">
-      <change afterPath="$PROJECT_DIR$/Game002/Sprites/CreeperWings 128x128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/Mob.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game002/Controllers/Drawers/HeroDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/Controllers/Drawers/HeroDrawer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/Controllers/Drawers/MapDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/Controllers/Drawers/MapDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game002/Controllers/Observers/HeroObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/Controllers/Observers/HeroObserver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/GameModel.dll" afterDir="false" />
@@ -43,14 +45,17 @@
       <change beforePath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/Game002.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/Game002.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/ref/Game002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/ref/Game002.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Levels/TestLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Levels/TestLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/DirPhysic/Physics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirPhysic/Physics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/Creeper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/Creeper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/DirEntity/IEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/IEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/DirEntity/IPVP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/IPVP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/DirEntity/Manipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/Manipulator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/Hero/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Hero/Hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/Creeper.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/CreeperAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/CreeperAI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/ref/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/ref/GameModel.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/ref/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/ref/GameModel.dll" afterDir="false" />
@@ -77,9 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TrueGame002/Model/DirPhysic/Physics.cs" />
-        <option value="$PROJECT_DIR$/TrueGame002/Model/DirHero/ManipulatorEXTRA.cs" />
-        <option value="$PROJECT_DIR$/Game002/DirTests/ManipulatorTests.cs" />
         <option value="$PROJECT_DIR$/Game002/DirTests/PhysicsTests.cs" />
         <option value="$PROJECT_DIR$/Game002/Model/DirHero/Manipulator.cs" />
         <option value="$PROJECT_DIR$/Game002/DirTests/MapMethodsTests.cs" />
@@ -102,32 +104,35 @@
         <option value="$PROJECT_DIR$/GameModel/LinqExtensions.cs" />
         <option value="$PROJECT_DIR$/Game002/Controllers/Drawers/LevelDrawer.cs" />
         <option value="$PROJECT_DIR$/TestGameModelProject/MapMethodsTests.cs" />
-        <option value="$PROJECT_DIR$/Game002/Controllers/Observers/HeroObserver.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirHero/Hero.cs" />
-        <option value="$PROJECT_DIR$/Game002/Controllers/Drawers/HeroDrawer.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/IEntity.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/Hero.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/MobManipulator.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/MobController.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/IPVP.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/Creeper.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/CreeperAI.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/MobsController.cs" />
         <option value="$PROJECT_DIR$/Game002/Program.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/GameModel.cs" />
         <option value="$PROJECT_DIR$/Game002/Controllers/MainController.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/Manipulator.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/Hero/Hero.cs" />
         <option value="$PROJECT_DIR$/Game002/MainForm.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Map.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/AI.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Mobs/Creeper.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/CreeperAI.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Level.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirPhysic/Physics.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/FiendAI.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/Fiend.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/IEntity.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" />
+        <option value="$PROJECT_DIR$/Game002/Controllers/Drawers/HeroDrawer.cs" />
         <option value="$PROJECT_DIR$/Game002/Controllers/Drawers/MapDrawer.cs" />
         <option value="$PROJECT_DIR$/GameModel/Levels/TestLevel.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/Manipulator.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/IPVP.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/Mob.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/CreeperAI.cs" />
+        <option value="$PROJECT_DIR$/Game002/Controllers/Observers/HeroObserver.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Hero/Hero.cs" />
       </list>
     </option>
   </component>
@@ -309,6 +314,7 @@
       <workItem from="1619013638052" duration="3703000" />
       <workItem from="1619264212865" duration="8396000" />
       <workItem from="1619273166328" duration="3901000" />
+      <workItem from="1619286769077" duration="5885000" />
     </task>
     <task id="LOCAL-00001" summary="some refactoring">
       <created>1618407918527</created>
@@ -454,22 +460,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="488" height="464" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1619273724364" />
-    <state width="1323" height="159" key="GridCell.Tab.0.bottom" timestamp="1619277035519">
+    <state width="1323" height="159" key="GridCell.Tab.0.bottom" timestamp="1619292399484">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619277035519" />
-    <state width="1323" height="159" key="GridCell.Tab.0.center" timestamp="1619277035519">
+    <state width="1323" height="159" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619292399484" />
+    <state width="1323" height="159" key="GridCell.Tab.0.center" timestamp="1619292399484">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619277035519" />
-    <state width="1323" height="159" key="GridCell.Tab.0.left" timestamp="1619277035518">
+    <state width="1323" height="159" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619292399484" />
+    <state width="1323" height="159" key="GridCell.Tab.0.left" timestamp="1619292399483">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619277035518" />
-    <state width="1323" height="159" key="GridCell.Tab.0.right" timestamp="1619277035519">
+    <state width="1323" height="159" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619292399483" />
+    <state width="1323" height="159" key="GridCell.Tab.0.right" timestamp="1619292399484">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619277035519" />
+    <state width="1323" height="159" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619292399484" />
     <state width="1323" height="124" key="GridCell.Tab.1.bottom" timestamp="1619274771024">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -538,10 +544,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Rider.ProjectTemplateDialog.Size/0.0.1366.728@0.0.1366.728" timestamp="1618850481144" />
-    <state x="511" y="49" key="RiderGenerateDialog" timestamp="1619265191468">
+    <state x="511" y="49" key="RiderGenerateDialog" timestamp="1619287134331">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="511" y="49" key="RiderGenerateDialog/0.0.1366.728@0.0.1366.728" timestamp="1619265191468" />
+    <state x="511" y="49" key="RiderGenerateDialog/0.0.1366.728@0.0.1366.728" timestamp="1619287134331" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1618646533333">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

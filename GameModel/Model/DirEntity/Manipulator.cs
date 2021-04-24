@@ -17,9 +17,9 @@ namespace GameModel.Model.DirHero
             entity.HorizontalVelocity = direction * step;
         }
 
-        public void SetUpVelocity(int step = RALS)
+        public void SetUpVelocity(int step = RALS, bool isJump = true)
         {
-            //if (entity.UpVelocity == 0)
+            if (isJump && entity.UpVelocity == 0 || !isJump)
                 entity.UpVelocity = step;
         }
     }

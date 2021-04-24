@@ -5,6 +5,7 @@ namespace GameModel.Model.DirEntity
 {
     public interface IEntity
     {
+        public string Name { get; set; }
         public Size Size { get; }
         public Manipulator Manipulator { get; }
         public Point Location { get; }
