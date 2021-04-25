@@ -6,19 +6,19 @@ namespace GameModel.Model.Mobs
 {
     public class SimpleFiendAI
     {
-        public static void SetVelocity(Hero hero, Mob sasuke, Map map) //TODO Tests
+        public static void SetVelocity(Hero hero, Mob fiend, Map map) //TODO Tests
         {
-            sasuke.Manipulator
-                .SetHorizontalVelocity(hero.Location.X > sasuke.Location.X ? 1 : -1);
+            fiend.Manipulator
+                .SetHorizontalVelocity(hero.Location.X > fiend.Location.X ? 1 : -1);
             
-            if (hero.Location.Y < sasuke.Location.Y)
-                sasuke.Manipulator.SetUpVelocity(29);
+            if (hero.Location.Y < fiend.Location.Y)
+                fiend.Manipulator.SetUpVelocity(29);
         }
 
-        public static void TryAttack(Hero hero, Mob sasuke)
+        public static void TryAttack(Hero hero, Mob fiend)
         {
-            sasuke.IsReadyToAttack = true;
-            sasuke.Manipulator.TryDamage(new [] {hero});
+            fiend.IsReadyToAttack = true;
+            fiend.Manipulator.TryDamage(new [] {hero});
         }
     }
 }

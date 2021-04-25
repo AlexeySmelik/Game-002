@@ -17,7 +17,7 @@ namespace Game002.Levels
                     new Size(64, 64),
                     new Point(0, 100),
                     100,
-                    10,
+                    50,
                     10);
             var mobTest1List = new List<Mob>
             {
@@ -76,7 +76,7 @@ namespace Game002.Levels
                     new Size(64, 64),
                     new Point(460, 200),
                     100,
-                    10,
+                    25,
                     @"..\..\..\Sprites\Mobs\SasukeStand 128x128.png")
             };
             var testMap2 = new Map(15, 20, mobTest2List)
@@ -110,10 +110,11 @@ namespace Game002.Levels
                 new Mob(
                     "Pudge",
                     new Size(256, 256),
-                    new Point(460, 200),
+                    new Point(460, 0),
                     100,
-                    10,
-                    @"..\..\..\Sprites\Mobs\PudgeTest.png")
+                    50,
+                    @"..\..\..\Sprites\Mobs\PudgeTest.png",
+                    20)
             };
             var testMap3 = new Map(15, 20, mobTest3List)
             {

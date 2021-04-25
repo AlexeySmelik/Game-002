@@ -28,9 +28,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d0beb4-0563-47d4-90a7-88bab69fa0eb" name="Default Changelist" comment="+pudge">
-      <change afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/SimpleFiendAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="02d0beb4-0563-47d4-90a7-88bab69fa0eb" name="Default Changelist" comment="+some ref">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.pdb" afterDir="false" />
@@ -40,14 +38,12 @@
       <change beforePath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/Game002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/Game002.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/Game002.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/obj/Debug/net5.0-windows/Game002.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Levels/TestLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Levels/TestLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/DirEntity/ManipulatorEXTRA.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/ManipulatorEXTRA.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/Mob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/Mob.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/SasukeAI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/PudgeAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/PudgeAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/SimpleFiendAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/SimpleFiendAI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/ref/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/ref/GameModel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/ref/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/ref/GameModel.dll" afterDir="false" />
@@ -118,15 +114,15 @@
         <option value="$PROJECT_DIR$/GameModel/Model/Level.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Hero/Hero.cs" />
         <option value="$PROJECT_DIR$/Game002/Controllers/Observers/HeroObserver.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/PudgeAI.cs" />
         <option value="$PROJECT_DIR$/Game002/Controllers/Drawers/MapDrawer.cs" />
         <option value="$PROJECT_DIR$/Game002/Controllers/Drawers/HeroDrawer.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Mobs/SasukeAI.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Mobs/Mob.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/ManipulatorEXTRA.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Levels/TestLevel.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Mobs/SimpleFiendAI.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Levels/TestLevel.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/PudgeAI.cs" />
       </list>
     </option>
   </component>
@@ -309,7 +305,7 @@
       <workItem from="1619264212865" duration="8396000" />
       <workItem from="1619273166328" duration="3901000" />
       <workItem from="1619286769077" duration="5954000" />
-      <workItem from="1619326989731" duration="13581000" />
+      <workItem from="1619326989731" duration="14927000" />
     </task>
     <task id="LOCAL-00001" summary="some refactoring">
       <created>1618407918527</created>
@@ -430,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619338580283</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="+some ref">
+      <created>1619341242522</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1619341242522</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,29 +467,30 @@
     <MESSAGE value="+physics" />
     <MESSAGE value="+exp" />
     <MESSAGE value="+pudge" />
-    <option name="LAST_COMMIT_MESSAGE" value="+pudge" />
+    <MESSAGE value="+some ref" />
+    <option name="LAST_COMMIT_MESSAGE" value="+some ref" />
   </component>
   <component name="WindowStateProjectService">
     <state width="488" height="464" key="DebuggerActiveHint" timestamp="1619340260649">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="488" height="464" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1619340260649" />
-    <state width="1323" height="159" key="GridCell.Tab.0.bottom" timestamp="1619340773495">
+    <state width="1323" height="159" key="GridCell.Tab.0.bottom" timestamp="1619342301651">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619340773495" />
-    <state width="1323" height="159" key="GridCell.Tab.0.center" timestamp="1619340773495">
+    <state width="1323" height="159" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619342301651" />
+    <state width="1323" height="159" key="GridCell.Tab.0.center" timestamp="1619342301651">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619340773495" />
-    <state width="1323" height="159" key="GridCell.Tab.0.left" timestamp="1619340773494">
+    <state width="1323" height="159" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619342301651" />
+    <state width="1323" height="159" key="GridCell.Tab.0.left" timestamp="1619342301651">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619340773494" />
-    <state width="1323" height="159" key="GridCell.Tab.0.right" timestamp="1619340773495">
+    <state width="1323" height="159" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619342301651" />
+    <state width="1323" height="159" key="GridCell.Tab.0.right" timestamp="1619342301651">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619340773495" />
+    <state width="1323" height="159" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619342301651" />
     <state width="1323" height="209" key="GridCell.Tab.1.bottom" timestamp="1619340460625">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -567,10 +571,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="VCS.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1619267096135" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1619338582829">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1619341244388">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1619338582829" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1619341244388" />
     <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1618430787167">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -631,10 +635,10 @@
           <line>20</line>
           <properties documentPath="C:\Users\Alexey\RiderProjects\Game002\GameModel\Model\Mobs\SimpleFiendAI.cs" initialLine="18">
             <startOffsets>
-              <option value="616" />
+              <option value="609" />
             </startOffsets>
             <endOffsets>
-              <option value="660" />
+              <option value="652" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="44" />

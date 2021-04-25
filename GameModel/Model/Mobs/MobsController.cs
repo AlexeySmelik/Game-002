@@ -24,6 +24,12 @@ namespace GameModel.Model
                     SimpleFiendAI.SetVelocity(hero, it, map);
                     SimpleFiendAI.TryAttack(hero, it);
                 }
+
+                if (it.Name == "Pudge")
+                {
+                    PudgeAI.SetVelocity(hero, it, map);
+                    PudgeAI.TryAttack(hero, it);
+                }
             });
         }
     }
