@@ -18,6 +18,12 @@ namespace GameModel.Model
                     CreeperAI.SetVelocity(hero, it, map);
                     CreeperAI.TryAttack(hero, it);
                 }
+
+                if (it.Name == "Sasuke")
+                {
+                    SimpleFiendAI.SetVelocity(hero, it, map);
+                    SimpleFiendAI.TryAttack(hero, it);
+                }
             });
         }
     }

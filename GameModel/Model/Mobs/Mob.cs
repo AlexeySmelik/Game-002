@@ -20,7 +20,14 @@ namespace GameModel.Model.Mobs
         public readonly string PathToImage;
         public bool IsReadyToAttack { get; set; }
 
-        public Mob(string name, Size size, Point location, int health, int attack, string path)
+        public Mob(
+            string name,
+            Size size,
+            Point location,
+            int health,
+            int attack,
+            string path,
+            int cd = 10)
         {
             Name = name;
             Size = size;
@@ -28,6 +35,7 @@ namespace GameModel.Model.Mobs
             Health = health;
             Attack = attack;
             Direction = Direction.Right;
+            Cooldown = cd;
             IsReadyToAttack = true;
             PathToImage = path;
             Manipulator = new Manipulator(this);

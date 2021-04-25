@@ -85,6 +85,7 @@ namespace GameModel.Model.DirHero
                 });
             else if (ticks > 0)
                 ticks = (1 + ticks) % ((IPVP)entity).Cooldown;
+            ((IPVP) entity).IsReadyToAttack = false;
         }
 
         private void DoDamage(IPVP e)

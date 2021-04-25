@@ -68,50 +68,45 @@ namespace Game002.Levels
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2}
                 }
             };
+            /////////////////////////////////////////////////////////
             var mobTest2List = new List<Mob>
             {
                 new Mob(
-                    "Pudge",
+                    "Sasuke",
                     new Size(64, 64),
-                    new Point(136, 200),
+                    new Point(460, 200),
+                    100,
                     10,
-                    10,
-                    @"..\..\..\Sprites\Mobs\PudgeTest.png"),
-                new Mob(
-                    "Pudge",
-                    new Size(64, 64),
-                    new Point(72, 200),
-                    10,
-                    10,
-                    @"..\..\..\Sprites\Mobs\PudgeTest.png"),
-                new Mob(
-                    "Pudge",
-                    new Size(64, 64),
-                    new Point(8, 200),
-                    10,
-                    10,
-                    @"..\..\..\Sprites\Mobs\PudgeTest.png"),
-                new Mob(
-                    "Pudge",
-                    new Size(64, 64),
-                    new Point(264, 200),
-                    10,
-                    10,
-                    @"..\..\..\Sprites\Mobs\PudgeTest.png"),
-                new Mob(
-                    "Pudge",
-                    new Size(64, 64),
-                    new Point(328, 200),
-                    10,
-                    10,
-                    @"..\..\..\Sprites\Mobs\PudgeTest.png"),
-                new Mob(
-                    "Pudge",
-                    new Size(64, 64),
-                    new Point(396, 200),
-                    10,
-                    10,
-                    @"..\..\..\Sprites\Mobs\PudgeTest.png"),
+                    @"..\..\..\Sprites\Mobs\SasukeStand 128x128.png")
+            };
+            var testMap2 = new Map(15, 20, mobTest2List)
+            {
+                BlockMap = new [,] {
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 1, 2, 2, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 1, 2, 2},
+                    {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2}
+                }
+            };
+            /////////////////////////////////////////////////
+            var mobTest3List = new List<Mob>
+            {
                 new Mob(
                     "Pudge",
                     new Size(256, 256),
@@ -120,7 +115,7 @@ namespace Game002.Levels
                     10,
                     @"..\..\..\Sprites\Mobs\PudgeTest.png")
             };
-            var testMap2 = new Map(15, 20, mobTest2List)
+            var testMap3 = new Map(15, 20, mobTest3List)
             {
                 BlockMap = new [,] {
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
@@ -145,7 +140,7 @@ namespace Game002.Levels
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2}
                 }
             };
-            return new Level(naruto, new List<Map> {testMap1, testMap2}, 5);
+            return new Level(naruto, new List<Map> {testMap1, testMap2, testMap3}, 5);
         }
     }
 }
