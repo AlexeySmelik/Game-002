@@ -15,6 +15,9 @@ namespace Game002.Controllers.Observers
                 case Keys.D:
                     hero.Manipulator.SetHorizontalVelocity(1);
                     break;
+                case Keys.F:
+                    hero.IsReadyToAttack = true;
+                    break;
             }
         }
 
@@ -24,9 +27,6 @@ namespace Game002.Controllers.Observers
             {
                 case (char)Keys.Space:
                     hero.Manipulator.SetUpVelocity(39);
-                    break;
-                case (char)Keys.F:
-                    hero.TryAttack();
                     break;
             }
         }

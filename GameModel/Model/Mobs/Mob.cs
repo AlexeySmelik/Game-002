@@ -6,7 +6,7 @@ namespace GameModel.Model.Mobs
 {
     public class Mob : IEntity, IPVP
     {
-        public string Name { get; set; }
+        public string Name { get; }
         public Size Size { get; }
         public Manipulator Manipulator { get; }
         public Point Location { get; private set; }
@@ -14,16 +14,22 @@ namespace GameModel.Model.Mobs
         public double UpVelocity { get; set; }
         public double HorizontalVelocity { get; set; }
         public int Health { get; private set; }
-        public int Attack { get; set; }
+        public int Attack { get; }
         public int Cooldown { get; set; }
+        public Direction Direction { get; set; }
+        public readonly string PathToImage;
+        public bool IsReadyToAttack { get; set; }
 
-        public Mob(string name, Size size, Point location, int health, int attack)
+        public Mob(string name, Size size, Point location, int health, int attack, string path)
         {
             Name = name;
             Size = size;
             Location = location;
             Health = health;
             Attack = attack;
+            Direction = Direction.Right;
+            IsReadyToAttack = true;
+            PathToImage = path;
             Manipulator = new Manipulator(this);
         }
         

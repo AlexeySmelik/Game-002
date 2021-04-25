@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using GameModel.Model.DirEntity;
 using GameModel.Model.DirHero;
 using GameModel.Model.DirPhysic;
 
@@ -24,15 +25,20 @@ namespace GameModel.Model
 
         public void OnTimerTickEvents()
         {
-            TryNextMap();
+            if (TryNextMap())
+                CurrentHero.SetLocation(new Point(100, 100));
             UpdateLevelPhysics();
-            MobsController.MakeMove(GetCurrentMap(), CurrentHero);
+            MobsController.MakeMoveAndAttack(GetCurrentMap(), CurrentHero);
+            CurrentHero.Manipulator.TryDamage(GetCurrentMap().GetActiveMobs());
         }
         
         private void UpdateLevelPhysics()
         {
             Physics.UpdateMap(GetCurrentMap());
-            var entityList = GetCurrentMap().MobList.Where(it => it.IsActive()).ToList();
+            var entityList = GetCurrentMap().MobList
+                .Where(it => it.IsActive())
+                .Select(it => it as IEntity)
+                .ToList();
             entityList.Add(CurrentHero);
             Physics.TryMoveForEntity(entityList, TimerInterval);
         }

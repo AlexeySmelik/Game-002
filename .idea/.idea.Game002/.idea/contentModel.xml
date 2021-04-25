@@ -47,10 +47,14 @@
           <e p="Backgrounds" t="Include">
             <e p="BackgroundCity.png" t="Include" />
           </e>
-          <e p="CreeperWings 128x128.png" t="Include" />
           <e p="MainCharacter" t="Include">
             <e p="Naruto128x128.png" t="Include" />
             <e p="Naruto64x64.png" t="Include" />
+          </e>
+          <e p="Mobs" t="Include">
+            <e p="CreeperWings 128x128.png" t="Include" />
+            <e p="pudgeTest.png" t="Include" />
+            <e p="SasukeStand 128x128.png" t="Include" />
           </e>
           <e p="StandartBlocks" t="Include">
             <e p="EarthDown.png" t="Include" />
@@ -66,12 +70,14 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="GameModel.csproj" t="IncludeRecursive" />
         <e p="GameMods.cs" t="Include" />
+        <e p="HelpMethods.cs" t="Include" />
         <e p="Levels" t="Include">
           <e p="TestLevel.cs" t="Include" />
         </e>
         <e p="LinqExtensions.cs" t="Include" />
         <e p="Model" t="Include">
           <e p="DirEntity" t="Include">
+            <e p="Direction.cs" t="Include" />
             <e p="IEntity.cs" t="Include" />
             <e p="IPVP.cs" t="Include" />
             <e p="Manipulator.cs" t="Include" />
@@ -90,6 +96,8 @@
             <e p="CreeperAI.cs" t="Include" />
             <e p="Mob.cs" t="Include" />
             <e p="MobsController.cs" t="Include" />
+            <e p="PudgeAI.cs" t="Include" />
+            <e p="SasukeAI.cs" t="Include" />
           </e>
         </e>
         <e p="obj" t="ExcludeRecursive">

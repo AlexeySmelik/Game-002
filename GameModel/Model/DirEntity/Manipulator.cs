@@ -15,6 +15,7 @@ namespace GameModel.Model.DirHero
             if (Math.Abs(direction) != 1)
                 throw new Exception("Direction should be 1 or -1");
             entity.HorizontalVelocity = direction * step;
+            entity.Direction = direction == 1 ? Direction.Right : Direction.Left;
         }
 
         public void SetUpVelocity(int step = RALS, bool isJump = true)

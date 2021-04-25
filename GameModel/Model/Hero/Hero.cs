@@ -5,7 +5,7 @@ namespace GameModel.Model.DirHero
 {
     public class Hero : IEntity, IPVP
     {
-        public string Name { get; set; }
+        public string Name { get; }
         public Size Size { get; }
         public Manipulator Manipulator { get; }
         public Point Location { get; private set; }
@@ -13,16 +13,27 @@ namespace GameModel.Model.DirHero
         public double UpVelocity { get; set; }
         public double HorizontalVelocity { get; set; }
         public int Health { get; private set; }
-        public int Attack { get; set; }
+        public int Attack { get; }
         public int Cooldown { get; set; }
+        public Direction Direction { get; set; }
+        public bool IsReadyToAttack { get; set; }
 
-        public Hero(string name, Size size, Point location, int health, int attack)
+        public Hero(
+            string name,
+            Size size,
+            Point location,
+            int health,
+            int attack,
+            int cd)
         {
             Name = name;
             Size = size;
             Location = location;
             Health = health;
             Attack = attack;
+            Cooldown = cd;
+            IsReadyToAttack = false;
+            Direction = Direction.Right;
             Manipulator = new Manipulator(this);
         }
         
@@ -38,8 +49,9 @@ namespace GameModel.Model.DirHero
             Health -= damage;
         }
 
-        public void TryAttack()
+        public void SetLocation(Point nLocation)
         {
+            Location = nLocation;
         }
     }
 }

@@ -51,10 +51,17 @@ namespace Game002.Controllers.Drawers
             for(var i = 0; i < map.BlockMap.GetLength(0); i++)
                 for (var j = 0; j < map.BlockMap.GetLength(1); j++)
                     DrawingBlocks[map.BlockMap[i, j]](map, g, i * map.CellSize, j * map.CellSize);
-            map.MobList.Where(it => it.IsActive()).ForEach(it =>
+            map.MobList
+                .Where(it => it.IsActive())
+                .ForEach(it =>
             {
-                g.DrawImage(new Bitmap(System.IO.Path.GetFullPath(@"..\..\..\Sprites\CreeperWings 128x128.png")),
+                g.DrawImage(new Bitmap(System.IO.Path.GetFullPath(it.PathToImage)),
                     new Rectangle(it.Location, it.Size));
+                g.FillRectangle(
+                    new SolidBrush(Color.Red),
+                    new Rectangle( 
+                        it.Location + new Size(0, -10),
+                        new Size(it.Size.Width * it.Health / 100, 10)));
             });
         }
         

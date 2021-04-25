@@ -15,11 +15,9 @@ namespace GameModel.Model.DirEntity
             
             if (hero.Location.Y < creeper.Location.Y)
                 creeper.Manipulator.SetUpVelocity(29, false);
-            
-            TryAttack(hero, creeper);
         }
 
-        private static void TryAttack(Hero hero, Mob creeper)
+        public static void TryAttack(Hero hero, Mob creeper)
         {
             if (IsExplosion(hero, creeper) && creeper.Cooldown == TimeToExplosion)
             {
@@ -32,14 +30,11 @@ namespace GameModel.Model.DirEntity
                 creeper.Cooldown = 0;
         }
         
-        private static bool IsExplosion(Hero hero, Mob creeper) //TODO Tests
+        private static bool IsExplosion(Hero hero, Mob creeper)
         {
             var r1 = new Rectangle(hero.Location, hero.Size);
             var r2 = new Rectangle(creeper.Location, creeper.Size);
-            return r1.Bottom >= r2.Top &&
-                   r1.Right >= r2.Left &&
-                   r2.Bottom >= r1.Top &&
-                   r2.Right >= r1.Left; // are intersected
+            return HelpMethods.AreIntersected(r1, r2);
         }
     }
 }

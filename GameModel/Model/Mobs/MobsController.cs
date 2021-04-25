@@ -7,14 +7,17 @@ namespace GameModel.Model
 {
     public static class MobsController
     { 
-        public static void MakeMove(Map map, Hero hero)
+        public static void MakeMoveAndAttack(Map map, Hero hero)
         {
             map.MobList
                 .Where(it => it.IsActive())
                 .ForEach(it =>
             {
                 if (it.Name == "Creeper")
-                    CreeperAI.SetVelocity(hero, it as Mob, map);
+                {
+                    CreeperAI.SetVelocity(hero, it, map);
+                    CreeperAI.TryAttack(hero, it);
+                }
             });
         }
     }

@@ -28,13 +28,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d0beb4-0563-47d4-90a7-88bab69fa0eb" name="Default Changelist" comment="+physics">
-      <change afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/Mob.cs" afterDir="false" />
+    <list default="true" id="02d0beb4-0563-47d4-90a7-88bab69fa0eb" name="Default Changelist" comment="+exp">
+      <change afterPath="$PROJECT_DIR$/Game002/Sprites/Mobs/SasukeStand 128x128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game002/Sprites/Mobs/pudgeTest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameModel/HelpMethods.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/Direction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/PudgeAI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/SasukeAI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game002/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game002/Controllers/Drawers/HeroDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/Controllers/Drawers/HeroDrawer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/Controllers/Drawers/MapDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/Controllers/Drawers/MapDrawer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/Controllers/Observers/HeroObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/Controllers/Observers/HeroObserver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game002/Sprites/CreeperWings 128x128.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/Sprites/Mobs/CreeperWings 128x128.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/Game002.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game002/bin/Debug/net5.0-windows/GameModel.dll" afterDir="false" />
@@ -48,9 +53,12 @@
       <change beforePath="$PROJECT_DIR$/GameModel/Model/DirEntity/IEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/IEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Model/DirEntity/IPVP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/IPVP.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Model/DirEntity/Manipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/Manipulator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/DirEntity/ManipulatorEXTRA.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/DirEntity/ManipulatorEXTRA.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Model/Hero/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Hero/Hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/Creeper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Map.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/CreeperAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/CreeperAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/Mob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/Mob.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/bin/Debug/net5.0/GameModel.pdb" afterDir="false" />
@@ -59,6 +67,7 @@
       <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/GameModel.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/ref/GameModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameModel/obj/Debug/net5.0/ref/GameModel.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestGameModelProject/MapMethodsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestGameModelProject/MapMethodsTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +81,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/37581B6A-F235-477E-A1EE-8192154B0F87/176/Timer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/85D998E2-943E-4011-9898-985B0BE823A5/8/Size.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/37581B6A-F235-477E-A1EE-8192154B0F87/113/NativeWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/85D998E2-943E-4011-9898-985B0BE823A5/4/Point.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/37581B6A-F235-477E-A1EE-8192154B0F87/224/Application.ComponentManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameModel/Model/Hero/Hero.cs" root0="FORCE_HIGHLIGHTING" />
@@ -82,11 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Game002/DirTests/PhysicsTests.cs" />
-        <option value="$PROJECT_DIR$/Game002/Model/DirHero/Manipulator.cs" />
-        <option value="$PROJECT_DIR$/Game002/DirTests/MapMethodsTests.cs" />
-        <option value="$PROJECT_DIR$/TestProject/ManipulatorTests.cs" />
-        <option value="$PROJECT_DIR$/../../../../Program Files/dotnet/sdk/5.0.103/Sdks/Microsoft.NET.Sdk/Sdk/Sdk.props" />
         <option value="$PROJECT_DIR$/TestProject/MapMethodsTests.cs" />
         <option value="$PROJECT_DIR$/Game002/Model/DirHero/ManipulatorEXTRA.cs" />
         <option value="$PROJECT_DIR$/Game002/Model/Level.cs" />
@@ -103,7 +108,6 @@
         <option value="$PROJECT_DIR$/GameModel/GameMods.cs" />
         <option value="$PROJECT_DIR$/GameModel/LinqExtensions.cs" />
         <option value="$PROJECT_DIR$/Game002/Controllers/Drawers/LevelDrawer.cs" />
-        <option value="$PROJECT_DIR$/TestGameModelProject/MapMethodsTests.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirHero/Hero.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/Hero.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/MobManipulator.cs" />
@@ -115,24 +119,30 @@
         <option value="$PROJECT_DIR$/GameModel/Model/GameModel.cs" />
         <option value="$PROJECT_DIR$/Game002/Controllers/MainController.cs" />
         <option value="$PROJECT_DIR$/Game002/MainForm.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/Map.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/AI.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Mobs/Creeper.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/Level.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/DirPhysic/Physics.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Mobs/FiendAI.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Mobs/Fiend.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/IEntity.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" />
         <option value="$PROJECT_DIR$/Game002/Controllers/Drawers/HeroDrawer.cs" />
+        <option value="$PROJECT_DIR$/TestGameModelProject/MapMethodsTests.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/Direction.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/Manipulator.cs" />
+        <option value="$PROJECT_DIR$/GameModel/HelpMethods.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/IEntity.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/CreeperAI.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/MobsController.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/IPVP.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Map.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Level.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Hero/Hero.cs" />
+        <option value="$PROJECT_DIR$/Game002/Controllers/Observers/HeroObserver.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/ManipulatorEXTRA.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/PudgeAI.cs" />
         <option value="$PROJECT_DIR$/Game002/Controllers/Drawers/MapDrawer.cs" />
         <option value="$PROJECT_DIR$/GameModel/Levels/TestLevel.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/Manipulator.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/DirEntity/IPVP.cs" />
+        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/SasukeAI.cs" />
         <option value="$PROJECT_DIR$/GameModel/Model/Mobs/Mob.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/Mobs/CreeperAI.cs" />
-        <option value="$PROJECT_DIR$/Game002/Controllers/Observers/HeroObserver.cs" />
-        <option value="$PROJECT_DIR$/GameModel/Model/Hero/Hero.cs" />
       </list>
     </option>
   </component>
@@ -314,7 +324,8 @@
       <workItem from="1619013638052" duration="3703000" />
       <workItem from="1619264212865" duration="8396000" />
       <workItem from="1619273166328" duration="3901000" />
-      <workItem from="1619286769077" duration="5885000" />
+      <workItem from="1619286769077" duration="5954000" />
+      <workItem from="1619326989731" duration="11184000" />
     </task>
     <task id="LOCAL-00001" summary="some refactoring">
       <created>1618407918527</created>
@@ -421,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619276309038</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="+exp">
+      <created>1619292692743</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1619292692743</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,93 +471,94 @@
     <MESSAGE value="0" />
     <MESSAGE value="//" />
     <MESSAGE value="+physics" />
-    <option name="LAST_COMMIT_MESSAGE" value="+physics" />
+    <MESSAGE value="+exp" />
+    <option name="LAST_COMMIT_MESSAGE" value="+exp" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="488" height="464" key="DebuggerActiveHint" timestamp="1619273724364">
+    <state width="488" height="464" key="DebuggerActiveHint" timestamp="1619335435429">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="488" height="464" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1619273724364" />
-    <state width="1323" height="159" key="GridCell.Tab.0.bottom" timestamp="1619292399484">
+    <state width="488" height="464" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1619335435429" />
+    <state width="1323" height="159" key="GridCell.Tab.0.bottom" timestamp="1619338508430">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619292399484" />
-    <state width="1323" height="159" key="GridCell.Tab.0.center" timestamp="1619292399484">
+    <state width="1323" height="159" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619338508430" />
+    <state width="1323" height="159" key="GridCell.Tab.0.center" timestamp="1619338508430">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619292399484" />
-    <state width="1323" height="159" key="GridCell.Tab.0.left" timestamp="1619292399483">
+    <state width="1323" height="159" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619338508430" />
+    <state width="1323" height="159" key="GridCell.Tab.0.left" timestamp="1619338508430">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619292399483" />
-    <state width="1323" height="159" key="GridCell.Tab.0.right" timestamp="1619292399484">
+    <state width="1323" height="159" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619338508430" />
+    <state width="1323" height="159" key="GridCell.Tab.0.right" timestamp="1619338508430">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="159" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619292399484" />
-    <state width="1323" height="124" key="GridCell.Tab.1.bottom" timestamp="1619274771024">
+    <state width="1323" height="159" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619338508430" />
+    <state width="1323" height="209" key="GridCell.Tab.1.bottom" timestamp="1619336109042">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619274771024" />
-    <state width="1323" height="124" key="GridCell.Tab.1.center" timestamp="1619274771024">
+    <state width="1323" height="209" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619336109042" />
+    <state width="1323" height="209" key="GridCell.Tab.1.center" timestamp="1619336109041">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1619274771024" />
-    <state width="1323" height="124" key="GridCell.Tab.1.left" timestamp="1619274771024">
+    <state width="1323" height="209" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1619336109041" />
+    <state width="1323" height="209" key="GridCell.Tab.1.left" timestamp="1619336109041">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1619274771024" />
-    <state width="1323" height="124" key="GridCell.Tab.1.right" timestamp="1619274771024">
+    <state width="1323" height="209" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1619336109041" />
+    <state width="1323" height="209" key="GridCell.Tab.1.right" timestamp="1619336109041">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1619274771024" />
-    <state width="1323" height="124" key="GridCell.Tab.2.bottom" timestamp="1619274771025">
+    <state width="1323" height="209" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1619336109041" />
+    <state width="1323" height="209" key="GridCell.Tab.2.bottom" timestamp="1619336109042">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619274771025" />
-    <state width="1323" height="124" key="GridCell.Tab.2.center" timestamp="1619274771025">
+    <state width="1323" height="209" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619336109042" />
+    <state width="1323" height="209" key="GridCell.Tab.2.center" timestamp="1619336109042">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1619274771025" />
-    <state width="1323" height="124" key="GridCell.Tab.2.left" timestamp="1619274771025">
+    <state width="1323" height="209" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1619336109042" />
+    <state width="1323" height="209" key="GridCell.Tab.2.left" timestamp="1619336109042">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1619274771025" />
-    <state width="1323" height="124" key="GridCell.Tab.2.right" timestamp="1619274771025">
+    <state width="1323" height="209" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1619336109042" />
+    <state width="1323" height="209" key="GridCell.Tab.2.right" timestamp="1619336109042">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1619274771025" />
-    <state width="1323" height="124" key="GridCell.Tab.3.bottom" timestamp="1619274771026">
+    <state width="1323" height="209" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1619336109042" />
+    <state width="1323" height="209" key="GridCell.Tab.3.bottom" timestamp="1619336109043">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619274771026" />
-    <state width="1323" height="124" key="GridCell.Tab.3.center" timestamp="1619274771026">
+    <state width="1323" height="209" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619336109043" />
+    <state width="1323" height="209" key="GridCell.Tab.3.center" timestamp="1619336109042">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1619274771026" />
-    <state width="1323" height="124" key="GridCell.Tab.3.left" timestamp="1619274771025">
+    <state width="1323" height="209" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1619336109042" />
+    <state width="1323" height="209" key="GridCell.Tab.3.left" timestamp="1619336109042">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1619274771025" />
-    <state width="1323" height="124" key="GridCell.Tab.3.right" timestamp="1619274771026">
+    <state width="1323" height="209" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1619336109042" />
+    <state width="1323" height="209" key="GridCell.Tab.3.right" timestamp="1619336109043">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1619274771026" />
-    <state width="1323" height="124" key="GridCell.Tab.4.bottom" timestamp="1619274771027">
+    <state width="1323" height="209" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1619336109043" />
+    <state width="1323" height="209" key="GridCell.Tab.4.bottom" timestamp="1619336109043">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.4.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619274771027" />
-    <state width="1323" height="124" key="GridCell.Tab.4.center" timestamp="1619274771027">
+    <state width="1323" height="209" key="GridCell.Tab.4.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619336109043" />
+    <state width="1323" height="209" key="GridCell.Tab.4.center" timestamp="1619336109043">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.4.center/0.0.1366.728@0.0.1366.728" timestamp="1619274771027" />
-    <state width="1323" height="124" key="GridCell.Tab.4.left" timestamp="1619274771027">
+    <state width="1323" height="209" key="GridCell.Tab.4.center/0.0.1366.728@0.0.1366.728" timestamp="1619336109043" />
+    <state width="1323" height="209" key="GridCell.Tab.4.left" timestamp="1619336109043">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.4.left/0.0.1366.728@0.0.1366.728" timestamp="1619274771027" />
-    <state width="1323" height="124" key="GridCell.Tab.4.right" timestamp="1619274771027">
+    <state width="1323" height="209" key="GridCell.Tab.4.left/0.0.1366.728@0.0.1366.728" timestamp="1619336109043" />
+    <state width="1323" height="209" key="GridCell.Tab.4.right" timestamp="1619336109043">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="124" key="GridCell.Tab.4.right/0.0.1366.728@0.0.1366.728" timestamp="1619274771027" />
+    <state width="1323" height="209" key="GridCell.Tab.4.right/0.0.1366.728@0.0.1366.728" timestamp="1619336109043" />
     <state x="275" y="96" key="Rider.ProjectTemplateDialog.Size" timestamp="1618850481144">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -556,10 +575,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="VCS.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1619267096135" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1618855583812">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1619292724730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618855583812" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1619292724730" />
     <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1618430787167">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -574,55 +593,55 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/TestGameModelProject/MapMethodsTests.cs</url>
-          <line>37</line>
+          <line>38</line>
           <properties documentPath="C:\Users\Alexey\RiderProjects\Game002\TestGameModelProject\MapMethodsTests.cs" initialLine="36">
             <startOffsets>
-              <option value="947" />
+              <option value="971" />
             </startOffsets>
             <endOffsets>
-              <option value="1004" />
+              <option value="1028" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/TestGameModelProject/MapMethodsTests.cs</url>
-          <line>43</line>
+          <line>44</line>
           <properties documentPath="C:\Users\Alexey\RiderProjects\Game002\TestGameModelProject\MapMethodsTests.cs" initialLine="41">
             <startOffsets>
-              <option value="1103" />
+              <option value="1127" />
             </startOffsets>
             <endOffsets>
-              <option value="1163" />
+              <option value="1187" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/TestGameModelProject/MapMethodsTests.cs</url>
-          <line>52</line>
+          <line>53</line>
           <properties documentPath="C:\Users\Alexey\RiderProjects\Game002\TestGameModelProject\MapMethodsTests.cs" initialLine="50">
             <startOffsets>
-              <option value="1547" />
+              <option value="1571" />
             </startOffsets>
             <endOffsets>
-              <option value="1614" />
+              <option value="1638" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/GameModel/Model/DirPhysic/Physics.cs</url>
-          <line>55</line>
-          <properties documentPath="C:\Users\Alexey\RiderProjects\Game002\GameModel\Model\DirPhysic\Physics.cs" initialLine="54">
+          <url>file://$PROJECT_DIR$/GameModel/Model/DirEntity/ManipulatorEXTRA.cs</url>
+          <line>71</line>
+          <properties documentPath="C:\Users\Alexey\RiderProjects\Game002\GameModel\Model\DirEntity\ManipulatorEXTRA.cs" initialLine="70">
             <startOffsets>
-              <option value="2065" />
+              <option value="2920" />
             </startOffsets>
             <endOffsets>
-              <option value="2077" />
+              <option value="2965" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="33" />
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
