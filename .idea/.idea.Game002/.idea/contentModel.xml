@@ -46,13 +46,16 @@
         <e p="Sprites" t="Include">
           <e p="Backgrounds" t="Include">
             <e p="BackgroundCity.png" t="Include" />
+            <e p="BackgroundCity2.png" t="Include" />
+            <e p="BackgroundCity3.png" t="Include" />
+            <e p="BackgroundCity4.png" t="Include" />
           </e>
           <e p="MainCharacter" t="Include">
-            <e p="Naruto128x128.png" t="Include" />
             <e p="Naruto64x64.png" t="Include" />
           </e>
           <e p="Mobs" t="Include">
             <e p="CreeperWings 128x128.png" t="Include" />
+            <e p="Naruto128x128.png" t="Include" />
             <e p="pudgeTest.png" t="Include" />
             <e p="SasukeStand 128x128.png" t="Include" />
           </e>
@@ -78,27 +81,23 @@
         <e p="Model" t="Include">
           <e p="DirEntity" t="Include">
             <e p="Direction.cs" t="Include" />
+            <e p="IDangerous.cs" t="Include" />
             <e p="IEntity.cs" t="Include" />
-            <e p="IPVP.cs" t="Include" />
             <e p="Manipulator.cs" t="Include" />
             <e p="ManipulatorEXTRA.cs" t="Include" />
           </e>
-          <e p="DirPhysic" t="Include">
-            <e p="Physics.cs" t="Include" />
-          </e>
           <e p="GameModel.cs" t="Include" />
-          <e p="Hero" t="Include">
-            <e p="Hero.cs" t="Include" />
-          </e>
           <e p="Level.cs" t="Include" />
           <e p="Map.cs" t="Include" />
           <e p="Mobs" t="Include">
             <e p="CreeperAI.cs" t="Include" />
+            <e p="Hero.cs" t="Include" />
             <e p="Mob.cs" t="Include" />
             <e p="MobsController.cs" t="Include" />
             <e p="PudgeAI.cs" t="Include" />
             <e p="SimpleFiendAI.cs" t="Include" />
           </e>
+          <e p="Physics.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -111,6 +110,7 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="TestGameModelProject" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="ManipulatorTests.cs" t="Include" />
         <e p="MapMethodsTests.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -119,6 +119,8 @@
             </e>
           </e>
         </e>
+        <e p="PhysicsTests.cs" t="Include" />
+        <e p="PudgeAITests.cs" t="Include" />
         <e p="TestGameModelProject.csproj" t="IncludeRecursive" />
       </e>
     </e>

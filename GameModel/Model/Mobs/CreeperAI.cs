@@ -33,7 +33,7 @@ namespace GameModel.Model.DirEntity
         private static bool IsExplosion(Hero hero, Mob creeper)
         {
             var r1 = new Rectangle(hero.Location, hero.Size);
-            var r2 = new Rectangle(creeper.Location, creeper.Size);
+            var r2 = new Rectangle(creeper.Location, creeper.Size + hero.Size);
             return HelpMethods.AreIntersected(r1, r2);
         }
     }

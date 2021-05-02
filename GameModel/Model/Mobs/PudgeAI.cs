@@ -3,7 +3,7 @@ using GameModel.Model.DirHero;
 
 namespace GameModel.Model.Mobs
 {
-    public class PudgeAI
+    public static class PudgeAI
     {
         public static void SetVelocity(Hero hero, Mob pudge, Map map) //TODO Tests
         {
@@ -18,9 +18,12 @@ namespace GameModel.Model.Mobs
             pudge.Manipulator.TryDamage(new [] {hero});
         }
         
+        private static int ticks;
+        
         private static void DoRot(Hero hero, Mob pudge)
         {
-            hero.GetDamage(pudge.Attack / 50);
+            hero.GetDamage(ticks++ % (pudge.Cooldown / 4) == 0 ? 1 : 0);
+            pudge.GetDamage(pudge.Health > 50 ? (ticks++ % (pudge.Cooldown / 4) == 0 ? 1 : 0) : 0);
         }
     }
 }

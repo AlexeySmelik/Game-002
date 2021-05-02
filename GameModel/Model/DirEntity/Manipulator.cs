@@ -5,7 +5,7 @@ namespace GameModel.Model.DirHero
 {
     public partial class Manipulator
     {
-        private const int RALS = 30; // Right and left step
+        private const int RALS = 29; // Right and left step
         private readonly IEntity entity;
         
         public Manipulator(IEntity entity) => this.entity = entity;

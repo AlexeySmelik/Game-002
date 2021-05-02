@@ -3,7 +3,7 @@ using GameModel.Model.DirEntity;
 
 namespace GameModel.Model.DirHero
 {
-    public class Hero : IEntity, IPVP
+    public class Hero : IEntity, IDangerous
     {
         public string Name { get; }
         public Size Size { get; }
@@ -18,13 +18,7 @@ namespace GameModel.Model.DirHero
         public Direction Direction { get; set; }
         public bool IsReadyToAttack { get; set; }
 
-        public Hero(
-            string name,
-            Size size,
-            Point location,
-            int health,
-            int attack,
-            int cd)
+        public Hero(string name, Size size, Point location, int health, int attack, int cd)
         {
             Name = name;
             Size = size;

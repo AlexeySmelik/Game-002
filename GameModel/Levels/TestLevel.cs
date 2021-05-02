@@ -16,8 +16,8 @@ namespace Game002.Levels
                     "Naruto",
                     new Size(64, 64),
                     new Point(0, 100),
+                    200,
                     100,
-                    50,
                     10);
             var mobTest1List = new List<Mob>
             {
@@ -27,21 +27,28 @@ namespace Game002.Levels
                     new Point(100, 100),
                     10,
                     10,
-                    @"..\..\..\Sprites\Mobs\CreeperWings 128x128.png"),
+                    0),
                 new Mob(
                     "Creeper",
                     new Size(64, 64),
                     new Point(400, 150),
                     10,
                     10,
-                    @"..\..\..\Sprites\Mobs\CreeperWings 128x128.png"),
+                    0),
                 new Mob(
                     "Creeper",
-                    new Size(96, 96),
-                    new Point(0, 50),
+                    new Size(64, 64),
+                    new Point(50, 0),
                     10,
                     10,
-                    @"..\..\..\Sprites\Mobs\CreeperWings 128x128.png")
+                    0),
+                new Mob(
+                    "Creeper",
+                    new Size(64, 64),
+                    new Point(150, 150),
+                    10,
+                    10,
+                    0),
             };
             var testMap1 = new Map(15, 20, mobTest1List)
             {
@@ -76,8 +83,7 @@ namespace Game002.Levels
                     new Size(64, 64),
                     new Point(460, 200),
                     100,
-                    25,
-                    @"..\..\..\Sprites\Mobs\SasukeStand 128x128.png")
+                    25)
             };
             var testMap2 = new Map(15, 20, mobTest2List)
             {
@@ -105,6 +111,12 @@ namespace Game002.Levels
                 }
             };
             /////////////////////////////////////////////////
+            var testMap3 = TestMap3();
+            return new Level(naruto, new List<Map> {testMap1, testMap2, testMap3}, 5);
+        }
+
+        private static Map TestMap3()
+        {
             var mobTest3List = new List<Mob>
             {
                 new Mob(
@@ -112,13 +124,27 @@ namespace Game002.Levels
                     new Size(256, 256),
                     new Point(460, 0),
                     100,
-                    50,
-                    @"..\..\..\Sprites\Mobs\PudgeTest.png",
-                    20)
+                    15,
+                    20),
+                new Mob(
+                    "Pudge",
+                    new Size(128, 64),
+                    new Point(120, 0),
+                    100,
+                    15,
+                    20),
+                new Mob(
+                "Pudge",
+                new Size(64, 128),
+                new Point(500, 0),
+                100,
+                15,
+                20)
             };
             var testMap3 = new Map(15, 20, mobTest3List)
             {
-                BlockMap = new [,] {
+                BlockMap = new[,]
+                {
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
@@ -141,7 +167,7 @@ namespace Game002.Levels
                     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2}
                 }
             };
-            return new Level(naruto, new List<Map> {testMap1, testMap2, testMap3}, 5);
+            return testMap3;
         }
     }
 }

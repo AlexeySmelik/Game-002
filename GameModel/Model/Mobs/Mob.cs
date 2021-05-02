@@ -4,7 +4,7 @@ using GameModel.Model.DirHero;
 
 namespace GameModel.Model.Mobs
 {
-    public class Mob : IEntity, IPVP
+    public class Mob : IEntity, IDangerous
     {
         public string Name { get; }
         public Size Size { get; }
@@ -17,7 +17,6 @@ namespace GameModel.Model.Mobs
         public int Attack { get; }
         public int Cooldown { get; set; }
         public Direction Direction { get; set; }
-        public readonly string PathToImage;
         public bool IsReadyToAttack { get; set; }
 
         public Mob(
@@ -26,7 +25,6 @@ namespace GameModel.Model.Mobs
             Point location,
             int health,
             int attack,
-            string path,
             int cd = 10)
         {
             Name = name;
@@ -37,7 +35,6 @@ namespace GameModel.Model.Mobs
             Direction = Direction.Right;
             Cooldown = cd;
             IsReadyToAttack = true;
-            PathToImage = path;
             Manipulator = new Manipulator(this);
         }
         

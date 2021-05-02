@@ -25,11 +25,19 @@ namespace GameModel.Model
 
         public void OnTimerTickEvents()
         {
-            if (TryNextMap())
-                CurrentHero.SetLocation(new Point(100, 100));
-            UpdateLevelPhysics();
-            MobsController.MakeMoveAndAttack(GetCurrentMap(), CurrentHero);
-            CurrentHero.Manipulator.TryDamage(GetCurrentMap().GetActiveMobs());
+            if (!CheckOnGameOver())
+            {
+                if (TryNextMap())
+                    CurrentHero.SetLocation(new Point(100, 100));
+                UpdateLevelPhysics();
+                CurrentHero.Manipulator.TryDamage(GetCurrentMap().GetActiveMobs());
+                MobsController.MakeMoveAndAttack(GetCurrentMap(), CurrentHero);
+            }
+        }
+
+        private bool CheckOnGameOver()
+        {
+            return !CurrentHero.IsActive();
         }
         
         private void UpdateLevelPhysics()

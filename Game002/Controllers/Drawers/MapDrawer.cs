@@ -4,72 +4,89 @@ using System.Drawing;
 using System.Linq;
 using GameModel;
 using GameModel.Model;
+using GameModel.Model.DirEntity;
+using GameModel.Model.Mobs;
 
 namespace Game002.Controllers.Drawers
 {
     public static class MapDrawer
     {
-        private static readonly string Path = System.IO.Path.GetFullPath(@"..\..\..\Sprites\StandartBlocks\");
-        private static readonly Dictionary<int, Action<Map, Graphics, int, int>> DrawingBlocks =
-            new Dictionary<int, Action<Map, Graphics, int, int>>
+        private static readonly string PathToBlocks = System.IO.Path.GetFullPath(@"..\..\..\Sprites\StandartBlocks\");
+        private static readonly string PathToMobs = System.IO.Path.GetFullPath(@"..\..\..\Sprites\Mobs\");
+        private static readonly string PathToBackgrounds = System.IO.Path.GetFullPath(@"..\..\..\Sprites\Backgrounds\");
+        private static readonly Dictionary<string, string> MobImageNames =
+            new Dictionary<string, string>
             {
-                {-2, (map, g, x, y) => 
-                    g.DrawRectangle(new Pen(Color.Chartreuse), x, y, map.CellSize, map.CellSize)}, // CellSheet
-                {-1, (map, g, x, y) => 
-                    g.DrawImage(new Bitmap(System.IO.Path.GetFullPath(@"..\..\..\Sprites\Backgrounds\BackgroundCity.png")),
-                        new Rectangle(new Point(x, y), new Size(map.Width, map.Height)),
-                        0, 0, 800, 600, GraphicsUnit.Pixel)}, // Background
-                {0, (map, g, x, y) => {}}, // Empty area
-                {1, (map, g, x, y) => 
-                    g.DrawImage(new Bitmap(Path + @"EarthMiddle.png"),
-                new Rectangle(new Point(x, y), new Size(map.CellSize, map.CellSize)),
-                    0, 0, 128, 128, GraphicsUnit.Pixel)}, // EarthMiddle.png
-                {2, (map, g, x, y) => 
-                    g.DrawImage(new Bitmap(Path + @"EarthDown.png"),
-                    new Rectangle(new Point(x, y), new Size(map.CellSize, map.CellSize)),
-                    0, 0, 128, 128, GraphicsUnit.Pixel)}, // EarthDown
-                {3, (map, g, x, y) => 
-                    g.DrawImage(new Bitmap(Path + @"RightPlatform.png"),
-                    new Rectangle(new Point(x, y), new Size(map.CellSize, map.CellSize)),
-                    0, 0, 128, 128,
-                    GraphicsUnit.Pixel)}, // RightPlatform
-                {4, (map, g, x, y) => 
-                    g.DrawImage(new Bitmap(Path + @"MiddlePlatform.png"),
-                    new Rectangle(new Point(x, y), new Size(map.CellSize, map.CellSize)),
-                    0, 0, 128, 128,
-                    GraphicsUnit.Pixel)}, // MiddlePlatform,
-                {5, (map, g, x, y) => 
-                    g.DrawImage(new Bitmap(Path + @"LeftPlatform.png"),
-                    new Rectangle(new Point(x, y), new Size(map.CellSize, map.CellSize)),
-                    0, 0, 96, 128,
-                    GraphicsUnit.Pixel)} // LeftPlatform
+                {"Creeper", "CreeperWings 128x128.png"},
+                {"Sasuke", "SasukeStand 128x128.png"},
+                {"Pudge", "PudgeTest.png"},
+                {"Naruto", "Naruto128x128.png"}
+            };
+        private static readonly Dictionary<int, string> BlockImageNames = 
+            new Dictionary<int, string>
+            {
+                {1, "EarthMiddle.png"},
+                {2, "EarthDown.png"},
+            };
+        private static readonly Action<Map, Graphics, int, int, int> DrawBlock =
+            (map, g, p, x, y) =>
+            {
+                if (p != 0)
+                {
+                    g.DrawImage(
+                        new Bitmap(PathToBlocks + BlockImageNames[p]),
+                        new Rectangle(new Point(x, y), new Size(map.CellSize, map.CellSize)),
+                        new Rectangle(Point.Empty, new Size(128, 128)),
+                        GraphicsUnit.Pixel);
+                }
             };
 
+        private static readonly Action<Map, Graphics> DrawBackground =
+            (map, g) =>
+                g.DrawImage(
+                    new Bitmap(PathToBackgrounds + "BackgroundCity.png"),
+                    new Rectangle(Point.Empty, map.Size),
+                    new Rectangle(Point.Empty, map.Size),
+                    GraphicsUnit.Pixel);
+            
         public static void DrawMap(Graphics g, Map map)
         {
-            DrawingBlocks[-1](map, g, 0, 0);
+            DrawBackground(map, g);
+            
             for(var i = 0; i < map.BlockMap.GetLength(0); i++)
-                for (var j = 0; j < map.BlockMap.GetLength(1); j++)
-                    DrawingBlocks[map.BlockMap[i, j]](map, g, i * map.CellSize, j * map.CellSize);
+            for (var j = 0; j < map.BlockMap.GetLength(1); j++)
+                DrawBlock(map, g, map.BlockMap[i, j], i * map.CellSize, j * map.CellSize);
+            
             map.MobList
                 .Where(it => it.IsActive())
                 .ForEach(it =>
-            {
-                g.DrawImage(new Bitmap(System.IO.Path.GetFullPath(it.PathToImage)),
-                    new Rectangle(it.Location, it.Size));
-                g.FillRectangle(
-                    new SolidBrush(Color.Red),
-                    new Rectangle( 
+                {
+                    DrawEntity(g, it);
+                    DrawHealthBar(
+                        g,
+                        it,
                         it.Location + new Size(0, -10),
-                        new Size(it.Size.Width * it.Health / 100, 10)));
-            });
+                        new Size(it.Size.Width * it.Health / 100, 20));
+                });
         }
-        
-        public static void DrawSheetMap(Graphics g, Map map)
+
+        public static void DrawEntity(Graphics graphics, IEntity entity)
         {
-            for(var i = 0; i < map.BlockMap.GetLength(0); i++)
-            for (var j = 0; j < map.BlockMap.GetLength(1); j++)
-                DrawingBlocks[-2](map, g, i * map.CellSize, j * map.CellSize);
+            graphics.DrawImage(
+                new Bitmap(PathToMobs + MobImageNames[entity.Name]),
+                new Rectangle(entity.Location, entity.Size));
+        }
+
+        public static void DrawHealthBar(Graphics graphics, IDangerous dEntity, Point location, Size size)
+        {
+            graphics.FillRectangle(
+                new SolidBrush(Color.Red),
+                new Rectangle(location, size));
+            graphics.DrawString(
+                Math.Max(0, dEntity.Health).ToString(),
+                new Font("Arial", 10),
+                new SolidBrush(Color.Black),
+                location);
         }
     }
 }

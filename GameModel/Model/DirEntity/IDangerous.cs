@@ -1,6 +1,6 @@
 ﻿namespace GameModel.Model.DirEntity
 {
-    public interface IPVP
+    public interface IDangerous : IEntity
     {
         public int Health { get; }
         public int Attack { get; }
