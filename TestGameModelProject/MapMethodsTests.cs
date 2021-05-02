@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using GameModel.Model;
-using GameModel.Model.DirEntity;
 using GameModel.Model.Mobs;
 using NUnit.Framework;
 
@@ -13,15 +12,14 @@ namespace TestGameModelProject
         [SetUp]
         public void Setup()
         {
-            _testMap = new Map(3, 3, new List<Mob>(), 3)
-            {
-                BlockMap = new [,]
+            _testMap = new Map(
+                new[,]
                 {
                     {1, 1, 1},
                     {0, 0, 0},
                     {1, 1, 1}
-                }
-            };
+                },
+                new List<Mob>(), 3);
         }
 
         private Map _testMap;
@@ -49,9 +47,9 @@ namespace TestGameModelProject
         [TestCase(1, 1,true, Description = "No border point")]
         [TestCase(4, 4,false, Description = "No border point")]
         [TestCase(3, 3,false, Description = "Maybe(no) border point")]
-        public void IsBlock_IfThePointIsOnTheMap(int x, int y, bool exceptedResult)
+        public void IsBlock_IfThePointIsOnTheMap(int x, int y, bool expectedResult)
         {
-            Assert.AreEqual(exceptedResult, _testMap.IsBlock(new Point(x, y)));
+            Assert.AreEqual(expectedResult, _testMap.IsBlock(new Point(x, y)));
         }
     }
 }

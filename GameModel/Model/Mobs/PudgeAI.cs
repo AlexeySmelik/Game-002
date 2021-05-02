@@ -5,25 +5,24 @@ namespace GameModel.Model.Mobs
 {
     public static class PudgeAI
     {
-        public static void SetVelocity(Hero hero, Mob pudge, Map map) //TODO Tests
+        public const int PudgeStep = 10;
+        public static void SetVelocity(Hero hero, Mob pudge) //TODO Tests
         {
-            pudge.Manipulator
-                .SetHorizontalVelocity(hero.Location.X > pudge.Location.X ? 1 : -1, 10);
+            pudge.Manipulator.SetHorizontalVelocity(hero.Location.X > pudge.Location.X ? 1 : -1, PudgeStep);
         }
         
         public static void TryAttack(Hero hero, Mob pudge)
         {
-            DoRot(hero, pudge);
             pudge.IsReadyToAttack = true;
             pudge.Manipulator.TryDamage(new [] {hero});
         }
         
         private static int ticks;
         
-        private static void DoRot(Hero hero, Mob pudge)
+        public static void DoRot(Hero hero, Mob pudge)
         {
             hero.GetDamage(ticks++ % (pudge.Cooldown / 4) == 0 ? 1 : 0);
-            pudge.GetDamage(pudge.Health > 50 ? (ticks++ % (pudge.Cooldown / 4) == 0 ? 1 : 0) : 0);
+            pudge.GetDamage(pudge.Health > 50 ? ticks++ % (pudge.Cooldown / 4) == 0 ? 1 : 0 : 0);
         }
     }
 }

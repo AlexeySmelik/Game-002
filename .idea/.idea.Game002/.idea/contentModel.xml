@@ -50,9 +50,6 @@
             <e p="BackgroundCity3.png" t="Include" />
             <e p="BackgroundCity4.png" t="Include" />
           </e>
-          <e p="MainCharacter" t="Include">
-            <e p="Naruto64x64.png" t="Include" />
-          </e>
           <e p="Mobs" t="Include">
             <e p="CreeperWings 128x128.png" t="Include" />
             <e p="Naruto128x128.png" t="Include" />

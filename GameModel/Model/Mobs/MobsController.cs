@@ -27,7 +27,8 @@ namespace GameModel.Model
 
                 if (it.Name == "Pudge")
                 {
-                    PudgeAI.SetVelocity(hero, it, map);
+                    PudgeAI.SetVelocity(hero, it);
+                    PudgeAI.DoRot(hero, it);
                     PudgeAI.TryAttack(hero, it);
                 }
             });

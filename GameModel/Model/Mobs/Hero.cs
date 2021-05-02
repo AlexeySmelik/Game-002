@@ -3,7 +3,7 @@ using GameModel.Model.DirEntity;
 
 namespace GameModel.Model.DirHero
 {
-    public class Hero : IEntity, IDangerous
+    public class Hero : IDangerous
     {
         public string Name { get; }
         public Size Size { get; }

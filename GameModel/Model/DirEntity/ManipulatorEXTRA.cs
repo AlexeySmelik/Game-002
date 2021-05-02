@@ -7,8 +7,6 @@ namespace GameModel.Model.DirHero
 {
     public partial class Manipulator
     {
-        private const int K = 0; // Up padding const
-        
         public Point PreDownOrUpMove(Point dp, Map map) //TODO Testing
         {
             if (dp.X != 0)
@@ -29,7 +27,7 @@ namespace GameModel.Model.DirHero
                     return new Point(
                         0,
                         dp.Y > 0 ?
-                            cLPoint.Y / map.CellSize * map.CellSize - nLPoint.Y + dp.Y + K :
+                            cLPoint.Y / map.CellSize * map.CellSize - nLPoint.Y + dp.Y :
                             cLPoint.Y / map.CellSize * map.CellSize - entity.Location.Y + map.CellSize);
             }
             return dp;
@@ -46,7 +44,7 @@ namespace GameModel.Model.DirHero
             var nLPoint = new Point(
                 entity.Location.X + dp.X + (dp.X > 0 ? entity.Size.Width : 0), 
                 entity.Location.Y);
-            for (var i = 0; i < entity.Size.Height - K; i++)
+            for (var i = 0; i < entity.Size.Height; i++)
             {
                 var cLPoint = new Point(nLPoint.X, nLPoint.Y + i);
                 if (!map.IsBound(cLPoint))

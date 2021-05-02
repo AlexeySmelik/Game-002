@@ -4,7 +4,7 @@ using GameModel.Model.DirHero;
 
 namespace GameModel.Model.Mobs
 {
-    public class Mob : IEntity, IDangerous
+    public class Mob : IDangerous
     {
         public string Name { get; }
         public Size Size { get; }
@@ -19,13 +19,7 @@ namespace GameModel.Model.Mobs
         public Direction Direction { get; set; }
         public bool IsReadyToAttack { get; set; }
 
-        public Mob(
-            string name,
-            Size size,
-            Point location,
-            int health,
-            int attack,
-            int cd = 10)
+        public Mob(string name, Size size, Point location, int health, int attack, int cd = 10)
         {
             Name = name;
             Size = size;
