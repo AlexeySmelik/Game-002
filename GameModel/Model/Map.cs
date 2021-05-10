@@ -22,7 +22,7 @@ namespace GameModel.Model
             MobList = mobs;
         }
         
-        public IEnumerable<Mob> GetActiveMobs() => MobList.Where(it => it.IsActive()).ToList();
+        public IEnumerable<Mob> GetActiveMobs() => MobList.Where(it => it.IsActive).ToList();
 
         public bool IsBound(Point p) => p.X >= 0 && p.X < Size.Width && p.Y >= 0 && p.Y < Size.Height;
 

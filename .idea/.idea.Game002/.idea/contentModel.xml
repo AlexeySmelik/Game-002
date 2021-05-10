@@ -69,30 +69,28 @@
       <e p="GameModel" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="GameModel.csproj" t="IncludeRecursive" />
-        <e p="GameMods.cs" t="Include" />
-        <e p="HelpMethods.cs" t="Include" />
         <e p="Levels" t="Include">
           <e p="TestLevel.cs" t="Include" />
         </e>
         <e p="LinqExtensions.cs" t="Include" />
         <e p="Model" t="Include">
-          <e p="DirEntity" t="Include">
+          <e p="Data" t="Include">
             <e p="Direction.cs" t="Include" />
             <e p="ICombat.cs" t="Include" />
             <e p="IEntity.cs" t="Include" />
-            <e p="Manipulator.cs" t="Include" />
-            <e p="ManipulatorEXTRA.cs" t="Include" />
           </e>
           <e p="GameModel.cs" t="Include" />
           <e p="Level.cs" t="Include" />
+          <e p="Manipulators" t="Include">
+            <e p="CombatManipulator.cs" t="Include" />
+            <e p="MovementManipulator.cs" t="Include" />
+          </e>
           <e p="Map.cs" t="Include" />
           <e p="Mobs" t="Include">
-            <e p="CreeperAI.cs" t="Include" />
             <e p="Hero.cs" t="Include" />
             <e p="Mob.cs" t="Include" />
-            <e p="MobsController.cs" t="Include" />
-            <e p="PudgeAI.cs" t="Include" />
-            <e p="SimpleFiendAI.cs" t="Include" />
+            <e p="MobManager.cs" t="Include" />
+            <e p="SimpleEntityAi.cs" t="Include" />
           </e>
           <e p="Physics.cs" t="Include" />
         </e>
@@ -107,8 +105,9 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="TestGameModelProject" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="ManipulatorTests.cs" t="Include" />
+        <e p="CombatManipulatorTests.cs" t="Include" />
         <e p="MapMethodsTests.cs" t="Include" />
+        <e p="MovementManipulatorTests.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="net5.0" t="Include">
@@ -117,7 +116,6 @@
           </e>
         </e>
         <e p="PhysicsTests.cs" t="Include" />
-        <e p="PudgeAITests.cs" t="Include" />
         <e p="TestGameModelProject.csproj" t="IncludeRecursive" />
       </e>
     </e>

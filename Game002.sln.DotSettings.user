@@ -5,6 +5,8 @@
     &lt;TestId&gt;NUnit3x::6DA167CB-DEF1-42C8-8C07-C9F7BDA7CE8E::.NETCoreApp,Version=v5.0::TestGameModelProject.MapTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::6DA167CB-DEF1-42C8-8C07-C9F7BDA7CE8E::.NETCoreApp,Version=v5.0::TestGameModelProject.ManipulatorTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::6DA167CB-DEF1-42C8-8C07-C9F7BDA7CE8E::.NETCoreApp,Version=v5.0::TestGameModelProject.PudgeAITests.SetVelocity_TrySetVelocity&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6DA167CB-DEF1-42C8-8C07-C9F7BDA7CE8E::.NETCoreApp,Version=v5.0::TestGameModelProject.CombatManipulatorTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6DA167CB-DEF1-42C8-8C07-C9F7BDA7CE8E::.NETCoreApp,Version=v5.0::TestGameModelProject.MovementManipulatorTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e82388ce_002D7676_002D4d09_002Db085_002Dabde3b625100/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="IfThePointOnTheBorder" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;

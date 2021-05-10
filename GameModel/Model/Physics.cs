@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using GameModel.Model.DirEntity;
+using GameModel.Model.Data;
 
 namespace GameModel.Model
 {
@@ -15,22 +15,22 @@ namespace GameModel.Model
             _map = newMap;
         }
         
-        public static void TryMoveForEntity(List<IEntity> entityList, double interval)
+        public static void TryMoveEntities(List<IEntity> entityList, double interval)
         {
             entityList.ForEach(it => TryMove(it, interval));
         }
 
-        private static void TryMove(IEntity entity, double dt) //TODO Tests
+        private static void TryMove(IEntity entity, double dt)
         {
             if (CheckOnJump(entity))
             {
                 entity.UpVelocity = Math.Max(0, entity.UpVelocity - dt / 100 * G);
-                entity.Move(entity.Manipulator.PreDownOrUpMove(new Point(0, -(int) entity.UpVelocity), _map));
+                entity.Move(entity.MovementManipulator.PreDownOrUpMove(new Point(0, -(int) entity.UpVelocity), _map));
             }
             else if (CheckOnFall(entity))
             {
                 entity.DownVelocity = Math.Min(_map.CellSize - 1, entity.DownVelocity + dt / 100 * G);
-                entity.Move(entity.Manipulator.PreDownOrUpMove(new Point(0, (int)entity.DownVelocity), _map));
+                entity.Move(entity.MovementManipulator.PreDownOrUpMove(new Point(0, (int)entity.DownVelocity), _map));
             }
             else
             {
@@ -42,7 +42,7 @@ namespace GameModel.Model
                 entity.HorizontalVelocity = 
                     Math.Sign(entity.HorizontalVelocity) * Math.Max(0, Math.Abs(entity.HorizontalVelocity) - dt / 100 * G);
                 entity.Move(
-                    entity.Manipulator.PreRightOrLeftMove(new Point((int) entity.HorizontalVelocity, 0), _map));
+                    entity.MovementManipulator.PreRightOrLeftMove(new Point((int) entity.HorizontalVelocity, 0), _map));
             }
         }
 

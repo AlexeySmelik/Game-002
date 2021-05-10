@@ -1,11 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
+using GameModel.Model.Data;
 
-namespace GameModel.Model.DirEntity
+namespace GameModel.Model.Manipulators
 {
-    public partial class Manipulator
+    public class MovementManipulator
     {
+        private const int BasicHorizontalVelocity = 29;
+        private readonly IEntity _entity;
+        
+        public MovementManipulator(IEntity entity) => _entity = entity;
+        
+        public void SetHorizontalVelocity(int direction, int step = BasicHorizontalVelocity)
+        {
+            if (Math.Abs(direction) != 1)
+                throw new Exception("Direction should be 1 or -1");
+            _entity.HorizontalVelocity = direction * step;
+            _entity.Direction = (Direction) direction;
+        }
+
+        public void SetUpVelocity(int step = BasicHorizontalVelocity)
+        {
+            if (_entity.UpVelocity == 0)
+                _entity.UpVelocity = step;
+        }
+        
         public Point PreDownOrUpMove(Point dp, Map map)
         {
             if (dp.X != 0)
@@ -60,41 +79,6 @@ namespace GameModel.Model.DirEntity
                            0);
             }
             return dp;
-        }
-
-        private int _ticks; 
-
-        public void TryDamage(IEnumerable<IEntity> entities)
-        {
-            if (((ICombat) _entity).IsReadyToAttack &&
-                _ticks % ((ICombat)_entity).Cooldown == 0)
-                entities.ForEach(it =>
-                {
-                    var r1 = new Rectangle(it.Location, it.Size);
-                    var r2 = new Rectangle(
-                        new Point(
-                            _entity.Direction == Direction.Right ?
-                                _entity.Location.X + _entity.Size.Width / 2 :
-                                _entity.Location.X - 25, _entity.Location.Y),
-                        _entity.Size);
-                    if (Rectangle.Intersect(r1, r2) != Rectangle.Empty &&
-                        ((ICombat) _entity).IsReadyToAttack)
-                    {
-                        DoDamage(it as ICombat);
-                        ((ICombat) _entity).IsReadyToAttack = false;
-                        _ticks++;
-                    }
-                });
-            else if (_ticks > 0)
-                _ticks = (1 + _ticks) % ((ICombat)_entity).Cooldown;
-            ((ICombat) _entity).IsReadyToAttack = false;
-        }
-
-
-        private void DoDamage(ICombat e)
-        {
-            _ticks = 0;
-            e.GetDamage(((ICombat) _entity).Attack);
         }
     }
 }

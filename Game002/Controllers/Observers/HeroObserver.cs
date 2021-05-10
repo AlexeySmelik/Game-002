@@ -10,13 +10,13 @@ namespace TestGame002.Controllers.Observers
             switch (args.KeyCode)
             {
                 case Keys.A:
-                    hero.Manipulator.SetHorizontalVelocity(-1);
+                    hero.MovementManipulator.SetHorizontalVelocity(-1);
                     break;
                 case Keys.D:
-                    hero.Manipulator.SetHorizontalVelocity(1);
+                    hero.MovementManipulator.SetHorizontalVelocity(1);
                     break;
                 case Keys.F:
-                    hero.IsReadyToAttack = true;
+                    hero.CombatManipulator.IsReadyToAttack = true;
                     break;
             }
         }
@@ -26,7 +26,7 @@ namespace TestGame002.Controllers.Observers
             switch (args.KeyChar)
             {
                 case (char)Keys.Space:
-                    hero.Manipulator.SetUpVelocity(39);
+                    hero.MovementManipulator.SetUpVelocity(39);
                     break;
             }
         }

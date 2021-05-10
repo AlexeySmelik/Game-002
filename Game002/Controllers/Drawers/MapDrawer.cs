@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using GameModel;
 using GameModel.Model;
-using GameModel.Model.DirEntity;
+using GameModel.Model.Data;
 
 namespace TestGame002.Controllers.Drawers
 {
@@ -57,15 +57,15 @@ namespace TestGame002.Controllers.Drawers
                 DrawBlock(map, g, map.BlockMap[i, j], i * map.CellSize, j * map.CellSize);
             
             map.MobList
-                .Where(it => it.IsActive())
+                .Where(it => it.IsActive)
                 .ForEach(it =>
                 {
                     DrawEntity(g, it);
                     DrawHealthBar(
                         g,
-                        it,
+                        it.CombatManipulator,
                         it.Location + new Size(0, -10),
-                        new Size(it.Size.Width * it.Health / 100, 20));
+                        new Size(it.Size.Width * it.CombatManipulator.Health / 100, 20));
                 });
         }
 
@@ -76,13 +76,13 @@ namespace TestGame002.Controllers.Drawers
                 new Rectangle(entity.Location, entity.Size));
         }
 
-        public static void DrawHealthBar(Graphics graphics, ICombat dEntity, Point location, Size size)
+        public static void DrawHealthBar(Graphics graphics, ICombat info, Point location, Size size)
         {
             graphics.FillRectangle(
                 new SolidBrush(Color.Red),
                 new Rectangle(location, size));
             graphics.DrawString(
-                Math.Max(0, dEntity.Health).ToString(),
+                Math.Max(0, info.Health).ToString(),
                 new Font("Arial", 10),
                 new SolidBrush(Color.Black),
                 location);

@@ -9,44 +9,29 @@ namespace GameModel.Levels
     {
         public static Level GetTestLevel0()
         {
-            var naruto = 
+            var naruto =
                 new Hero(
                     "Naruto",
                     new Size(64, 64),
-                    new Point(0, 100),
-                    200,
-                    100,
-                    10);
+                    new Point(0, 100));
             var mobTest1List = new List<Mob>
             {
                 new Mob(
                     "Creeper",
                     new Size(128, 128),
-                    new Point(100, 100),
-                    10,
-                    10,
-                    0),
+                    new Point(100, 100)),
                 new Mob(
                     "Creeper",
                     new Size(64, 64),
-                    new Point(400, 150),
-                    10,
-                    10,
-                    0),
+                    new Point(400, 150)),
                 new Mob(
                     "Creeper",
                     new Size(64, 64),
-                    new Point(50, 0),
-                    10,
-                    10,
-                    0),
+                    new Point(50, 0)),
                 new Mob(
                     "Creeper",
                     new Size(64, 64),
-                    new Point(150, 150),
-                    10,
-                    10,
-                    0),
+                    new Point(150, 150))
             };
             var testMap1 = new Map(
                 new[,]
@@ -76,11 +61,9 @@ namespace GameModel.Levels
             var mobTest2List = new List<Mob>
             {
                 new Mob(
-                    "SimpleFiend",
+                    "Sasuke",
                     new Size(64, 64),
-                    new Point(460, 200),
-                    100,
-                    25)
+                    new Point(460, 200))
             };
             var testMap2 = new Map(new [,] {
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2},
@@ -116,24 +99,15 @@ namespace GameModel.Levels
                 new Mob(
                     "Pudge",
                     new Size(256, 256),
-                    new Point(460, 0),
-                    100,
-                    15,
-                    20),
+                    new Point(460, 0)),
                 new Mob(
                     "Pudge",
                     new Size(128, 64),
-                    new Point(120, 0),
-                    100,
-                    15,
-                    20),
+                    new Point(120, 0)),
                 new Mob(
                 "Pudge",
                 new Size(64, 128),
-                new Point(500, 0),
-                100,
-                15,
-                20)
+                new Point(500, 0))
             };
             var testMap3 = new Map(
                 new[,]

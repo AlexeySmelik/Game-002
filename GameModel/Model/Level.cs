@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using GameModel.Model.DirEntity;
+using GameModel.Model.Data;
 using GameModel.Model.Mobs;
 
 namespace GameModel.Model
@@ -29,29 +29,31 @@ namespace GameModel.Model
             if (TryNextMap())
                 CurrentHero.SetLocation(new Point(100, 100));
             UpdateLevelPhysics();
-            CurrentHero.Manipulator.TryDamage(GetCurrentMap().GetActiveMobs());
-            MobsController.MakeMoveAndAttack(GetCurrentMap(), CurrentHero);
+            CurrentHero.CombatManipulator.RestoreStamina(1);
+            CurrentHero.CombatManipulator.DoSimpleAttack(
+                GetCurrentMap().GetActiveMobs().Select(x => x as IEntity), 10);
+            MobManager.MakeMove(GetCurrentMap(), CurrentHero);
         }
 
         private bool CheckOnGameOver()
         {
-            return !CurrentHero.IsActive();
+            return !CurrentHero.IsActive;
         }
         
         private void UpdateLevelPhysics()
         {
             Physics.UpdateMap(GetCurrentMap());
             var entityList = GetCurrentMap().MobList
-                .Where(it => it.IsActive())
+                .Where(it => it.IsActive)
                 .Select(it => it as IEntity)
                 .ToList();
             entityList.Add(CurrentHero);
-            Physics.TryMoveForEntity(entityList, TimerInterval);
+            Physics.TryMoveEntities(entityList, TimerInterval);
         }
 
         private bool TryNextMap()
         {
-            if (GetCurrentMap().MobList.Any(it => it.IsActive()) || _indexMap + 1 >= _maps.Count) 
+            if (GetCurrentMap().MobList.Any(it => it.IsActive) || _indexMap + 1 >= _maps.Count) 
                 return false;
             _indexMap++;
             return true;
