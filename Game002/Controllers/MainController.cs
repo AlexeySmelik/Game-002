@@ -1,38 +1,34 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Game002.Controllers.Drawers;
-using Game002.Controllers.Observers;
-using GameModel;
+using TestGame002.Controllers.Drawers;
+using TestGame002.Controllers.Observers;
 
-namespace Game002.Controllers
+namespace TestGame002.Controllers
 {
     public static class MainController
     {
-        public static GameModel.Model.GameModel Model;
+        public static GameModel.Model.GameModel Model = null!;
 
         public static void OnKeyDown(object sender, KeyEventArgs args)
         {
-            if (Model.CurrentMode == GameMods.PlayMode)
-                HeroObserver.SetKeyDownActions(args, Model.CurrentLevel.CurrentHero);
+            HeroObserver.SetKeyDownActions(args, Model.CurrentLevel.CurrentHero);
         }            
         
         public static void Draw(Graphics g)
         {
-            if (Model.CurrentMode == GameMods.PlayMode)
-                LevelDrawer.Draw(g, Model);
+            LevelDrawer.Draw(g, Model);
         }
 
         public static void OnKeyPress(object? sender, KeyPressEventArgs args)
         {
-            if (Model.CurrentMode == GameMods.PlayMode)
-                HeroObserver.SetKeyPassActions(args, Model.CurrentLevel.CurrentHero);
+            HeroObserver.SetKeyPassActions(args, Model.CurrentLevel.CurrentHero);
         }
 
         public static void TimerTickEvents(object sender, EventArgs args)
         {
-            if (Model.CurrentMode == GameMods.PlayMode)
-                Model.CurrentLevel.OnTimerTickEvents();
+            Model.CurrentLevel.OnTimerTickEvents();
         }
     }
 }

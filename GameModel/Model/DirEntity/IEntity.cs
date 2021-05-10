@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using Manipulator = GameModel.Model.DirHero.Manipulator;
 
 namespace GameModel.Model.DirEntity
 {

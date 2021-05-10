@@ -1,9 +1,6 @@
-﻿using System.Drawing;
-using GameModel.Model.DirHero;
-
-namespace GameModel.Model.Mobs
+﻿namespace GameModel.Model.Mobs
 {
-    public static class PudgeAI
+    public static class PudgeAi
     {
         public const int PudgeStep = 10;
         public static void SetVelocity(Hero hero, Mob pudge) //TODO Tests
@@ -17,12 +14,12 @@ namespace GameModel.Model.Mobs
             pudge.Manipulator.TryDamage(new [] {hero});
         }
         
-        private static int ticks;
+        private static int _ticks;
         
         public static void DoRot(Hero hero, Mob pudge)
         {
-            hero.GetDamage(ticks++ % (pudge.Cooldown / 4) == 0 ? 1 : 0);
-            pudge.GetDamage(pudge.Health > 50 ? ticks++ % (pudge.Cooldown / 4) == 0 ? 1 : 0 : 0);
+            hero.GetDamage(_ticks++ % (pudge.Cooldown / 4) == 0 ? 1 : 0);
+            pudge.GetDamage(pudge.Health > 50 ? _ticks++ % (pudge.Cooldown / 4) == 0 ? 1 : 0 : 0);
         }
     }
 }

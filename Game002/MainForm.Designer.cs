@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 
-namespace Game002
+namespace TestGame002
 {
-    partial class MainForm
+    sealed partial class MainForm
     {
         /// <summary>
         /// Required designer variable.

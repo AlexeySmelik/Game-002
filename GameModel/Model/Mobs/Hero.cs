@@ -1,9 +1,9 @@
 ﻿using System.Drawing;
 using GameModel.Model.DirEntity;
 
-namespace GameModel.Model.DirHero
+namespace GameModel.Model.Mobs
 {
-    public class Hero : IDangerous
+    public class Hero : ICombat
     {
         public string Name { get; }
         public Size Size { get; }
@@ -14,7 +14,7 @@ namespace GameModel.Model.DirHero
         public double HorizontalVelocity { get; set; }
         public int Health { get; private set; }
         public int Attack { get; }
-        public int Cooldown { get; set; }
+        public int Cooldown { get; }
         public Direction Direction { get; set; }
         public bool IsReadyToAttack { get; set; }
 

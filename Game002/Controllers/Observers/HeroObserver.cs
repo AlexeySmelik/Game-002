@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
-using GameModel.Model.DirHero;
+using GameModel.Model.Mobs;
 
-namespace Game002.Controllers.Observers
+namespace TestGame002.Controllers.Observers
 {
     public static class HeroObserver
     {

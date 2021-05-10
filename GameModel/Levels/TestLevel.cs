@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using GameModel.Model;
-using GameModel.Model.DirEntity;
-using GameModel.Model.DirHero;
 using GameModel.Model.Mobs;
 
-namespace Game002.Levels
+namespace GameModel.Levels
 {
     public static class TestLevel
     {
@@ -78,7 +76,7 @@ namespace Game002.Levels
             var mobTest2List = new List<Mob>
             {
                 new Mob(
-                    "Sasuke",
+                    "SimpleFiend",
                     new Size(64, 64),
                     new Point(460, 200),
                     100,

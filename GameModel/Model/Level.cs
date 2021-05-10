@@ -2,8 +2,7 @@
 using System.Drawing;
 using System.Linq;
 using GameModel.Model.DirEntity;
-using GameModel.Model.DirHero;
-using GameModel.Model.DirPhysic;
+using GameModel.Model.Mobs;
 
 namespace GameModel.Model
 {
@@ -12,27 +11,26 @@ namespace GameModel.Model
         public readonly Hero CurrentHero;
         public readonly int TimerInterval;
         
-        private readonly List<Map> maps;
+        private readonly List<Map> _maps;
         
-        private int indexMap;
+        private int _indexMap;
         
         public Level(Hero hero, List<Map> maps, int t)
         {
             CurrentHero = hero;
-            this.maps = maps;
+            _maps = maps;
             TimerInterval = t;
         }
 
         public void OnTimerTickEvents()
         {
-            if (!CheckOnGameOver())
-            {
-                if (TryNextMap())
-                    CurrentHero.SetLocation(new Point(100, 100));
-                UpdateLevelPhysics();
-                CurrentHero.Manipulator.TryDamage(GetCurrentMap().GetActiveMobs());
-                MobsController.MakeMoveAndAttack(GetCurrentMap(), CurrentHero);
-            }
+            if (CheckOnGameOver()) 
+                return;
+            if (TryNextMap())
+                CurrentHero.SetLocation(new Point(100, 100));
+            UpdateLevelPhysics();
+            CurrentHero.Manipulator.TryDamage(GetCurrentMap().GetActiveMobs());
+            MobsController.MakeMoveAndAttack(GetCurrentMap(), CurrentHero);
         }
 
         private bool CheckOnGameOver()
@@ -53,12 +51,12 @@ namespace GameModel.Model
 
         private bool TryNextMap()
         {
-            if (GetCurrentMap().MobList.Any(it => it.IsActive()) || indexMap + 1 >= maps.Count) 
+            if (GetCurrentMap().MobList.Any(it => it.IsActive()) || _indexMap + 1 >= _maps.Count) 
                 return false;
-            indexMap++;
+            _indexMap++;
             return true;
         }
         
-        public Map GetCurrentMap() => maps[indexMap];
+        public Map GetCurrentMap() => _maps[_indexMap];
     }
 }

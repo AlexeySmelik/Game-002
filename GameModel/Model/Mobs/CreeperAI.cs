@@ -1,14 +1,12 @@
 ﻿using System.Drawing;
-using GameModel.Model.DirHero;
-using GameModel.Model.Mobs;
 
-namespace GameModel.Model.DirEntity
+namespace GameModel.Model.Mobs
 {
-    public static class CreeperAI
+    public static class CreeperAi
     {
         private const int TimeToExplosion = 5; // 150 / TimerInterval = TimeToExplosion
         
-        public static void SetVelocity(Hero hero, Mob creeper, Map map) //TODO Tests
+        public static void SetVelocity(Hero hero, Mob creeper, Map map)
         {
             creeper.Manipulator
                 .SetHorizontalVelocity(hero.Location.X < creeper.Location.X ? -1 : 1, 15);
@@ -34,7 +32,7 @@ namespace GameModel.Model.DirEntity
         {
             var r1 = new Rectangle(hero.Location, hero.Size);
             var r2 = new Rectangle(creeper.Location, creeper.Size + hero.Size);
-            return HelpMethods.AreIntersected(r1, r2);
+            return Rectangle.Intersect(r1, r2) != Rectangle.Empty;
         }
     }
 }

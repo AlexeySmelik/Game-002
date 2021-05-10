@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using System.Drawing;
 using GameModel.Model.DirEntity;
-using GameModel.Model.DirHero;
 
-namespace GameModel.Model.DirPhysic
+namespace GameModel.Model
 {
     public static class Physics
     {
-        private static Map map;
+        private static Map _map;
         private const double G = 100;
         
         public static void UpdateMap(Map newMap)
         {
-            map = newMap;
+            _map = newMap;
         }
         
         public static void TryMoveForEntity(List<IEntity> entityList, double interval)
@@ -26,12 +25,12 @@ namespace GameModel.Model.DirPhysic
             if (CheckOnJump(entity))
             {
                 entity.UpVelocity = Math.Max(0, entity.UpVelocity - dt / 100 * G);
-                entity.Move(entity.Manipulator.PreDownOrUpMove(new Point(0, -(int) entity.UpVelocity), map));
+                entity.Move(entity.Manipulator.PreDownOrUpMove(new Point(0, -(int) entity.UpVelocity), _map));
             }
             else if (CheckOnFall(entity))
             {
-                entity.DownVelocity = Math.Min(map.CellSize - 1, entity.DownVelocity + dt / 100 * G);
-                entity.Move(entity.Manipulator.PreDownOrUpMove(new Point(0, (int)entity.DownVelocity), map));
+                entity.DownVelocity = Math.Min(_map.CellSize - 1, entity.DownVelocity + dt / 100 * G);
+                entity.Move(entity.Manipulator.PreDownOrUpMove(new Point(0, (int)entity.DownVelocity), _map));
             }
             else
             {
@@ -43,15 +42,15 @@ namespace GameModel.Model.DirPhysic
                 entity.HorizontalVelocity = 
                     Math.Sign(entity.HorizontalVelocity) * Math.Max(0, Math.Abs(entity.HorizontalVelocity) - dt / 100 * G);
                 entity.Move(
-                    entity.Manipulator.PreRightOrLeftMove(new Point((int) entity.HorizontalVelocity, 0), map));
+                    entity.Manipulator.PreRightOrLeftMove(new Point((int) entity.HorizontalVelocity, 0), _map));
             }
         }
 
         private static bool CheckOnFall(IEntity entity)
         {
             for (var i = 0; i < entity.Size.Width; i++)
-                if (!map.IsBound(new Point(entity.Location.X + i, entity.Location.Y + entity.Size.Height + 1)) ||
-                    map.IsBlock(new Point(entity.Location.X + i, entity.Location.Y + entity.Size.Height + 1)))
+                if (!_map.IsBound(new Point(entity.Location.X + i, entity.Location.Y + entity.Size.Height + 1)) ||
+                    _map.IsBlock(new Point(entity.Location.X + i, entity.Location.Y + entity.Size.Height + 1)))
                     return false;
             return true;
         }

@@ -1,9 +1,9 @@
 ﻿using System.Windows.Forms;
-using Game002.Controllers;
+using TestGame002.Controllers;
 
-namespace Game002
+namespace TestGame002
 {
-    public partial class MainForm : Form
+    public sealed partial class MainForm : Form
     {
         public MainForm(GameModel.Model.GameModel model)
         {

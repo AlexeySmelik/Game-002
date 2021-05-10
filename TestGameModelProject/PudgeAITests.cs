@@ -1,12 +1,11 @@
 ﻿using System.Drawing;
-using GameModel.Model.DirHero;
 using GameModel.Model.Mobs;
 using NUnit.Framework;
 
 namespace TestGameModelProject
 {
     [TestFixture]
-    public class PudgeAITests
+    public class PudgeAiTests
     {
         private Hero GetHero(Point location) => 
             new Hero("testHero", new Size(64, 64), location, 100, 1, 1);
@@ -19,12 +18,12 @@ namespace TestGameModelProject
         public void SetVelocity_TrySetVelocity()
         {
             var pudge = GetPudge(Point.Empty);
-            var hero = GetHero(new Point(PudgeAI.PudgeStep * 2, 0));
-            PudgeAI.SetVelocity(hero, pudge);
-            Assert.AreEqual(PudgeAI.PudgeStep, pudge.HorizontalVelocity);
-            hero.Move(new Point(-PudgeAI.PudgeStep * 2, 0));
-            PudgeAI.SetVelocity(hero, pudge);
-            Assert.AreEqual(-PudgeAI.PudgeStep, pudge.HorizontalVelocity);
+            var hero = GetHero(new Point(PudgeAi.PudgeStep * 2, 0));
+            PudgeAi.SetVelocity(hero, pudge);
+            Assert.AreEqual(PudgeAi.PudgeStep, pudge.HorizontalVelocity);
+            hero.Move(new Point(-PudgeAi.PudgeStep * 2, 0));
+            PudgeAi.SetVelocity(hero, pudge);
+            Assert.AreEqual(-PudgeAi.PudgeStep, pudge.HorizontalVelocity);
         }
         
         [Test]
@@ -34,7 +33,7 @@ namespace TestGameModelProject
             var hero = GetHero(Point.Empty);
             for (var i = 1; i < 5; i++)
             {
-                PudgeAI.DoRot(hero, pudge);
+                PudgeAi.DoRot(hero, pudge);
             }
         }
     }

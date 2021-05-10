@@ -1,27 +1,26 @@
 ﻿using System;
-using GameModel.Model.DirEntity;
 
-namespace GameModel.Model.DirHero
+namespace GameModel.Model.DirEntity
 {
     public partial class Manipulator
     {
-        private const int RALS = 29; // Right and left step
-        private readonly IEntity entity;
+        private const int BasicHorizontalVelocity = 29;
+        private readonly IEntity _entity;
         
-        public Manipulator(IEntity entity) => this.entity = entity;
+        public Manipulator(IEntity entity) => _entity = entity;
         
-        public void SetHorizontalVelocity(int direction, int step = RALS)
+        public void SetHorizontalVelocity(int direction, int step = BasicHorizontalVelocity)
         {
             if (Math.Abs(direction) != 1)
                 throw new Exception("Direction should be 1 or -1");
-            entity.HorizontalVelocity = direction * step;
-            entity.Direction = direction == 1 ? Direction.Right : Direction.Left;
+            _entity.HorizontalVelocity = direction * step;
+            _entity.Direction = direction == 1 ? Direction.Right : Direction.Left;
         }
 
-        public void SetUpVelocity(int step = RALS, bool isJump = true)
+        public void SetUpVelocity(int step = BasicHorizontalVelocity, bool isJump = true)
         {
-            if (isJump && entity.UpVelocity == 0 || !isJump)
-                entity.UpVelocity = step;
+            if (isJump && _entity.UpVelocity == 0 || !isJump)
+                _entity.UpVelocity = step;
         }
     }
 }

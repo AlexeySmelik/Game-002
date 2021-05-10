@@ -5,9 +5,8 @@ using System.Linq;
 using GameModel;
 using GameModel.Model;
 using GameModel.Model.DirEntity;
-using GameModel.Model.Mobs;
 
-namespace Game002.Controllers.Drawers
+namespace TestGame002.Controllers.Drawers
 {
     public static class MapDrawer
     {
@@ -77,7 +76,7 @@ namespace Game002.Controllers.Drawers
                 new Rectangle(entity.Location, entity.Size));
         }
 
-        public static void DrawHealthBar(Graphics graphics, IDangerous dEntity, Point location, Size size)
+        public static void DrawHealthBar(Graphics graphics, ICombat dEntity, Point location, Size size)
         {
             graphics.FillRectangle(
                 new SolidBrush(Color.Red),

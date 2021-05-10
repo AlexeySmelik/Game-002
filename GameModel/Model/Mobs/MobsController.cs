@@ -1,9 +1,6 @@
 ﻿using System.Linq;
-using GameModel.Model.DirEntity;
-using GameModel.Model.DirHero;
-using GameModel.Model.Mobs;
 
-namespace GameModel.Model
+namespace GameModel.Model.Mobs
 {
     public static class MobsController
     { 
@@ -15,21 +12,21 @@ namespace GameModel.Model
             {
                 if (it.Name == "Creeper")
                 {
-                    CreeperAI.SetVelocity(hero, it, map);
-                    CreeperAI.TryAttack(hero, it);
+                    CreeperAi.SetVelocity(hero, it, map);
+                    CreeperAi.TryAttack(hero, it);
                 }
 
-                if (it.Name == "Sasuke")
+                if (it.Name == "SimpleFiend")
                 {
-                    SimpleFiendAI.SetVelocity(hero, it, map);
-                    SimpleFiendAI.TryAttack(hero, it);
+                    SimpleFiendAi.SetVelocity(hero, it, map);
+                    SimpleFiendAi.TryAttack(hero, it);
                 }
 
                 if (it.Name == "Pudge")
                 {
-                    PudgeAI.SetVelocity(hero, it);
-                    PudgeAI.DoRot(hero, it);
-                    PudgeAI.TryAttack(hero, it);
+                    PudgeAi.SetVelocity(hero, it);
+                    PudgeAi.DoRot(hero, it);
+                    PudgeAi.TryAttack(hero, it);
                 }
             });
         }

@@ -1,10 +1,10 @@
 ﻿using System.Drawing;
 using GameModel.Model.DirEntity;
-using GameModel.Model.DirHero;
+using Manipulator = GameModel.Model.DirEntity.Manipulator;
 
 namespace GameModel.Model.Mobs
 {
-    public class Mob : IDangerous
+    public class Mob : ICombat
     {
         public string Name { get; }
         public Size Size { get; }

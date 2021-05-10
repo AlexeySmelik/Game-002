@@ -78,7 +78,7 @@
         <e p="Model" t="Include">
           <e p="DirEntity" t="Include">
             <e p="Direction.cs" t="Include" />
-            <e p="IDangerous.cs" t="Include" />
+            <e p="ICombat.cs" t="Include" />
             <e p="IEntity.cs" t="Include" />
             <e p="Manipulator.cs" t="Include" />
             <e p="ManipulatorEXTRA.cs" t="Include" />

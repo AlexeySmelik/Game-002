@@ -1,10 +1,6 @@
-﻿using System;
-using GameModel.Model.DirEntity;
-using GameModel.Model.DirHero;
-
-namespace GameModel.Model.Mobs
+﻿namespace GameModel.Model.Mobs
 {
-    public class SimpleFiendAI
+    public static class SimpleFiendAi
     {
         public static void SetVelocity(Hero hero, Mob fiend, Map map) //TODO Tests
         {
@@ -12,7 +8,7 @@ namespace GameModel.Model.Mobs
                 .SetHorizontalVelocity(hero.Location.X > fiend.Location.X ? 1 : -1);
             
             if (hero.Location.Y < fiend.Location.Y)
-                fiend.Manipulator.SetUpVelocity(29);
+                fiend.Manipulator.SetUpVelocity();
         }
 
         public static void TryAttack(Hero hero, Mob fiend)

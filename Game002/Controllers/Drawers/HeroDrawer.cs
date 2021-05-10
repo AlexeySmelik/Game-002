@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
-using GameModel.Model.DirHero;
+using GameModel.Model.Mobs;
 
-namespace Game002.Controllers.Drawers
+namespace TestGame002.Controllers.Drawers
 {
     public static class HeroDrawer
     {
