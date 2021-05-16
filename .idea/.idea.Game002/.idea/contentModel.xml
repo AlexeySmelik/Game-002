@@ -83,6 +83,7 @@
           <e p="Level.cs" t="Include" />
           <e p="Manipulators" t="Include">
             <e p="CombatManipulator.cs" t="Include" />
+            <e p="CooldownTimer.cs" t="Include" />
             <e p="MovementManipulator.cs" t="Include" />
           </e>
           <e p="Map.cs" t="Include" />

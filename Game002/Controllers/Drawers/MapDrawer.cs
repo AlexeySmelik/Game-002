@@ -66,6 +66,11 @@ namespace TestGame002.Controllers.Drawers
                         it.CombatManipulator,
                         it.Location + new Size(0, -10),
                         new Size(it.Size.Width * it.CombatManipulator.Health / 100, 20));
+                    DrawStaminaBar(
+                        g,
+                        it.CombatManipulator,
+                        it.Location + new Size(0, -20),
+                        new Size(it.Size.Width * it.CombatManipulator.Stamina / 100, 20));
                 });
         }
 
@@ -83,6 +88,18 @@ namespace TestGame002.Controllers.Drawers
                 new Rectangle(location, size));
             graphics.DrawString(
                 Math.Max(0, info.Health).ToString(),
+                new Font("Arial", 10),
+                new SolidBrush(Color.Black),
+                location);
+        }
+        
+        public static void DrawStaminaBar(Graphics graphics, ICombat info, Point location, Size size)
+        {
+            graphics.FillRectangle(
+                new SolidBrush(Color.Blue),
+                new Rectangle(location, size));
+            graphics.DrawString(
+                Math.Max(0, info.Stamina).ToString(),
                 new Font("Arial", 10),
                 new SolidBrush(Color.Black),
                 location);

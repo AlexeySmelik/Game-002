@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Drawing;
+using System.Linq;
+using GameModel.Model.Manipulators;
 
 namespace GameModel.Model.Mobs
 {
@@ -11,7 +13,22 @@ namespace GameModel.Model.Mobs
                 .ForEach(it =>
             {
                 SimpleEntityAi.GoToHero(hero, it);
-                SimpleEntityAi.TryAttackHero(it, hero, 5);
+                if (it.Name == "Pudge")
+                {
+                    it.CombatManipulator.Rot(new[] {hero}, 1);
+                    SimpleEntityAi.TryAttackHero(it, hero, 5);
+                }
+                if (it.Name == "Creeper")
+                {
+                    var range = new Rectangle(it.Location, it.Size);
+                    it.CombatManipulator.IsReadyToAttack = it.CombatManipulator.IsReadyToAttack ||
+                                                           CombatManipulator.IsItInRange(hero, range);
+                    it.CombatManipulator.TryExplode(new[] {hero});
+                }
+                else
+                {
+                    SimpleEntityAi.TryAttackHero(it, hero, 5);
+                }
             });
         }
     }
