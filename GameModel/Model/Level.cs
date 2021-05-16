@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using GameModel.Model.Data;
@@ -12,34 +13,34 @@ namespace GameModel.Model
         public readonly int TimerInterval;
         
         private readonly List<Map> _maps;
-        
         private int _indexMap;
+
+        public int Score { get; private set; }
         
         public Level(Hero hero, List<Map> maps, int t)
         {
             CurrentHero = hero;
             _maps = maps;
             TimerInterval = t;
+            Score = TimerInterval * 1000;
         }
 
         public void OnTimerTickEvents()
         {
-            if (CheckOnGameOver()) 
-                return;
             if (TryNextMap())
                 CurrentHero.SetLocation(new Point(100, 100));
+            if (CheckOnEndLevel()) 
+                return;
+            Score = Math.Max(Score - TimerInterval, 0);
             UpdateLevelPhysics();
             CurrentHero.CombatManipulator.RestoreStamina(1);
             CurrentHero.CombatManipulator.DoSimpleAttack(
-                GetCurrentMap().GetActiveMobs().Select(x => x as IEntity), 10);
+                GetCurrentMap().GetActiveMobs().Select(x => x as IEntity), 25);
             MobManager.MakeMove(GetCurrentMap(), CurrentHero);
         }
 
-        private bool CheckOnGameOver()
-        {
-            return !CurrentHero.IsActive;
-        }
-        
+        private bool CheckOnEndLevel() => !CurrentHero.IsActive || !GetCurrentMap().GetActiveMobs().Any();
+
         private void UpdateLevelPhysics()
         {
             Physics.UpdateMap(GetCurrentMap());

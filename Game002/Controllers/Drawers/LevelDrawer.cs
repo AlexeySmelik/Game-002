@@ -8,6 +8,11 @@ namespace TestGame002.Controllers.Drawers
         {
             MapDrawer.DrawMap(g, model.CurrentLevel.GetCurrentMap());
             HeroDrawer.DrawHero(g, model.CurrentLevel.CurrentHero);
+            g.DrawString(
+                model.CurrentLevel.Score.ToString(),
+                new Font("Arial", 50),
+                new SolidBrush(Color.Black),
+                new Point(150, 150));
         }
     }
 }

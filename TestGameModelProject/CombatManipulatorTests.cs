@@ -67,7 +67,7 @@ namespace TestGameModelProject
                 testEntityMain.CombatManipulator.IsReadyToAttack = true;
                 testEntityMain.CombatManipulator.DoSimpleAttack(new[] {testEntity}, 5);
             }
-            Assert.AreEqual(70, testEntity.CombatManipulator.Health);
+            Assert.AreEqual(80, testEntity.CombatManipulator.Health);
         }
         
         private static IEntity GetTestEntity(Point location) =>

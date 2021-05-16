@@ -91,7 +91,6 @@
             <e p="Hero.cs" t="Include" />
             <e p="Mob.cs" t="Include" />
             <e p="MobManager.cs" t="Include" />
-            <e p="SimpleEntityAi.cs" t="Include" />
           </e>
           <e p="Physics.cs" t="Include" />
         </e>

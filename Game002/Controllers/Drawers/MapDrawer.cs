@@ -64,12 +64,12 @@ namespace TestGame002.Controllers.Drawers
                     DrawHealthBar(
                         g,
                         it.CombatManipulator,
-                        it.Location + new Size(0, -10),
+                        it.Location + new Size(0, -30),
                         new Size(it.Size.Width * it.CombatManipulator.Health / 100, 20));
                     DrawStaminaBar(
                         g,
                         it.CombatManipulator,
-                        it.Location + new Size(0, -20),
+                        it.Location + new Size(0, -10),
                         new Size(it.Size.Width * it.CombatManipulator.Stamina / 100, 20));
                 });
         }

@@ -20,12 +20,7 @@ namespace GameModel.Model.Manipulators
         private CooldownTimer _rotTimer;
         private CooldownTimer _simpleAttackTimer;
 
-        public CombatManipulator(
-            IEntity entity,
-            int health,
-            int attack,
-            int stamina,
-            int cooldown)
+        public CombatManipulator(IEntity entity, int health, int attack, int stamina, int cooldown)
         {
             _entity = entity;
             Health = health;
@@ -44,8 +39,7 @@ namespace GameModel.Model.Manipulators
 
         public void DoDamage(IEntity enemy, int damage)
         {
-            if (!enemy.IsPeaceful())
-                enemy.CombatManipulator.GetDamage(damage);
+            enemy.CombatManipulator?.GetDamage(damage);
         }
 
         public void RestoreStamina(int stamina)
@@ -56,44 +50,32 @@ namespace GameModel.Model.Manipulators
         public bool TrySpendStamina(int stamina)
         {
             if (Stamina < stamina)
-            {
-                Stamina = 0;
                 return false;
-            }
-
-            Stamina -= stamina;
+            Stamina = Math.Max(Stamina - stamina, 0);
             return true;
-        }
-
-        private int _ticks;
-
-        private bool CheckCooldown()
-        {
-            _ticks %= Cooldown;
-            return ++_ticks == Cooldown / 2;
         }
 
         public void DoSimpleAttack(IEnumerable<IEntity> enemies, int cost)
         {
-            _simpleAttackTimer = new CooldownTimer(Cooldown);
-            if (IsReadyToAttack && CheckCooldown() && TrySpendStamina(cost))
+            _simpleAttackTimer ??= new CooldownTimer(Cooldown);
+            if (IsReadyToAttack)
             {
+                _simpleAttackTimer.Tick();
                 foreach (var it in enemies.Where(it => it.IsActive && !it.IsPeaceful()))
                 {
-                    var r1 = new Rectangle(it.Location, it.Size);
-                    var r2 = new Rectangle(
+                    var range = new Rectangle(
                         new Point(
                             _entity.Location.X + (int) _entity.Direction * _entity.Size.Width / 2,
                             _entity.Location.Y),
                         _entity.Size);
-                    if (IsReadyToAttack && Rectangle.Intersect(r1, r2) != Rectangle.Empty)
+                    if (_simpleAttackTimer.Ticks % Cooldown == Cooldown / 2)
                     {
-                        DoDamage(it, Attack);
+                        if (IsItInRange(it, range) && TrySpendStamina(cost))
+                            DoDamage(it, Attack);
                         IsReadyToAttack = false;
-                    } else if (!IsReadyToAttack) break;
+                        break;
+                    }
                 }
-                IsReadyToAttack = false;
-                _ticks = 0;
             }
         }
 

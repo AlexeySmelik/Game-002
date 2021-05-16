@@ -17,7 +17,8 @@ namespace GameModel.Levels
                     new Point(0, 100),
                     1000,
                     1000,
-                    1000);
+                    1000,
+                    6);
             var mobTest1List = new List<Mob>
             {
                 new Mob(
@@ -107,7 +108,8 @@ namespace GameModel.Levels
                 new Mob(
                     "Pudge",
                     new Size(256, 256),
-                    new Point(460, 0)),
+                    new Point(460, 0),
+                    health: 10000),
             };
             var testMap3 = new Map(
                 new[,]
