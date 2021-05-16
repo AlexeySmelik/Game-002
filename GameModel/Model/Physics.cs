@@ -40,7 +40,7 @@ namespace GameModel.Model
             if (CheckOnHorizontalMove(entity))
             {
                 entity.HorizontalVelocity = 
-                    Math.Sign(entity.HorizontalVelocity) * Math.Max(0, Math.Abs(entity.HorizontalVelocity) - dt / 100 * G);
+                    Math.Sign(entity.HorizontalVelocity) * Math.Max(0, Math.Abs(entity.HorizontalVelocity) - dt / 200 * G);
                 entity.Move(
                     entity.MovementManipulator.PreRightOrLeftMove(new Point((int) entity.HorizontalVelocity, 0),
                         _map));

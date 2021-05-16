@@ -29,7 +29,7 @@ namespace GameModel.Model
         {
             if (TryNextMap())
                 CurrentHero.SetLocation(new Point(100, 100));
-            if (CheckOnEndLevel()) 
+            if (CheckOnEndLevel())
                 return;
             Score = Math.Max(Score - TimerInterval, 0);
             UpdateLevelPhysics();
