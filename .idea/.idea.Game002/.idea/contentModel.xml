@@ -70,6 +70,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="GameModel.csproj" t="IncludeRecursive" />
         <e p="Levels" t="Include">
+          <e p="ReleaseLevels.cs" t="Include" />
           <e p="TestLevel.cs" t="Include" />
         </e>
         <e p="LinqExtensions.cs" t="Include" />

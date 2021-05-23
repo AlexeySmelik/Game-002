@@ -15,14 +15,13 @@ namespace GameModel.Model
         private readonly List<Map> _maps;
         private int _indexMap;
 
-        public int Score { get; private set; }
+        public TimeSpan Time { get; private set; }
         
         public Level(Hero hero, List<Map> maps, int t)
         {
             CurrentHero = hero;
             _maps = maps;
             TimerInterval = t;
-            Score = TimerInterval * 1000;
         }
 
         public void OnTimerTickEvents()
@@ -31,7 +30,8 @@ namespace GameModel.Model
                 CurrentHero.SetLocation(new Point(100, 100));
             if (CheckOnEndLevel())
                 return;
-            Score = Math.Max(Score - TimerInterval, 0);
+            Time += new TimeSpan(0, 0, 0, 1);
+            Console.WriteLine(Time);
             UpdateLevelPhysics();
             CurrentHero.CombatManipulator.RestoreStamina(1);
             CurrentHero.CombatManipulator.DoSimpleAttack(

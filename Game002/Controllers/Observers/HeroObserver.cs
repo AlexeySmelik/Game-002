@@ -18,14 +18,7 @@ namespace TestGame002.Controllers.Observers
                 case Keys.F:
                     hero.CombatManipulator.IsReadyToAttack = true;
                     break;
-            }
-        }
-
-        public static void SetKeyPassActions(KeyPressEventArgs args, Hero hero)
-        {
-            switch (args.KeyChar)
-            {
-                case (char)Keys.Space:
+                case Keys.W:
                     hero.MovementManipulator.SetUpVelocity(39);
                     break;
             }

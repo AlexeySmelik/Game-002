@@ -9,10 +9,10 @@ namespace TestGame002.Controllers.Drawers
             MapDrawer.DrawMap(g, model.CurrentLevel.GetCurrentMap());
             HeroDrawer.DrawHero(g, model.CurrentLevel.CurrentHero);
             g.DrawString(
-                model.CurrentLevel.Score.ToString(),
-                new Font("Arial", 50),
-                new SolidBrush(Color.Black),
-                new Point(150, 150));
+                model.CurrentLevel.Time.ToString(),
+                new Font("Impact", 40, FontStyle.Bold),
+                new SolidBrush(Color.GhostWhite),
+                new Point(500, 10));
         }
     }
 }

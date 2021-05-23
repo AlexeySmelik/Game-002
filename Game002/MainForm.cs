@@ -10,6 +10,7 @@ namespace TestGame002
             DoubleBuffered = true;
             InitializeComponent();
             MainController.Model = model;
+            model.GenerateCurrentLevel();
 
             var timer = new Timer{Interval = model.CurrentLevel.TimerInterval};
             timer.Tick += (sender, args) => Invalidate();
@@ -17,7 +18,6 @@ namespace TestGame002
             timer.Start();
             
             KeyDown += MainController.OnKeyDown;
-            KeyPress += MainController.OnKeyPress;
         }
 
         protected override void OnPaint(PaintEventArgs e)

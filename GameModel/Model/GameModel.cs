@@ -4,6 +4,11 @@ namespace GameModel.Model
 {
     public class GameModel
     {
-        public Level CurrentLevel = TestLevel.GetTestLevel0();
+        public Level CurrentLevel;
+
+        public void GenerateCurrentLevel()
+        {
+            CurrentLevel = TestLevel.GetTestLevel0();
+        }
     }
 }
