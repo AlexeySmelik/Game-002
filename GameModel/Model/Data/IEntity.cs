@@ -14,8 +14,8 @@ namespace GameModel.Model.Data
         public double DownVelocity { get; set; }
         public double UpVelocity { get; set; }
         public double HorizontalVelocity { get; set; }
+        public bool IsReadyToJump { get; set; }
         public void Move(Point dp);
-        public bool IsPeaceful();
         public Direction Direction { get; set; }
     }
 }

@@ -6,7 +6,7 @@ namespace GameModel.Model.Manipulators
 {
     public class MovementManipulator
     {
-        private const int BasicHorizontalVelocity = 29;
+        private const int BasicHorizontalVelocity = 25;
         private readonly IEntity _entity;
         
         public MovementManipulator(IEntity entity) => _entity = entity;
@@ -21,8 +21,11 @@ namespace GameModel.Model.Manipulators
 
         public void SetUpVelocity(int step = BasicHorizontalVelocity)
         {
-            if (_entity.UpVelocity == 0)
+            if (_entity.IsReadyToJump)
+            {
+                _entity.IsReadyToJump = false;
                 _entity.UpVelocity = step;
+            }
         }
         
         public Point PreDownOrUpMove(Point dp, Map map)

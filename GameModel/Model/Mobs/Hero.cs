@@ -15,6 +15,7 @@ namespace GameModel.Model.Mobs
         public double DownVelocity { get; set; }
         public double UpVelocity { get; set; }
         public double HorizontalVelocity { get; set; }
+        public bool IsReadyToJump { get; set; }
         public Direction Direction { get; set; }
 
         public Hero(
@@ -39,8 +40,6 @@ namespace GameModel.Model.Mobs
         {
             Location = new Point(Location.X + dPoint.X, Location.Y + dPoint.Y);
         }
-        
-        public bool IsPeaceful() => CombatManipulator == null;
         
         public void SetLocation(Point nLocation)
         {

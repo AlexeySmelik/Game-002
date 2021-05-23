@@ -8,7 +8,7 @@ namespace GameModel.Model
 
         public void GenerateCurrentLevel()
         {
-            CurrentLevel = TestLevel.GetTestLevel0();
+            CurrentLevel = ReleaseLevels.GetLevel1();
         }
     }
 }

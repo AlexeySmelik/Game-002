@@ -10,7 +10,7 @@ namespace GameModel.Model.Mobs
         public static void MakeMove(Map map, Hero hero)
         {
             map.MobList
-                .Where(it => it.IsActive)
+                .Where(it => it.IsActive && it.Name != "Pear")
                 .ForEach(it =>
             {
                 if (it.Name == "Pudge")

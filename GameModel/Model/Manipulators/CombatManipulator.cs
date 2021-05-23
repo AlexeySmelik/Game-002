@@ -12,7 +12,8 @@ namespace GameModel.Model.Manipulators
         public int Attack { get; }
         public bool IsReadyToAttack { get; set; }
         public int Stamina { get; private set; }
-        public int StaminaLimit { get; }
+        private int StaminaLimit { get; }
+        private int HealthLimit { get; }
         public int Cooldown { get; }
         
         private readonly IEntity _entity;
@@ -26,12 +27,24 @@ namespace GameModel.Model.Manipulators
             Health = health;
             Attack = attack;
             StaminaLimit = stamina;
+            HealthLimit = health;
             Cooldown = cooldown;
             Stamina = StaminaLimit;
         }
 
+        public void RestoreHealth(int health)
+        {
+            if (health < 0)
+                return;
+            Health = Math.Min(Health + health, HealthLimit);
+            if (Health == 0)
+                _entity.IsActive = false;
+        }
+
         public void GetDamage(int damage)
         {
+            if (damage < 0)
+                return;
             Health = Math.Max(Health - damage, 0);
             if (Health == 0)
                 _entity.IsActive = false;
@@ -61,13 +74,13 @@ namespace GameModel.Model.Manipulators
             if (IsReadyToAttack)
             {
                 _simpleAttackTimer.Tick();
-                foreach (var it in enemies.Where(it => it.IsActive && !it.IsPeaceful()))
+                foreach (var it in enemies.Where(it => it.IsActive))
                 {
                     var range = new Rectangle(
                         new Point(
-                            _entity.Location.X + (int) _entity.Direction * _entity.Size.Width / 2,
+                            _entity.Location.X,
                             _entity.Location.Y),
-                        _entity.Size);
+                        new Size(_entity.Size.Width+ (int) _entity.Direction * _entity.Size.Width / 2, _entity.Size.Height));
                     if (_simpleAttackTimer.Ticks % Cooldown == Cooldown / 2)
                     {
                         if (IsItInRange(it, range) && TrySpendStamina(cost))
@@ -97,7 +110,7 @@ namespace GameModel.Model.Manipulators
             {
                 _explodeTimer.Tick();
                 var range = new Rectangle(_entity.Location, _entity.Size);
-                foreach (var it in enemies.Where(it => it.IsActive && !it.IsPeaceful()))
+                foreach (var it in enemies.Where(it => it.IsActive))
                     if (_explodeTimer.Ticks % Cooldown == 0)
                         MakeExplode(IsItInRange(it, range) ? it.CombatManipulator : null);
             }

@@ -40,7 +40,7 @@ namespace GameModel.Model
             if (CheckOnHorizontalMove(entity))
             {
                 entity.HorizontalVelocity = 
-                    Math.Sign(entity.HorizontalVelocity) * Math.Max(0, Math.Abs(entity.HorizontalVelocity) - dt / 200 * G);
+                    Math.Sign(entity.HorizontalVelocity) * Math.Max(0, Math.Abs(entity.HorizontalVelocity) - dt / 100 * G);
                 entity.Move(
                     entity.MovementManipulator.PreRightOrLeftMove(new Point((int) entity.HorizontalVelocity, 0),
                         _map));
@@ -52,7 +52,10 @@ namespace GameModel.Model
             for (var i = 0; i < entity.Size.Width; i++)
                 if (!_map.IsBound(new Point(entity.Location.X + i, entity.Location.Y + entity.Size.Height + 1)) ||
                     _map.IsBlock(new Point(entity.Location.X + i, entity.Location.Y + entity.Size.Height + 1)))
+                {
+                    entity.IsReadyToJump = true;
                     return false;
+                }
             return true;
         }
 

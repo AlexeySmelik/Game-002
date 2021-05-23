@@ -11,36 +11,38 @@ namespace GameModel.Model
     {
         public readonly Hero CurrentHero;
         public readonly int TimerInterval;
+        public bool IsFinished;
+        public TimeSpan Time;
         
+        private readonly DateTime _startLevelDate;
         private readonly List<Map> _maps;
         private int _indexMap;
-
-        public TimeSpan Time { get; private set; }
         
         public Level(Hero hero, List<Map> maps, int t)
         {
             CurrentHero = hero;
             _maps = maps;
             TimerInterval = t;
+            _startLevelDate = DateTime.Now;
         }
+
+        private TimeSpan GetTime() => DateTime.Now - _startLevelDate;
 
         public void OnTimerTickEvents()
         {
+            IsFinished = !CurrentHero.IsActive || !GetCurrentMap().GetActiveMobs().Any();
             if (TryNextMap())
-                CurrentHero.SetLocation(new Point(100, 100));
-            if (CheckOnEndLevel())
+                CurrentHero.SetLocation(new Point(0, 415));
+            if (IsFinished)
                 return;
-            Time += new TimeSpan(0, 0, 0, 1);
-            Console.WriteLine(Time);
+            Time = GetTime();
             UpdateLevelPhysics();
             CurrentHero.CombatManipulator.RestoreStamina(1);
             CurrentHero.CombatManipulator.DoSimpleAttack(
-                GetCurrentMap().GetActiveMobs().Select(x => x as IEntity), 25);
+                GetCurrentMap().GetActiveMobs().Select(x => x as IEntity), 50);
             MobManager.MakeMove(GetCurrentMap(), CurrentHero);
         }
-
-        private bool CheckOnEndLevel() => !CurrentHero.IsActive || !GetCurrentMap().GetActiveMobs().Any();
-
+        
         private void UpdateLevelPhysics()
         {
             Physics.UpdateMap(GetCurrentMap());
@@ -54,8 +56,9 @@ namespace GameModel.Model
 
         private bool TryNextMap()
         {
-            if (GetCurrentMap().MobList.Any(it => it.IsActive) || _indexMap + 1 >= _maps.Count) 
+            if (GetCurrentMap().MobList.Any(it => it.IsActive) || _indexMap + 1 >= _maps.Count)
                 return false;
+            CurrentHero.CombatManipulator.RestoreHealth(25);
             _indexMap++;
             return true;
         }

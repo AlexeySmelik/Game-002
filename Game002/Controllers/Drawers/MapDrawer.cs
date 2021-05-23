@@ -19,31 +19,38 @@ namespace TestGame002.Controllers.Drawers
                 {"Creeper", "CreeperWings 128x128.png"},
                 {"Sasuke", "SasukeStand 128x128.png"},
                 {"Pudge", "PudgeTest.png"},
-                {"Naruto", "Naruto128x128.png"}
+                {"Naruto", "Naruto128x128.png"},
+                {"Pear", "pngegg.png"}
             };
         private static readonly Dictionary<int, string> BlockImageNames = 
             new Dictionary<int, string>
             {
                 {1, "EarthMiddle.png"},
                 {2, "EarthDown.png"},
+                {-1, "Info.png"},
+                {3, "Cake.png"}
             };
         private static readonly Action<Map, Graphics, int, int, int> DrawBlock =
             (map, g, p, x, y) =>
             {
                 if (p != 0)
                 {
+                    var destSize = p == -1 ? new Size(256, 256) : new Size(map.CellSize, map.CellSize);
+                    var srcSize = p == -1 ? destSize : new Size(128, 128);
                     g.DrawImage(
                         new Bitmap(PathToBlocks + BlockImageNames[p]),
-                        new Rectangle(new Point(x, y), new Size(map.CellSize, map.CellSize)),
-                        new Rectangle(Point.Empty, new Size(128, 128)),
+                        new Rectangle(new Point(x, y), destSize),
+                        new Rectangle(Point.Empty, srcSize),
                         GraphicsUnit.Pixel);
                 }
             };
+        
+        private static readonly Random Random = new Random(993); 
 
         private static readonly Action<Map, Graphics> DrawBackground =
             (map, g) =>
                 g.DrawImage(
-                    new Bitmap(PathToBackgrounds + "BackgroundCity.png"),
+                    new Bitmap(PathToBackgrounds + $"BackgroundCity{Random.Next(1, 4)}.png"),
                     new Rectangle(Point.Empty, map.Size),
                     new Rectangle(Point.Empty, map.Size),
                     GraphicsUnit.Pixel);

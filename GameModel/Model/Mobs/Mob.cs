@@ -15,13 +15,13 @@ namespace GameModel.Model.Mobs
         public double DownVelocity { get; set; }
         public double UpVelocity { get; set; }
         public double HorizontalVelocity { get; set; }
+        public bool IsReadyToJump { get; set; }
         public Direction Direction { get; set; }
 
         public Mob(
             string name,
             Size size,
             Point location,
-            bool isPeaceful = false,
             int health = 100,
             int attack = 10,
             int stamina = 100,
@@ -33,14 +33,12 @@ namespace GameModel.Model.Mobs
             Direction = Direction.Right;
             IsActive = true;
             MovementManipulator = new MovementManipulator(this);
-            CombatManipulator = isPeaceful ? null : new CombatManipulator(this, health, attack, stamina, cooldown);
+            CombatManipulator = new CombatManipulator(this, health, attack, stamina, cooldown);
         }
         
         public void Move(Point dPoint)
         {
             Location += new Size(dPoint);
         }
-
-        public bool IsPeaceful() => CombatManipulator == null;
     }
 }
